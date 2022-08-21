@@ -1,9 +1,3 @@
-## Landing page for BritishPost
-
-Basic information about small logistics company.
-
----
-
 ## Start development
 
 - npm run dev

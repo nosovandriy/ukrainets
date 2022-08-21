@@ -1,4 +1,4 @@
-import styles from '../../../../styles/Home.module.css';
+import styles from '../../../../styles/Home.module.scss';
 
 import classNames from 'classnames';
 import Image from 'next/image';
