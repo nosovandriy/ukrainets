@@ -1,0 +1,19 @@
+@import '../../styles/vars.scss';
+
+.layout {
+  padding: 0 50px;
+
+  @media #{$tablet} {
+    max-width: 870px;
+
+  }
+
+  @media #{$desktop-small} {
+    max-width: 950px;
+
+  }
+
+  @media #{$desktop}, #{desktop-large} {
+    max-width: 1200px;
+  }
+}

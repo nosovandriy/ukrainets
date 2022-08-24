@@ -1,9 +1,5 @@
-import type { NextComponentType } from 'next';
+import style from './footer.module.scss';
 
-export const Footer: NextComponentType = () => {
-  return (
-    <footer>
-      <p>Page footer</p>
-    </footer>
-  );
+export const Footer: React.FC = () => {
+  return <footer className={style.footer} />;
 };

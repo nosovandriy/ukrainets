@@ -1,2 +1,15 @@
+@import '../../../../styles/vars';
+@import '../../../../styles/mixins';
+
 .heroSection {
+  .title {
+    @include set-font($font-size-xl, $color-blue-dark, $font-weight-bold);
+    
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .banner {
+    max-width: 430px;
+  }
 }
