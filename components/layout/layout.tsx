@@ -7,9 +7,11 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   return (
-    <div className={style.layout}>
+    <div className={style.layoutSection}>
       <Navigation />
+
       {children}
+
       <Footer />
     </div>
   );
