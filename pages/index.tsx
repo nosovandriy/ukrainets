@@ -1,14 +1,14 @@
 import type { NextPage } from 'next';
 
-import { HeroSection, HomeHeader } from '../components';
+import { HeroSection, HomeHeader, Layout } from '../components';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <Layout>
       <HomeHeader />
 
       <HeroSection />
-    </div>
+    </Layout>
   );
 };
 
