@@ -21,7 +21,7 @@ export const HeroSection: React.FC = () => {
           <h1>Міжнародні перевезення посилок з Лондона в Україну</h1>
         </div>
 
-        <MediaQuery maxWidth={breakPoints.fromMobile}>
+        <MediaQuery maxWidth={breakPoints.fromTablet}>
           <HeroBanner />
         </MediaQuery>
 
@@ -35,7 +35,7 @@ export const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      <MediaQuery minWidth={breakPoints.fromMobile}>
+      <MediaQuery minWidth={breakPoints.fromTablet}>
         <HeroBanner />
       </MediaQuery>
     </main>

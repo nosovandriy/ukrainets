@@ -5,16 +5,17 @@
   max-width: 250px;
   margin: 0 auto;
 
-  @media #{$desktop-small-and-tablet}, #{$desktop} {
-    min-width: 225px;
-    max-width: 425px;
+  @media #{tablet} {
+    max-width: 300px;
   }
 
-  @media #{$desktop-small-and-tablet} {
+  @media #{$desktop-small} {
+    max-width: 100%;
     width: 440px;
   }
 
   @media #{$desktop} {
+    max-width: 100%;
     width: 540px;
   }
 
