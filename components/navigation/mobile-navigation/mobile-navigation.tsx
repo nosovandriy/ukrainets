@@ -3,15 +3,21 @@ import style from './mobile-navigation.module.scss';
 import { useState } from 'react';
 import MediaQuery from 'react-responsive';
 
+import { useIsMounted } from 'hooks';
 import { breakPoints } from 'consts';
 import { NavigationBody } from './navigation-body';
 import { NavigationHeader } from './navigation-header';
 
 export const MobileNavigation: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const isMounted = useIsMounted();
 
   function toggleMobileMenu() {
     setIsVisible(!isVisible);
+  }
+
+  if (!isMounted) {
+    return null;
   }
 
   return (

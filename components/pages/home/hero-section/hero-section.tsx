@@ -4,7 +4,7 @@ import MediaQuery from 'react-responsive';
 
 import { breakPoints } from 'consts';
 import { Button } from '../../../button';
-import { HeroBanner } from '../hero-banner';
+import { HeroBanner } from './hero-banner';
 import { useIsMounted } from 'hooks';
 
 export const HeroSection: React.FC = () => {
