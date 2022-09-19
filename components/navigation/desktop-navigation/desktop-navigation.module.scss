@@ -1,0 +1,8 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.desktopNavigation {
+  @include set-size(100%, 50px);
+
+  padding: 50px 0;
+}

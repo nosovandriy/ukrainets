@@ -1,0 +1,35 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.navigationMenu {
+  @include set-flex(column, space-between);
+
+  row-gap: 20px;
+  padding: 70px 0;
+  flex-wrap: wrap;
+
+  @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+    @include set-flex(row, flex-start, flex-end);
+
+    column-gap: 35px;
+    padding: 0;
+  }
+
+  @media #{$desktop}, #{$desktop-large} {
+    column-gap: 50px;
+  }
+
+  .mobileNumber {
+    @include set-flex(row, flex-start);
+
+    column-gap: 10px;
+    min-width: 150px;
+    cursor: pointer;
+  }
+
+  .menuItem {
+    @include set-flex(row, flex-start, center);
+
+    cursor: pointer;
+  }
+}

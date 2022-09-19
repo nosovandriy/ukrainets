@@ -1,7 +1,7 @@
 import style from './layout.module.scss';
 
+import { DesktopNavigation, MobileNavigation } from '../navigation';
 import { Footer } from '../footer';
-import { MobileNavigation, Navigation } from '../navigation';
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -11,7 +11,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
       <MobileNavigation />
 
       <div className={style.layoutSection}>
-        <Navigation />
+        <DesktopNavigation />
 
         {children}
 

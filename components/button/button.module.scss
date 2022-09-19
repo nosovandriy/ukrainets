@@ -1,5 +1,5 @@
-@import '../../styles/vars';
-@import '../../styles/mixins';
+@import '~styles/vars';
+@import '~styles/mixins';
 
 .button {
   @include set-font($font-size-sm, $color-white, $font-weight-regular);
