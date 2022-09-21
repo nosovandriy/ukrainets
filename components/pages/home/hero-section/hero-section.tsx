@@ -4,7 +4,7 @@ import MediaQuery from 'react-responsive';
 
 import { breakPoints } from 'consts';
 import { Button } from '../../../button';
-import { HeroBanner } from '../hero-banner';
+import { HeroBanner } from './hero-banner';
 import { useIsMounted } from 'hooks';
 
 export const HeroSection: React.FC = () => {
@@ -21,7 +21,7 @@ export const HeroSection: React.FC = () => {
           <h1>Міжнародні перевезення посилок з Лондона в Україну</h1>
         </div>
 
-        <MediaQuery maxWidth={breakPoints.fromMobile}>
+        <MediaQuery maxWidth={breakPoints.fromTablet}>
           <HeroBanner />
         </MediaQuery>
 
@@ -35,7 +35,7 @@ export const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      <MediaQuery minWidth={breakPoints.fromMobile}>
+      <MediaQuery minWidth={breakPoints.fromTablet}>
         <HeroBanner />
       </MediaQuery>
     </main>

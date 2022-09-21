@@ -1,0 +1,26 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.banner {
+  max-width: 250px;
+  margin: 0 auto;
+
+  @media #{tablet} {
+    max-width: 300px;
+  }
+
+  @media #{$desktop-small} {
+    max-width: 100%;
+    width: 440px;
+  }
+
+  @media #{$desktop} {
+    max-width: 100%;
+    width: 540px;
+  }
+
+  @media #{$desktop-large} {
+    width: 640px;
+    max-width: 640px;
+  }
+}

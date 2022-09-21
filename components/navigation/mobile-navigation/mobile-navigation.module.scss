@@ -1,0 +1,7 @@
+@import '~styles/vars';
+
+.mobileNavigation {
+  width: 100%;
+  position: fixed;
+  z-index: $z-index-menu;
+}

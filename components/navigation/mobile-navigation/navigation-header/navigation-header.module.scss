@@ -1,0 +1,9 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.navigationHeader {
+  @include set-flex(row, space-between, center);
+
+  padding: $default-page-padding;
+  background-color: $color-white;
+}
