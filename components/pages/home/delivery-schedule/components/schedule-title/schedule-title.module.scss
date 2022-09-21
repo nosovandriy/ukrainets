@@ -1,0 +1,25 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.title {
+  @include set-font($font-size-xl, $color-blue-dark, $font-weight-base);
+
+  max-width: 230px;
+  text-align: center;
+  margin-bottom: 70px;
+
+  @media #{$desktop-small} {
+    max-width: 330px;
+    font-size: $font-size-huge;
+  }
+
+  @media #{$desktop}, #{$desktop-large} {
+    max-width: 200px;
+    text-align: left;
+    font-size: $font-size-giant;
+  }
+
+  h2 {
+    line-height: 1.3;
+  }
+}
