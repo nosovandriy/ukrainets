@@ -1,6 +1,12 @@
 import type { NextPage } from 'next';
 
-import { HeroSection, HomeHeader, Layout } from '../components';
+import {
+  HeroSection,
+  HomeHeader,
+  Layout,
+  ScheduleFromEngland,
+  ScheduleFromUkraine,
+} from '../components';
 
 const Home: NextPage = () => {
   return (
@@ -8,6 +14,10 @@ const Home: NextPage = () => {
       <HomeHeader />
 
       <HeroSection />
+
+      <ScheduleFromEngland />
+
+      <ScheduleFromUkraine />
     </Layout>
   );
 };

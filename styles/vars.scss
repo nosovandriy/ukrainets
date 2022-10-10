@@ -17,7 +17,8 @@ $mobile: unquote('only screen and (max-width: 480px)');
 /* size */
 
 $font-size-giant: 40px;
-$font-size-huge: 32px;
+$font-size-huge: 36px;
+$font-size-xxxl: 32px;
 $font-size-xxl: 24px;
 $font-size-xl: 20px;
 $font-size-lg: 18px;
@@ -41,6 +42,8 @@ $color-blue-medium: #002fa8;
 $color-blue-dark: #273a5a;
 $color-grey-light: #c7d2dc;
 $color-grey-dark: #5e7294;
+
+$box-shadow-1: 0px 0px 10px 0.8px rgba(19, 10, 46, 0.08);
 
 /* other */
 $z-index-menu: 10;
