@@ -4,6 +4,7 @@ import {
   HeroSection,
   HomeHeader,
   Layout,
+  ScheduleFromEngland,
   ScheduleFromUkraine,
 } from '../components';
 
@@ -13,6 +14,8 @@ const Home: NextPage = () => {
       <HomeHeader />
 
       <HeroSection />
+
+      <ScheduleFromEngland />
 
       <ScheduleFromUkraine />
     </Layout>

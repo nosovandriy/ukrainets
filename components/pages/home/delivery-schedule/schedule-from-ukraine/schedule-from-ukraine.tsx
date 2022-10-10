@@ -19,7 +19,7 @@ export const ScheduleFromUkraine: React.FC = () => {
       <ScheduleTitle title="Розклад збору вантажів в Україні" />
 
       <div className={style.scheduleWrapper}>
-        <Calendar />
+        <Calendar isEngland={false} />
 
         <ScheduleDetailsContainer>
           <div>

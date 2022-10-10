@@ -3,10 +3,12 @@ import style from './calendar.module.scss';
 import Image from 'next/image';
 
 import { useDateDetails } from 'hooks';
+import classNames from 'classnames';
 
-export const Calendar: React.FC<{ showIcon?: boolean }> = ({
-  showIcon = true,
-}) => {
+export const Calendar: React.FC<{
+  showIcon?: boolean;
+  isEngland?: boolean;
+}> = ({ showIcon = true, isEngland = true }) => {
   const { currentYear, weekDays } = useDateDetails();
 
   const emptyDivList = createEmptyDivList(28);
@@ -25,7 +27,6 @@ export const Calendar: React.FC<{ showIcon?: boolean }> = ({
     <div className={style.calendar}>
       {showIcon && (
         <div className={style.calendarIcon}>
-          {/* TODO: change icon size on desktop */}
           <Image
             priority
             width="100"
@@ -46,7 +47,13 @@ export const Calendar: React.FC<{ showIcon?: boolean }> = ({
         ))}
 
         {emptyDivList.map((item, indx) => (
-          <div key={indx} className={style.dayElement}>
+          <div
+            key={indx}
+            className={classNames(style.dayElement, {
+              [style.england]: isEngland,
+              [style.ukraine]: !isEngland,
+            })}
+          >
             {item}
           </div>
         ))}
