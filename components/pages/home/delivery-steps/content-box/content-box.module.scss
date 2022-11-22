@@ -1,0 +1,72 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.contentBox {
+  @include set-flex(column, center, center);
+  @include set-font($font-size-sm, $color-white, $font-weight-regular);
+
+  position: relative;
+  row-gap: 20px;
+  width: 215px;
+  min-width: 215px;
+  min-height: 170px;
+  box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    155.63deg,
+    rgba(255, 255, 255, 0.3) 1.56%,
+    rgba(255, 255, 255, 0) 98.16%,
+    rgba(255, 255, 255, 0.1) 98.16%
+  );
+  border-radius: 40px;
+  z-index: 1;
+
+  @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+    width: 280px;
+    min-height: 230px;
+
+    &:nth-child(2) {
+      top: 70px;
+    }
+
+    &:nth-child(3) {
+      top: 140px;
+    }
+  }
+
+  .boxTitle {
+    @include set-font($font-size-md, $color-white, $font-weight-regular);
+    text-align: center;
+
+    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+      font-size: $font-size-lg;
+    }
+  }
+
+  .boxText {
+    max-width: 120px;
+    text-align: center;
+
+    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+      font-size: $font-size-base;
+      max-width: 200px;
+    }
+  }
+
+  .boxCount {
+    @include set-size(45px, 45px);
+    @include set-flex(row, center, center);
+    @include set-font($font-size-xxl, $color-blue-light, $font-weight-base);
+
+    position: absolute;
+    top: -20px;
+    border-radius: 50%;
+    background-color: $color-white;
+    box-shadow: $box-shadow-1;
+
+    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+      @include set-size(60px, 60px);
+
+      top: -25px;
+    }
+  }
+}

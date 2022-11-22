@@ -15,7 +15,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
 
         {children}
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

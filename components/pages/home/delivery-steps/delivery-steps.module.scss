@@ -1,0 +1,57 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.deliverySteps {
+  position: relative;
+  height: 100vh;
+  background-color: $color-blue-light;
+  padding: $default-page-padding;
+
+  .tridentImage {
+    @include set-flex(row, center, center);
+
+    position: absolute;
+    top: -100px;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+
+  .title {
+    @include set-font($font-size-xl, $color-white, $font-weight-regular);
+
+    max-width: 230px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 150px;
+
+    @media #{$desktop-small} {
+      max-width: 330px;
+      font-size: $font-size-huge;
+    }
+
+    @media #{$desktop}, #{$desktop-large} {
+      max-width: 450px;
+      text-align: center;
+      font-size: $font-size-giant;
+    }
+
+    h2 {
+      line-height: 1.3;
+    }
+  }
+
+  .boxesWrapper {
+    @include set-flex(column, center, center);
+    row-gap: 50px;
+
+    margin: 50px 0 100px 0;
+
+    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+      @include set-flex(row, center, center);
+
+      margin-top: 180px;
+      column-gap: 20px;
+    }
+  }
+}
