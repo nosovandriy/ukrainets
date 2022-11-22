@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 
 import {
+  DeliverySteps,
   HeroSection,
   HomeHeader,
   Layout,
@@ -10,15 +11,19 @@ import {
 
 const Home: NextPage = () => {
   return (
-    <Layout>
-      <HomeHeader />
+    <>
+      <Layout>
+        <HomeHeader />
 
-      <HeroSection />
+        <HeroSection />
 
-      <ScheduleFromEngland />
+        <ScheduleFromEngland />
 
-      <ScheduleFromUkraine />
-    </Layout>
+        <ScheduleFromUkraine />
+      </Layout>
+
+      <DeliverySteps />
+    </>
   );
 };
 

@@ -4,6 +4,8 @@
 .scheduleFromUkraine {
   @include set-flex(column, center, center);
 
+  padding-bottom: 180px;
+
   @media #{$desktop}, #{$desktop-large} {
     @include set-flex(row, space-between, center);
 
