@@ -20,19 +20,21 @@ export const AboutSection: React.FC = () => {
           <p className={style.aboutSection__aboutUs__subTitle}>
             Ми BritishPost — транспортна компанія, що надає послуги з перевезення вантажів та посилок з Лондона.
             <br></br>
+            <br></br>
             Відправляй все необхідне в Україну вже цього тижня!
           </p>
         </div>
 
         <div className={style.aboutSection__todos}>
           <div className={style.aboutSection__todo}>
-            <Image
-              className={style.aboutSection__todo__image1}
-              src="/pin_who-we-are.png"
-              width={88}
-              height={97}
-              alt="Picture point of the GPS"
-            />
+            <div className={style.aboutSection__todo__image1}
+            >
+              <Image
+                src="/pin_who-we-are.png"
+                layout="fill"
+                alt="Picture point of the GPS"
+              />
+            </div>
             <div className={style.aboutSection__todoInfo}>
               <h3 className={style.aboutSection__todoInfo__title}>
                 Довозимо
@@ -45,13 +47,15 @@ export const AboutSection: React.FC = () => {
             </div>
           </div>
           <div className={style.aboutSection__todo}>
-            <Image
-              className={style.aboutSection__todo__image2}
-              src="/like_who-we-are 1.png"
-              width={100}
-              height={96}
-              alt="Picture hand OK"
-            />
+            <div className={style.aboutSection__todo__image2}
+            >
+              <Image
+                layout="fill"
+                src="/like_who-we-are.png"
+                alt="Picture hand OK"
+              />
+            </div>
+
             <div className={style.aboutSection__todoInfo}>
               <h3 className={style.aboutSection__todoInfo__title}>
                 15 років
@@ -67,13 +71,17 @@ export const AboutSection: React.FC = () => {
             </div>
           </div>
           <div className={style.aboutSection__todo}>
-            <Image
-              className={style.aboutSection__todo__image3}
-              src="/time_who-we-are.png"
-              width={100}
-              height={100}
-              alt="Picture of clock"
-            />
+            <div className={style.aboutSection__todo__image3}
+            >
+              <Image
+                src="/time_who-we-are.png"
+                layout="responsive"
+                width={100}
+                height={100}
+                alt="Picture of clock"
+              />
+            </div>
+
             <div className={style.aboutSection__todoInfo}>
               <h3 className={style.aboutSection__todoInfo__title}>
                 Цінуємо
@@ -89,13 +97,15 @@ export const AboutSection: React.FC = () => {
             </div>
           </div>
           <div className={style.aboutSection__todo}>
-            <Image
-              className={style.aboutSection__todo__image4}
-              src="/safe_who-we-are.png"
-              width={75}
-              height={100}
-              alt="Picture of door lock"
-            />
+            <div className={style.aboutSection__todo__image4}
+            >
+              <Image
+                src="/safe_who-we-are.png"
+                layout="fill"
+                alt="Picture of door lock"
+              />
+            </div>
+
             <div className={style.aboutSection__todoInfo}>
               <h3 className={style.aboutSection__todoInfo__title}>
                 Безпечність та
