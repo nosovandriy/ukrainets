@@ -7,6 +7,7 @@ import {
   Layout,
   ScheduleFromEngland,
   ScheduleFromUkraine,
+  AboutSection,
 } from '../components';
 
 const Home: NextPage = () => {
@@ -14,11 +15,11 @@ const Home: NextPage = () => {
     <>
       <Layout>
         <HomeHeader />
-
         <HeroSection />
-
+      </Layout>
+      <AboutSection />
+      <Layout>
         <ScheduleFromEngland />
-
         <ScheduleFromUkraine />
       </Layout>
 
