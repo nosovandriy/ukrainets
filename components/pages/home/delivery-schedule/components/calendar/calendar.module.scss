@@ -1,0 +1,73 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.calendar {
+  @include set-flex(column, flex-start, center);
+  @include set-size(270px, 305px);
+
+  border-radius: 15px;
+  position: relative;
+  background-color: $color-blue-light;
+
+  @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+    @include set-size(350px, 405px);
+  }
+
+  .calendarIcon {
+    position: absolute;
+    right: -20px;
+    top: -55px;
+  }
+
+  .calendarYear {
+    @include set-font($font-size-xl, $color-white, $font-weight-regular);
+
+    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+      font-size: $font-size-xxl;
+    }
+
+    padding: 35px 0 10px;
+  }
+
+  .calendarWeek {
+    @include set-font($font-size-sm, $color-white, $font-weight-regular);
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 6px;
+    row-gap: 17px;
+
+    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+      font-size: $font-size-base;
+    }
+
+    .dayTitle {
+      text-align: center;
+    }
+
+    .dayElement {
+      @include set-size(25px, 25px);
+
+      @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+        @include set-size(36px, 36px);
+      }
+
+      border-radius: 50%;
+      background-color: $color-white;
+    }
+
+    .england {
+      &:nth-child(7n - 4),
+      &:nth-child(7n - 5),
+      &:nth-child(7n - 6) {
+        opacity: 30%;
+      }
+    }
+
+    .ukraine {
+      &:nth-child(7n) {
+        opacity: 30%;
+      }
+    }
+  }
+}

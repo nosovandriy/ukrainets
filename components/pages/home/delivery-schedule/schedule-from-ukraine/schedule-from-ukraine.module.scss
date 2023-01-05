@@ -1,0 +1,27 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.scheduleFromUkraine {
+  @include set-flex(column, center, center);
+
+  padding-bottom: 180px;
+
+  @media #{$desktop}, #{$desktop-large} {
+    @include set-flex(row, space-between, center);
+
+    column-gap: 60px;
+  }
+
+  .scheduleWrapper {
+    @include set-flex(column, center, center);
+
+    row-gap: 40px;
+
+    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+      @include set-flex(row, center, center);
+
+      column-gap: 20px;
+      flex-direction: row-reverse;
+    }
+  }
+}
