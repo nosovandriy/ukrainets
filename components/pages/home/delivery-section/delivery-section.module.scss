@@ -4,9 +4,6 @@
 .deliverySection {
   @include set-flex(column, center, center);
   font-weight: $font-weight-regular;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
 
 
@@ -60,7 +57,7 @@
       width: 475px;
       height: 210px;
     }
-  
+
     @include desktop-FHD {
       position: relative;
       width: 600px;
@@ -109,7 +106,7 @@
       @include tablet {
         padding-bottom: 50px;
       }
-    
+
       @include desktop-FHD {
         padding-bottom: 60px;
       }
