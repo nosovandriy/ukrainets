@@ -1,9 +1,6 @@
-import style from './about-section.module.scss';
-
-import { MapEurope } from '@components/icons';
-
 import Image from 'next/image';
-
+import style from './about-section.module.scss';
+import { MapEurope } from '@components/icons';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -125,4 +122,3 @@ export const AboutSection: React.FC = () => {
     </section>
   );
 };
-
