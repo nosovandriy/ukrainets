@@ -1,0 +1,185 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.footer {
+  @include set-flex(column);
+  background-color: $color-blue-dark;
+  color: $color-white;
+  font-weight: $font-weight-regular;
+
+  @include tablet {
+    align-items: center;
+  }
+
+  &__container {
+    padding: 60px 70px 60px 40px;
+
+    @include laptop {
+      @include set-flex(row);
+      gap: 65px;
+    }
+
+    @include desktop {
+      gap: 75px;
+    }
+
+    @include desktop-FHD {
+      gap: 95px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+    @include set-flex(column);
+    gap: 20px;
+
+    @include tablet {
+      @include set-flex(row, flex-start, center);
+      gap: 70px;
+    }
+
+    @include laptop {
+      @include set-flex(column, flex-start, start);
+      gap: 30px;
+    }
+
+    &__image {
+      position: relative;
+      width: 115px;
+      height: 30px;
+      cursor: pointer;
+
+      @include tablet {
+        width: 145px;
+        height: 35px;
+      }
+
+      @include desktop-FHD {
+        width: 160px;
+        height: 40px;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+        transition-duration: 0.3s;
+      }
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 21px;
+
+      @include tablet {
+        font-size: 15px;
+        line-height: 23px;
+      }
+
+      @include desktop-FHD {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    &__fb {
+      position: relative;
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+
+      @include tablet {
+        width: 30px;
+        height: 30px;
+      }
+
+      @include desktop-FHD {
+        width: 35px;
+        height: 35px;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+        transition-duration: 0.3s;
+      }
+    }
+  }
+
+  &__contacts {
+    @include set-flex(column);
+    gap: 40px;
+
+    @include tablet {
+      @include set-flex(row);
+      gap: 70px;
+    }
+
+    @include laptop {
+      align-items: start;
+      gap: 65px;
+    }
+
+    @include desktop {
+      gap: 75px;
+    }
+
+    @include desktop-FHD {
+      gap: 95px;
+    }
+
+    &__contact {
+      @include set-flex(column);
+      gap: 15px;
+
+      @include laptop {
+        gap: 30px;
+      }
+
+      &__title {
+        font-size: 14px;
+        line-height: 23px;
+
+        @include tablet {
+          font-size: 18px;
+          line-height: 29px;
+        }
+
+        @include desktop-FHD {
+          font-size: 20px;
+          line-height: 33px;
+        }
+      }
+
+      &__info {
+        font-size: 12px;
+        line-height: 18px;
+        cursor: pointer;
+
+        @include tablet {
+          font-size: 15px;
+          line-height: 22px;
+        }
+
+        @include desktop-FHD {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.textDecoration {
+  &:hover {
+    color: $color-grey-light;
+  }
+
+  @include laptop {
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      color: $color-grey-light;
+      border-bottom: 1px solid $color-grey-light;
+      transition-duration: 0.3s;
+    }
+  }
+}

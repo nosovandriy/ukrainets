@@ -8,6 +8,7 @@ import {
   ScheduleFromEngland,
   ScheduleFromUkraine,
   AboutSection,
+  Footer,
 } from '../components';
 
 const Home: NextPage = () => {
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
       </Layout>
 
       <DeliverySteps />
+      <Footer />
     </>
   );
 };
