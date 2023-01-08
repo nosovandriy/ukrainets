@@ -1,0 +1,54 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.qualitySection {
+  @include set-flex(column, flex-start, center);
+  position: relative;
+  height: 70vh;
+
+  @include tablet {
+    @include set-flex(row-reverse, flex-start, center);
+  }
+
+  @include desktop-FHD {
+    @include set-flex(row-reverse, center, center);
+  }
+
+  &__worldImage {
+    @include set-size(200px, 200px);
+    position: relative;
+    margin-top: 100px;
+
+    @include tablet {
+      margin: 0;
+      @include set-size(250px, 250px);
+    }
+
+    @include laptop {
+      @include set-size(350px, 350px);
+    }
+  }
+
+  &__textContent {
+    @include set-flex(column, center, center);
+    row-gap: 10px;
+    flex: 1 0 0;
+
+    &__text {
+      @include set-font(
+        $font-size-base,
+        $color-grey-dark,
+        $font-weight-regular
+      );
+
+      @include tablet {
+        @include set-size(350px, 100%);
+      }
+
+      @include laptop {
+        @include set-size(450px, 100%);
+        font-size: $font-size-lg;
+      }
+    }
+  }
+}

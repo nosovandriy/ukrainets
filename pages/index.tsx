@@ -6,26 +6,40 @@ import {
   HeroSection,
   HomeHeader,
   Layout,
+  QualitySection,
   ScheduleFromEngland,
   ScheduleFromUkraine,
   AboutSection,
 } from '../components';
+import { DesktopNavigation, MobileNavigation } from '@components/navigation';
 
 const Home: NextPage = () => {
   return (
     <>
+      <MobileNavigation />
+
       <Layout>
+        <DesktopNavigation />
+
         <HomeHeader />
+
         <HeroSection />
       </Layout>
+
       <AboutSection />
 
-      {/* <Layout>
+      <Layout>
         <ScheduleFromEngland />
-        <ScheduleFromUkraine />
-      </Layout> */}
 
-      {/* <DeliverySteps /> */}
+        <ScheduleFromUkraine />
+      </Layout>
+
+      <DeliverySteps />
+
+      <Layout>
+        <QualitySection />
+      </Layout>
+
       <DeliverySection />
     </>
   );
