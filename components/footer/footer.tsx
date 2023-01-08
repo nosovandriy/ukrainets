@@ -1,5 +1,24 @@
 import Image from 'next/image';
+
 import style from './footer.module.scss';
+
+const contacts  = [
+  {"id": 1,
+   "title": "Англія",
+   "firstInfo": "+447738204457",
+   "secondInfo": "+447982651844",
+  },
+  {"id": 2,
+   "title": "Україна",
+   "firstInfo": "+380677144424",
+   "secondInfo": "",
+  },
+  {"id": 3,
+   "title": "E-mail",
+   "firstInfo": "contact@britishpost.com.ua",
+   "secondInfo": "",
+  },
+];
 
 export const Footer: React.FC = () => {
   return (

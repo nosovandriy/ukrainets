@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
       <DeliverySteps />
       <DeliverySection />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
