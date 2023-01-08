@@ -5,14 +5,20 @@ import {
   HeroSection,
   HomeHeader,
   Layout,
+  QualitySection,
   ScheduleFromEngland,
   ScheduleFromUkraine,
 } from '../components';
+import { DesktopNavigation, MobileNavigation } from '@components/navigation';
 
 const Home: NextPage = () => {
   return (
     <>
+      <MobileNavigation />
+
       <Layout>
+        <DesktopNavigation />
+
         <HomeHeader />
 
         <HeroSection />
@@ -23,6 +29,10 @@ const Home: NextPage = () => {
       </Layout>
 
       <DeliverySteps />
+
+      <Layout>
+        <QualitySection />
+      </Layout>
     </>
   );
 };

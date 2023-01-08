@@ -1,0 +1,39 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.qualitySection {
+  @include set-flex(column, flex-start, center);
+
+  position: relative;
+  height: 70vh;
+  padding: $default-page-padding;
+
+  @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+    @include set-flex(row-reverse, center, center);
+  }
+
+  .worldImage {
+    position: relative;
+    left: -70px;
+    flex: 2 0 0;
+
+    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+      position: static;
+    }
+  }
+
+  .textContent {
+    @include set-flex(column, center, center);
+
+    row-gap: 10px;
+    flex: 1 0 0;
+
+    .title {
+      @include set-font($font-size-xl, $color-blue-dark, $font-weight-regular);
+    }
+
+    .text {
+      @include set-font($font-size-md, $color-grey-dark, $font-weight-regular);
+    }
+  }
+}
