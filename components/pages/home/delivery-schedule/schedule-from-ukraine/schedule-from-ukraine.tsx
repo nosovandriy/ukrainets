@@ -1,11 +1,8 @@
 import style from './schedule-from-ukraine.module.scss';
 
 import { useIsMounted } from 'hooks';
-import {
-  Calendar,
-  ScheduleDetailsContainer,
-  ScheduleTitle,
-} from '../components';
+import { Title } from '../../../../title';
+import { Calendar, ScheduleDetailsContainer } from '../components';
 
 export const ScheduleFromUkraine: React.FC = () => {
   const isMounted = useIsMounted();
@@ -16,7 +13,7 @@ export const ScheduleFromUkraine: React.FC = () => {
 
   return (
     <section className={style.scheduleFromUkraine}>
-      <ScheduleTitle title="Розклад збору вантажів в Україні" />
+      <Title title="Розклад збору вантажів в Україні" />
 
       <div className={style.scheduleWrapper}>
         <Calendar isEngland={false} />

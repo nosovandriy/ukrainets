@@ -3,11 +3,8 @@ import style from './schedule-from-england.module.scss';
 import Image from 'next/image';
 
 import { useIsMounted } from 'hooks';
-import {
-  Calendar,
-  ScheduleDetailsContainer,
-  ScheduleTitle,
-} from '../components';
+import { Title } from '../../../../title';
+import { Calendar, ScheduleDetailsContainer } from '../components';
 
 export const ScheduleFromEngland: React.FC = () => {
   const isMounted = useIsMounted();
@@ -18,7 +15,7 @@ export const ScheduleFromEngland: React.FC = () => {
 
   return (
     <section className={style.scheduleFromEngland}>
-      <ScheduleTitle title="Розклад збору вантажів в Лондоні" />
+      <Title title="Розклад збору вантажів в Лондоні" />
 
       <div className={style.scheduleWrapper}>
         <Calendar showIcon={false} />
