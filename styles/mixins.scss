@@ -28,3 +28,27 @@
   color: $color;
   font-weight: $font-weight;
 }
+
+@mixin tablet {
+  @media (min-width: 720px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin desktop-FHD {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}

@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 
 import {
+  DeliverySection,
   DeliverySteps,
   HeroSection,
   HomeHeader,
@@ -8,6 +9,7 @@ import {
   QualitySection,
   ScheduleFromEngland,
   ScheduleFromUkraine,
+  AboutSection,
 } from '../components';
 import { DesktopNavigation, MobileNavigation } from '@components/navigation';
 
@@ -22,7 +24,11 @@ const Home: NextPage = () => {
         <HomeHeader />
 
         <HeroSection />
+      </Layout>
 
+      <AboutSection />
+
+      <Layout>
         <ScheduleFromEngland />
 
         <ScheduleFromUkraine />
@@ -33,6 +39,8 @@ const Home: NextPage = () => {
       <Layout>
         <QualitySection />
       </Layout>
+
+      <DeliverySection />
     </>
   );
 };
