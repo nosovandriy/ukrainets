@@ -9,12 +9,12 @@
   margin-bottom: 70px;
 
   @media #{$desktop-small} {
-    max-width: 330px;
+    max-width: 400px;
     font-size: $font-size-huge;
   }
 
   @media #{$desktop}, #{$desktop-large} {
-    max-width: 200px;
+    max-width: 400px;
     text-align: left;
     font-size: $font-size-giant;
   }

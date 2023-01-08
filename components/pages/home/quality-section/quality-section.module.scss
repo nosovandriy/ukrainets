@@ -3,37 +3,52 @@
 
 .qualitySection {
   @include set-flex(column, flex-start, center);
-
   position: relative;
   height: 70vh;
-  padding: $default-page-padding;
 
-  @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+  @include tablet {
+    @include set-flex(row-reverse, flex-start, center);
+  }
+
+  @include desktop-FHD {
     @include set-flex(row-reverse, center, center);
   }
 
-  .worldImage {
+  &__worldImage {
+    @include set-size(200px, 200px);
     position: relative;
-    left: -70px;
-    flex: 2 0 0;
+    margin-top: 100px;
 
-    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
-      position: static;
+    @include tablet {
+      margin: 0;
+      @include set-size(250px, 250px);
+    }
+
+    @include laptop {
+      @include set-size(350px, 350px);
     }
   }
 
-  .textContent {
+  &__textContent {
     @include set-flex(column, center, center);
-
     row-gap: 10px;
     flex: 1 0 0;
 
-    .title {
-      @include set-font($font-size-xl, $color-blue-dark, $font-weight-regular);
-    }
+    &__text {
+      @include set-font(
+        $font-size-base,
+        $color-grey-dark,
+        $font-weight-regular
+      );
 
-    .text {
-      @include set-font($font-size-md, $color-grey-dark, $font-weight-regular);
+      @include tablet {
+        @include set-size(350px, 100%);
+      }
+
+      @include laptop {
+        @include set-size(450px, 100%);
+        font-size: $font-size-lg;
+      }
     }
   }
 }
