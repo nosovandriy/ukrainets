@@ -1,27 +1,17 @@
 import Image from 'next/image';
 
 import style from './footer.module.scss';
+import { contacts, fbContact } from '../../consts/default-contacts';
 
-const contacts = [
-  {
-    "id": 1,
-    "title": "Англія",
-    "firstInfo": "+447738204457",
-    "secondInfo": "+447982651844",
-  },
-  {
-    "id": 2,
-    "title": "Україна",
-    "firstInfo": "+380677144424",
-    "secondInfo": "",
-  },
-  {
-    "id": 3,
-    "title": "E-mail",
-    "firstInfo": "contact@britishpost.com.ua",
-    "secondInfo": "",
-  },
-];
+const formattingPhoneNumber = (contact: string) => {
+  if (contact.includes("@")) {
+    return contact;
+  } else {
+    return contact.replace(/(\+\d{2})(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4 $5');
+  }
+};
+
+const isContactPhoneNumber = (contact: string) => contact.includes("@") ? `mailto:${contact}` : `tel:${contact}`;
 
 export const Footer: React.FC = () => {
   return (
@@ -46,7 +36,7 @@ export const Footer: React.FC = () => {
 
           <a
             className={style.footer__logo__fb}
-            href="https://www.facebook.com/ukrainets.in.ua"
+            href={fbContact.info}
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -69,17 +59,17 @@ export const Footer: React.FC = () => {
                 </h4>
                 <a
                   className={`${style.footer__contacts__contact__info} ${style.textDecoration}`}
-                  href={contact.firstInfo.includes("@") ? `mailto:${contact.firstInfo}` : `tel:${contact.firstInfo}`}
+                  href={isContactPhoneNumber(contact.firstInfo)}
                 >
-                  {contact.firstInfo.replace(/(\+\d{2})(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4 $5')}
+                  {formattingPhoneNumber(contact.firstInfo)}
                 </a>
 
                 {contact.secondInfo && (
                   <a
                     className={`${style.footer__contacts__contact__info} ${style.textDecoration}`}
-                    href={contact.firstInfo.includes("@") ? `mailto:${contact.firstInfo}` : `tel:${contact.firstInfo}`}
-                  >
-                    {contact.firstInfo.replace(/(\+\d{2})(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4 $5')}
+                    href={isContactPhoneNumber(contact.secondInfo)}
+                    >
+                  {formattingPhoneNumber(contact.secondInfo)}
                   </a>
                 )}
               </div>
