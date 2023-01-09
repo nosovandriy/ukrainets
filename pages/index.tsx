@@ -42,7 +42,7 @@ const Home: NextPage = () => {
       </Layout>
 
       <DeliverySection />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

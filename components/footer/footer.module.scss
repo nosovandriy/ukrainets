@@ -45,18 +45,15 @@
 
     &__image {
       position: relative;
-      width: 115px;
-      height: 30px;
+      @include set-size($width: 115px, $height: 30px);
       cursor: pointer;
 
       @include tablet {
-        width: 145px;
-        height: 35px;
+        @include set-size($width: 145px, $height: 35px);
       }
 
       @include desktop-FHD {
-        width: 160px;
-        height: 40px;
+        @include set-size($width: 160px, $height: 40px);
       }
 
       &:hover {
@@ -83,17 +80,14 @@
     &__fb {
       position: relative;
       cursor: pointer;
-      width: 25px;
-      height: 25px;
+      @include set-size($width: 25px, $height: 25px);
 
       @include tablet {
-        width: 30px;
-        height: 30px;
+        @include set-size($width: 30px, $height: 30px);
       }
 
       @include desktop-FHD {
-        width: 35px;
-        height: 35px;
+        @include set-size($width: 35px, $height: 35px);
       }
 
       &:hover {
