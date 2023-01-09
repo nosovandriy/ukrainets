@@ -3,8 +3,6 @@ import React from 'react';
 export const MapEurope = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      // width="1920"
-      // height="1149"
       viewBox="1000 50 1450 950"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -1,19 +1,25 @@
 import Image from 'next/image';
 
 import style from './footer.module.scss';
-import { contacts, fbContact } from '../../consts/default-contacts';
-
-const formattingPhoneNumber = (contact: string) => {
-  if (contact.includes("@")) {
-    return contact;
-  } else {
-    return contact.replace(/(\+\d{2})(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4 $5');
-  }
-};
-
-const isContactPhoneNumber = (contact: string) => contact.includes("@") ? `mailto:${contact}` : `tel:${contact}`;
+import { defaultContacts } from '../../consts/default-contacts';
+import { useContacts } from './hooks/useContacts';
 
 export const Footer: React.FC = () => {
+
+  const { contacts } = useContacts();
+
+  const formattingPhoneNumber = (contact: string) => {
+    if (contact.includes("@")) {
+      return contact;
+    } else {
+      return contact.replace(/(\+\d{2})(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4 $5');
+    }
+  };
+
+  const isEmailAddress = (contact: string) => contact.includes("@")
+    ? `mailto:${contact}`
+    : `tel:${contact}`;
+
   return (
     <footer className={style.footer}>
       <div className={style.footer__container}>
@@ -36,7 +42,7 @@ export const Footer: React.FC = () => {
 
           <a
             className={style.footer__logo__fb}
-            href={fbContact.info}
+            href={defaultContacts.facebook}
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -59,7 +65,7 @@ export const Footer: React.FC = () => {
                 </h4>
                 <a
                   className={`${style.footer__contacts__contact__info} ${style.textDecoration}`}
-                  href={isContactPhoneNumber(contact.firstInfo)}
+                  href={isEmailAddress(contact.firstInfo)}
                 >
                   {formattingPhoneNumber(contact.firstInfo)}
                 </a>
@@ -67,9 +73,9 @@ export const Footer: React.FC = () => {
                 {contact.secondInfo && (
                   <a
                     className={`${style.footer__contacts__contact__info} ${style.textDecoration}`}
-                    href={isContactPhoneNumber(contact.secondInfo)}
-                    >
-                  {formattingPhoneNumber(contact.secondInfo)}
+                    href={isEmailAddress(contact.secondInfo)}
+                  >
+                    {formattingPhoneNumber(contact.secondInfo)}
                   </a>
                 )}
               </div>

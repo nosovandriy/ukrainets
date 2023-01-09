@@ -45,15 +45,15 @@
 
     &__image {
       position: relative;
-      @include set-size($width: 115px, $height: 30px);
+      @include set-size(115px, 30px);
       cursor: pointer;
 
       @include tablet {
-        @include set-size($width: 145px, $height: 35px);
+        @include set-size(145px, 35px);
       }
 
       @include desktop-FHD {
-        @include set-size($width: 160px, $height: 40px);
+        @include set-size(160px, 40px);
       }
 
       &:hover {
