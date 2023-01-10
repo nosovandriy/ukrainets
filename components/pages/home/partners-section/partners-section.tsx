@@ -1,5 +1,5 @@
 import style from './partners-section.module.scss';
-import { InTime, NovaPoshta } from '@components/icons';
+import { InTime, NovaPoshta, Meest, UkrPoshta } from '@components/icons';
 
 export const PartnersSection: React.FC = () => {
   return (
@@ -19,6 +19,24 @@ export const PartnersSection: React.FC = () => {
           rel="noreferrer noopener"
         >
           <NovaPoshta />
+        </a>
+
+        <a
+          className={style.partnersSection__partnersLogo__image}
+          href="https://www.ukrposhta.ua/ua"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <UkrPoshta />
+        </a>
+
+        <a
+          className={style.partnersSection__partnersLogo__image}
+          href="https://ua.meest.com/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <Meest />
         </a>
 
         <a

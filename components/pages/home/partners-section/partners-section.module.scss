@@ -45,7 +45,12 @@
 
     @include laptop {
       @include set-flex(row);
-      gap: 60px;
+      gap: 50px;
+    }
+  
+    @include desktop {
+      @include set-flex(row);
+      gap: 70px;
     }
 
     &__image {
