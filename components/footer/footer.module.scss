@@ -80,14 +80,14 @@
     &__fb {
       position: relative;
       cursor: pointer;
-      @include set-size($width: 25px, $height: 25px);
+      @include set-size(25px, 25px);
 
       @include tablet {
-        @include set-size($width: 30px, $height: 30px);
+        @include set-size(30px, 30px);
       }
 
       @include desktop-FHD {
-        @include set-size($width: 35px, $height: 35px);
+        @include set-size(35px, 35px);
       }
 
       &:hover {

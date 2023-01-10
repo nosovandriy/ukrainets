@@ -10,6 +10,7 @@ import {
   ScheduleFromEngland,
   ScheduleFromUkraine,
   AboutSection,
+  PartnersSection,
   Footer,
 } from '../components';
 import { DesktopNavigation, MobileNavigation } from '@components/navigation';
@@ -42,6 +43,7 @@ const Home: NextPage = () => {
       </Layout>
 
       <DeliverySection />
+      <PartnersSection />
       <Footer />
     </>
   );
