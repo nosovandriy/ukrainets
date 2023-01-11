@@ -15,7 +15,7 @@ export function useContacts(): {
     {
       "id": 1,
       "title": defaultContacts.countries.england,
-      "firstInfo": defaultContacts.phones.firstEngalndNumber,
+      "firstInfo": defaultContacts.phones.firstEnglandNumber,
       "secondInfo": defaultContacts.phones.secondEnglandNumber,
     },
     {

@@ -1,7 +1,10 @@
 import style from './partners-section.module.scss';
-import { InTime, NovaPoshta, Meest, UkrPoshta } from '@components/icons';
+import { ExternalLink } from '../../../external-link/external-link';
+import { usePartners } from './hooks/usePartners';
 
 export const PartnersSection: React.FC = () => {
+  const { partners } = usePartners();
+
   return (
     <section className={style.partnersSection}>
       <h2 className={style.partnersSection__title}>
@@ -12,41 +15,17 @@ export const PartnersSection: React.FC = () => {
       </p>
 
       <div className={style.partnersSection__partnersLogo}>
-        <a
-          className={style.partnersSection__partnersLogo__image}
-          href="https://novaposhta.ua/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <NovaPoshta />
-        </a>
-
-        <a
-          className={style.partnersSection__partnersLogo__image}
-          href="https://www.ukrposhta.ua/ua"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <UkrPoshta />
-        </a>
-
-        <a
-          className={style.partnersSection__partnersLogo__image}
-          href="https://ua.meest.com/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <Meest />
-        </a>
-
-        <a
-          className={style.partnersSection__partnersLogo__image}
-          href="https://intime.check-track.com/ua/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <InTime />
-        </a>
+        {partners.map(partner => (
+          <ExternalLink
+            key={partner.id}
+            className={
+              `${style["partnersSection__partnersLogo__image"]}
+               ${style[`partnersSection__partnersLogo__image${partner.id}`]}`}
+            href={partner.link}
+          >
+            {partner.logo}
+          </ExternalLink>
+        ))}
       </div>
     </section>
   );

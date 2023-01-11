@@ -8,6 +8,5 @@ export * from './cross.icon';
 export * from './map-europe';
 export * from './ukrainets-logo.icon';
 export * from './novaPoshta-logo';
-export * from './inTime-logo';
 export * from './meest-logo';
 export * from './ukrPoshta-logo';

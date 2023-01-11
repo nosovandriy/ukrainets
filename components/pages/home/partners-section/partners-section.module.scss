@@ -47,7 +47,7 @@
       @include set-flex(row);
       gap: 50px;
     }
-  
+
     @include desktop {
       @include set-flex(row);
       gap: 70px;
@@ -55,6 +55,17 @@
 
     &__image {
       @include set-size(126px, 45px);
+      
+      &:hover {
+        transform: scale(1.1);
+        transition-duration: 0.3s;
+      }
+    }
+
+    &__image1 {
+      @include tablet {
+        @include set-size(210px, 75px);
+      }
 
       @include laptop {
         @include set-size(210px, 75px);
@@ -63,10 +74,33 @@
       @include desktop {
         @include set-size(250px, 90px);
       }
+    }
 
-      &:hover {
-        transform: scale(1.2);
-        transition-duration: 0.3s;
+    &__image2 {
+      @include tablet {
+        @include set-size(210px, 75px);
+      }
+
+      @include laptop {
+        @include set-size(290px, 75px);
+      }
+
+      @include desktop {
+        @include set-size(350px, 90px);
+      }
+    }
+
+    &__image3 {
+      @include tablet {
+        @include set-size(210px, 75px);
+      }
+
+      @include laptop {
+        @include set-size(240px, 75px);
+      }
+
+      @include desktop {
+        @include set-size(280px, 90px);
       }
     }
   }
