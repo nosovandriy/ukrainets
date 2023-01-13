@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import style from './testimonials-section.module.scss';
 import { Quotes, QuotesSmall, ArrowLeft, ArrowRight } from '@components/icons';
+import { TestimonialsCarousel } from './carousel/carousel';
 
 export const TestimonialsSection: React.FC = () => {
   return (
@@ -59,6 +60,8 @@ export const TestimonialsSection: React.FC = () => {
           </div>
         </div>
 
+        <TestimonialsCarousel />
+        
         <div className={style.testimonialsSection__arrows}>
           <div className={style.testimonialsSection__arrow}>
             <ArrowLeft />

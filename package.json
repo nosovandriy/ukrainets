@@ -13,6 +13,7 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-responsive": "^9.0.0-beta.10",
+    "react-responsive-carousel": "^3.2.23",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.1.3"
   },
