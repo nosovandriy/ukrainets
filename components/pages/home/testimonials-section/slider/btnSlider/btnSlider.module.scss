@@ -1,0 +1,13 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.arrows {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+
+    @include laptop {
+      gap: 25px;
+    }
+  }
