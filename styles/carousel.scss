@@ -1,0 +1,128 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.swiper {
+  @include set-flex(column, flex-start, center);
+  width: 90%;
+
+  &__wrapper {
+    @include set-flex(column, center, center);
+    height: 350px;
+
+    @include laptop {
+      width: 850px;
+    }
+
+    @include desktop {
+      width: 1050px;
+    }
+
+    @include desktop-FHD {
+      width: 1280px;
+    }
+  }
+
+  &__testimonials {
+    @include set-flex(column, center, center);
+  }
+
+  &__testimonial {
+    @include set-flex(column, flex-start, center);
+    @include set-size(215px, 190px);
+    padding: 0 25px;
+    background: linear-gradient(155.63deg,
+        rgba(255, 255, 255, 0.3) 1.5%,
+        rgba(255, 255, 255, 0) 98%,
+        rgba(255, 255, 255, 0.1) 98%);
+    box-shadow: 0px 0px 10px 0.78px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.9px);
+    border-radius: 30px;
+
+    @include tablet {
+      @include set-size(260px, 200px);
+    }
+
+    @include laptop {
+      @include set-size(350px, 260px);
+    }
+
+    @include desktop {
+      @include set-size(310px, 260px);
+      padding: 0 40px;
+    }
+
+    @include desktop-FHD {
+      @include set-size(380px, 245px);
+    }
+
+    &__quotes {
+      $quotes-size: 50px;
+      @include set-flex(column, center, center);
+      @include set-square($quotes-size);
+      margin-top: $quotes-size / -2;
+      margin-bottom: 10px;
+      background: #E9ECFF;
+      box-shadow: 0px 0px 10px 0.78px rgba(0, 0, 0, 0.1);
+      border-radius: 50px;
+
+      @include laptop {
+        $quotes-size: 60px;
+        @include set-square($quotes-size);
+        margin-top: $quotes-size / -2;
+        margin-bottom: 20px;
+      }
+
+      @include desktop-FHD {
+        $quotes-size: 70px;
+        @include set-square($quotes-size);
+        margin-top: $quotes-size / -2;
+      }
+    }
+
+    &__name {
+      padding-bottom: 5px;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-base;
+      line-height: 25px;
+
+      @include laptop {
+        font-size: $font-size-xl;
+        line-height: 32px;
+      }
+    }
+
+    &__city {
+      padding-bottom: 10px;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-sm;
+      line-height: 20px;
+      color: $color-grey-light;
+
+      @include laptop {
+        padding-bottom: 20px;
+        font-size: $font-size-base;
+        line-height: 26px;
+      }
+    }
+
+    &__content {
+      font-weight: $font-weight-regular;
+      font-size: $font-size-sm;
+      line-height: 18px;
+
+      @include laptop {
+        font-size: $font-size-base;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  color: white;
+}
+
+.swiper .swiper-pagination-bullet {
+  background-color: white;
+}

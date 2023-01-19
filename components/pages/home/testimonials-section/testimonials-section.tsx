@@ -1,6 +1,6 @@
 import style from './testimonials-section.module.scss';
 import { Quotes } from '@components/icons';
-import { Slider } from './slider/slider';
+import { TestimonialsSlider } from './carousel';
 
 export const TestimonialsSection: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ export const TestimonialsSection: React.FC = () => {
           Що наші клієнти кажуть про нас
         </h2>
 
-        <Slider />
+        <TestimonialsSlider />
       </div>
     </section>
   );

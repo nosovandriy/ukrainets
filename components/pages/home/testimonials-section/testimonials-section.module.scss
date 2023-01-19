@@ -2,14 +2,11 @@
 @import '~styles/mixins';
 
 .testimonialsSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include set-flex(column, center);
   background-color: $color-blue-light;
   position: relative;
   z-index: 0;
-  color: white;
+  color: $color-white;
   text-align: center;
   overflow: hidden;
 
@@ -30,14 +27,11 @@
   }
 
   &__container {
-    margin: 100px 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    @include set-flex(column, center);
+    margin: 100px 0px;
 
     @include laptop {
-      margin: 145px 80px;
+      margin: 145px 0;
     }
 
     @include desktop-FHD {
@@ -46,23 +40,24 @@
   }
 
   &__title {
+    margin: 0 auto;
     width: 215px;
-    padding-bottom: 80px;
-    font-weight: 400;
-    font-size: 21px;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-xl;
     line-height: 27px;
+
 
     @include laptop {
       width: 270px;
       padding-bottom: 125px;
-      font-size: 36px;
+      font-size: $font-size-huge;
       line-height: 46px;
     }
 
     @include desktop-FHD {
       width: 500px;
       padding-bottom: 140px;
-      font-size: 40px;
+      font-size: $font-size-giant;
       line-height: 51px;
     }
   }

@@ -9,5 +9,4 @@ export * from './map-europe';
 export * from './ukrainets-logo.icon';
 export * from './quotes';
 export * from './quotes-small';
-export * from './arrow-left';
-export * from './arrow-right';
+
