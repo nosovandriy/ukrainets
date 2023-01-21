@@ -1,15 +1,15 @@
 import type { NextPage } from 'next';
 
 import {
-  DeliverySection,
-  DeliverySteps,
-  HeroSection,
-  HomeHeader,
   Layout,
-  QualitySection,
+  HomeHeader,
+  HeroSection,
+  AboutSection,
   ScheduleFromEngland,
   ScheduleFromUkraine,
-  AboutSection,
+  DeliverySteps,
+  QualitySection,
+  DeliverySection,
   Footer,
 } from '../components';
 import { DesktopNavigation, MobileNavigation } from '@components/navigation';
@@ -21,9 +21,7 @@ const Home: NextPage = () => {
 
       <Layout>
         <DesktopNavigation />
-
         <HomeHeader />
-
         <HeroSection />
       </Layout>
 
@@ -31,7 +29,6 @@ const Home: NextPage = () => {
 
       <Layout>
         <ScheduleFromEngland />
-
         <ScheduleFromUkraine />
       </Layout>
 
