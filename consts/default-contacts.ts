@@ -7,7 +7,18 @@ export const defaultContacts = {
   },
   phones: {
     ukraineNumber: '+380677144424',
-    firstEngalndNumber: '+447738204457',
+    firstEnglandNumber: '+447738204457',
     secondEnglandNumber: '+447982651844'
+  },
+  partners: {
+    novaPoshta: {
+      link: 'https://novaposhta.ua/',
+    },
+    ukrPoshta: {
+      link: 'https://www.ukrposhta.ua/',
+    },
+    meest: {
+      link: 'https://ua.meest.com/',
+    },
   }
 }
