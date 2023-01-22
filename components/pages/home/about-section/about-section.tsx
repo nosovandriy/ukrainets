@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import style from './about-section.module.scss';
 import { MapEurope } from '@components/icons';
 

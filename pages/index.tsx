@@ -10,7 +10,6 @@ import {
   DeliverySteps,
   QualitySection,
   DeliverySection,
-  RulesSection,
   Footer,
 } from '../components';
 import { DesktopNavigation, MobileNavigation } from '@components/navigation';
@@ -18,7 +17,7 @@ import { DesktopNavigation, MobileNavigation } from '@components/navigation';
 const Home: NextPage = () => {
   return (
     <>
-      {/* <MobileNavigation />
+      <MobileNavigation />
 
       <Layout>
         <DesktopNavigation />
@@ -39,8 +38,7 @@ const Home: NextPage = () => {
         <QualitySection />
       </Layout>
 
-      <DeliverySection /> */}
-      <RulesSection />
+      <DeliverySection />
       <Footer />
     </>
   );
