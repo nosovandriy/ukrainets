@@ -55,25 +55,4 @@
       line-height: 30px;
     }
   }
-
-  &__list {
-    @include set-flex(row, center, center);
-    gap: 30px;
-    padding: 15px 25px;
-    height: 85px;
-    background-color: $color-white;
-    border-radius: 12px;
-    font-size: $font-size-sm;
-    line-height: 18px;
-
-    @include laptop {
-      padding-bottom: 35px;
-      font-size: $font-size-lg;
-      line-height: 27px;
-    }
-
-    &__content {
-      width: 220px;
-    }
-  }
 }

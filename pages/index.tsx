@@ -9,7 +9,11 @@ import {
   ScheduleFromUkraine,
   DeliverySteps,
   QualitySection,
+  RulesSection,
+  TestimonialsSection,
+  PartnersSection,
   DeliverySection,
+  UkraineSection,
   Footer,
 } from '../components';
 import { DesktopNavigation, MobileNavigation } from '@components/navigation';
@@ -37,8 +41,11 @@ const Home: NextPage = () => {
       <Layout>
         <QualitySection />
       </Layout>
-
+      <TestimonialsSection />
       <DeliverySection />
+      <PartnersSection />
+       <RulesSection />
+       <UkraineSection />
       <Footer />
     </>
   );
