@@ -9,6 +9,7 @@ import {
   QualitySection,
   ScheduleFromEngland,
   ScheduleFromUkraine,
+  TestimonialsSection,
   AboutSection,
   UkraineSection,
   Footer,
@@ -42,6 +43,7 @@ const Home: NextPage = () => {
         <QualitySection />
       </Layout>
 
+      <TestimonialsSection />
       <DeliverySection />
       <UkraineSection />
       <Footer />

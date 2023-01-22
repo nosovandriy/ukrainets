@@ -3,6 +3,11 @@
   height: $height;
 }
 
+@mixin set-square($size) {
+  width: $size;
+  height: $size;
+}
+
 @mixin set-flex($flex-direction: row, $justify-content: flex-start, $align-items: stretch) {
   display: flex;
   flex-direction: $flex-direction;
