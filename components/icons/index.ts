@@ -10,3 +10,6 @@ export * from './ukrainets-logo.icon';
 export * from './novaPoshta-logo';
 export * from './meest-logo';
 export * from './ukrPoshta-logo';
+export * from './quotes';
+export * from './quotes-small';
+

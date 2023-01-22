@@ -1,0 +1,56 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.ukraineSection {
+  @include set-flex(column, center, center);
+  margin-top: 100px;
+
+  @include tablet {
+    margin-top: 150px;
+  }
+
+  @include laptop {
+    margin-top: 200px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: $font-size-xl;
+    line-height: 27px;
+
+    @include tablet {
+      margin-bottom: 30px;
+      font-size: $font-size-xxl;
+      line-height: 32px;
+    }
+
+    @include laptop {
+      margin-bottom: 40px;
+      font-size: $font-size-huge;
+      line-height: 46px;
+    }
+
+    @include desktop {
+      margin-bottom: 50px;
+      font-size: $font-size-giant;
+      line-height: 50px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    @include set-size(215px, 175px);
+
+    @include tablet {
+      @include set-size(275px, 220px);
+    }
+
+    @include laptop {
+      @include set-size(290px, 250px);
+    }
+
+    @include desktop {
+      @include set-size(385px, 310px);
+    }
+  }
+}
