@@ -22,15 +22,6 @@ const pPNeueMachinaFont = localFont({
   ],
 });
 
-const pPNeueMachinaFontNew = localFont({
-  src: [
-    {
-      path: '../font/PPNeueMachina-PlainUltrabold.otf',
-      weight: '800',
-    },
-  ],
-});
-
 class FontService {
   montserratFont;
   machinaFont;
