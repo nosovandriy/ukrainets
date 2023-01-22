@@ -1,3 +1,3 @@
-import { uuid } from 'uuidv4';
+import { v4 } from 'uuid';
 
-export const getRandomId = (): string => uuid();
+export const getRandomId = (): string => v4();

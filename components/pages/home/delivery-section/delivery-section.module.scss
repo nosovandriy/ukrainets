@@ -5,7 +5,7 @@
   @include set-flex(column, center, center);
   font-weight: $font-weight-regular;
   text-align: center;
-
+  margin: 100px 0;
 
   &__title {
     padding: 85px 0 30px;
@@ -85,7 +85,6 @@
       font-size: 16px;
       line-height: 24px;
     }
-
 
     @include desktop {
       width: 640px;
