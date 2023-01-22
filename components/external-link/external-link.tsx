@@ -1,7 +1,7 @@
 type Props = {
-  className: string,
-  href: string,
-  children: React.ReactNode,
+  href: string;
+  children: React.ReactNode;
+  className?: string;
 };
 
 export const ExternalLink: React.FC<Props> = ({

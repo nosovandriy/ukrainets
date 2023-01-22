@@ -4,7 +4,7 @@ import { TestimonialsSlider } from './carousel';
 
 export const TestimonialsSection: React.FC = () => {
   return (
-    <section className={style.testimonialsSection}>
+    <section id={'testimonials-section'} className={style.testimonialsSection}>
       <div className={style.testimonialsSection__background}>
         <Quotes />
       </div>
