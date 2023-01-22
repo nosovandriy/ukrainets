@@ -11,6 +11,7 @@ import {
   ScheduleFromUkraine,
   TestimonialsSection,
   AboutSection,
+  UkraineSection,
   Footer,
 } from '../components';
 import { DesktopNavigation, MobileNavigation } from '@components/navigation';
@@ -44,6 +45,7 @@ const Home: NextPage = () => {
 
       <TestimonialsSection />
       <DeliverySection />
+      <UkraineSection />
       <Footer />
     </>
   );
