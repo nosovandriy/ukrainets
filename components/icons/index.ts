@@ -6,4 +6,5 @@ export * from './ukraine-flag.icon';
 export * from './england-flag.icon';
 export * from './cross.icon';
 export * from './map-europe';
+export * from './arrow-down';
 export * from './ukrainets-logo.icon';
