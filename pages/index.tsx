@@ -17,6 +17,7 @@ import { DesktopNavigation, MobileNavigation } from '@components/navigation';
 const Home: NextPage = () => {
   return (
     <>
+
       <MobileNavigation />
 
       <Layout>

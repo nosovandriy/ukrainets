@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
           >
             <Image
               src="/logo.svg"
-              layout="fill"
+              fill
               alt="logo of the site"
             />
           </a>
@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
           >
             <Image
               src="/facebook-logo.svg"
-              layout="fill"
+              fill
               alt="facebook logo"
             />
           </a>
