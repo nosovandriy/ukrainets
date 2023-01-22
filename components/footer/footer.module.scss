@@ -39,7 +39,7 @@
     }
 
     @include laptop {
-      @include set-flex(column, flex-start, start);
+      @include set-flex(column, flex-start, flex-start);
       gap: 30px;
     }
 
@@ -107,7 +107,7 @@
     }
 
     @include laptop {
-      align-items: start;
+      align-items: flex-start;
       gap: 65px;
     }
 
