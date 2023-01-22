@@ -1,42 +1,52 @@
-import localFont from '@next/font/local'
-
+import localFont from '@next/font/local';
 import { Montserrat } from '@next/font/google';
+import { NextFont, NextFontWithVariable } from '@next/font';
 
-export const montserratFont = Montserrat({
+const montserratFont = Montserrat({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '500', '600'],
   variable: '--montserratFont-font',
   display: 'swap',
-})
+});
 
-// class FontService {
-//   getMachinaFont() {
-//     const pPNeueMachina = localFont({
-//       src: [
-//         {
-//           path: '../font/PPNeueMachina-400.otf',
-//           weight: '400',
-//         },
-//         {
-//           path: '../font/PPNeueMachina-800.otf',
-//           weight: '800',
-//         },
-//       ],
-//     });
+const pPNeueMachinaFont = localFont({
+  src: [
+    {
+      path: '../font/PPNeueMachina-400.otf',
+      weight: '400',
+    },
+    {
+      path: '../font/PPNeueMachina-800.otf',
+      weight: '800',
+    },
+  ],
+});
 
-//     return pPNeueMachina;
-//   }
+const pPNeueMachinaFontNew = localFont({
+  src: [
+    {
+      path: '../font/PPNeueMachina-PlainUltrabold.otf',
+      weight: '800',
+    },
+  ],
+});
 
-//   getMontserratFont() {
-//     const montserratFont = Montserrat({
-//       subsets: ['latin', 'cyrillic'],
-//       weight: ['400', '500', '600'],
-//       variable: '--montserratFont-font',
-//       display: 'swap',
-//     })
+class FontService {
+  montserratFont;
+  machinaFont;
 
-//     return montserratFont;
-//   }
-// }
+  constructor(montserratFont: NextFontWithVariable, machinaFont: NextFont) {
+    this.montserratFont = montserratFont;
+    this.machinaFont = machinaFont;
+  }
 
-// export const fontService = new FontService();
+  getMachinaFont(): NextFont {
+    return this.machinaFont;
+  }
+
+  getMontserratFont(): NextFontWithVariable {
+    return this.montserratFont;
+  }
+}
+
+export const fontService = new FontService(montserratFont, pPNeueMachinaFont);
