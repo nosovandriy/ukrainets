@@ -4,7 +4,9 @@
 .qualitySection {
   @include set-flex(column, flex-start, center);
   position: relative;
-  height: 70vh;
+  height: 80vh;
+  margin-top: 50px;
+  margin-bottom: 100px;
 
   @include tablet {
     @include set-flex(row-reverse, flex-start, center);
