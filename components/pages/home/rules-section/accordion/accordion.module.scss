@@ -6,43 +6,65 @@
   gap: 15px;
 
   &__preview {
-    @include set-flex(row, center, center);
-    gap: 30px;
+    @include set-flex(row, space-around, center);
+    @include set-size(330px, 85px);
     padding: 15px 25px;
-    height: 85px;
     background-color: $color-white;
     border-radius: 12px;
     font-size: $font-size-sm;
     line-height: 18px;
-    width: 330px;
+    text-align: start;
+
+    @include tablet {
+      width: 450px;
+    }
 
     &__title {
       width: 235px;
-    }
-  }
+      font-weight: $font-weight-regular;
+      font-size: $font-size-sm;
+      line-height: 18px;
+      color: $color-grey-dark;
 
-  @include laptop {
-    padding-bottom: 35px;
-    font-size: $font-size-lg;
-    line-height: 27px;
+      @include tablet {
+        width: 280px;
+        font-size: $font-size-md;
+        line-height: 22px;
+      }
+
+      @include laptop {
+        width: 320px;
+        font-size: $font-size-base;
+        line-height: 22px;
+      }
+    }
   }
 
   &__arrowUP {
     transform: rotate(180deg);
+    transition: 0.5s;
+  }
+
+  &__arrowDown {
+    transform: rotate(360deg);
+    transition: 0.5s;
   }
 
   &__list {
-    padding: 15px 25px 0;
-    @include set-flex(column);
+    @include set-flex(column, space-around);
+    width: 330px;
+    padding: 15px 35px;
     background-color: $color-white;
     border-radius: 12px;
-    font-size: $font-size-sm;
-    line-height: 18px;
-    width: 330px;
+    color: $color-grey-dark;
 
-    &__item {
-      @include set-flex(row, space-between, center);
-      padding: 15px 25px;
+    @include tablet {
+      width: 450px;
+      padding: 25px 55px;
+    }
+
+    @include laptop {
+      padding: 25px 45px;
     }
   }
 }

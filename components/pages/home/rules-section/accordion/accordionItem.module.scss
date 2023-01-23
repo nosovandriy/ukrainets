@@ -4,24 +4,53 @@
 .accordionItem {
   display: flex;
   flex-direction: column;
-  // gap: 15px;
   padding-bottom: 15px;
 
-  &__title {
-    display: flex;
-    justify-content: space-between;
+  &:last-of-type {
+    padding-bottom: 0;
   }
 
+  &__title {
+    @include set-flex(row, space-between);
+    font-weight: $font-weight-base;
+    font-size: $font-size-md;
+    line-height: 18px;
+
+    @include laptop {
+      font-size: $font-size-base;
+      line-height: 22px;
+    }
+  }
 
   &__subTitle {
-    // display: none;
+    margin: 0 auto;
+    width: 250px;
+    padding-bottom: 15px;
+    font-weight: 400;
+    font-size: $font-size-sm;
+    line-height: 18px;
+
+    @include tablet {
+      width: 300px;
+      font-size: $font-size-md;
+      line-height: 22px;
+    }
+
+    @include laptop {
+      width: 330px;
+      font-size: $font-size-base;
+      line-height: 22px;
+    }
   }
 
-  &__subTitleHide {
-    display: none;
+  &__button {
+    transition: width 0.5s ease 1s;
+    transition-timing-function: linear;
+    transform: rotate(190deg);
   }
 
   &__arrowUP {
     transform: rotate(90deg);
+    transition: 0.5s;
   }
 }

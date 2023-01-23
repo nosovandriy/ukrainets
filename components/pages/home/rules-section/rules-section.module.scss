@@ -2,18 +2,25 @@
 @import '~styles/mixins';
 
 .rulesSection {
+  @include set-flex(row, center, center);
   background-color: $color-blue-light;
-
+  
   &__container {
-    @include set-flex(column, center, center);
-    padding: 150px 20px;
+    padding: 150px 0;
+    width: 325px;
+    text-align: center;
+
+    @include tablet {
+      padding: 200px 0;
+      width: 450px;
+    }
 
     @include laptop {
-      padding: 200px 0;
+      width: 480px;
     }
 
     @include desktop {
-      marpaddinggin: 280px 0;
+      width: 520px;
     }
   }
 
@@ -24,8 +31,13 @@
     font-size: $font-size-xl;
     line-height: 27px;
 
-    @include laptop {
+    @include tablet {
       padding-bottom: 35px;
+      font-size: $font-size-xxl;
+      line-height: 46px;
+    }
+
+    @include laptop {
       font-size: $font-size-huge;
       line-height: 46px;
     }
@@ -42,9 +54,8 @@
     font-weight: $font-weight-regular;
     font-size: $font-size-sm;
     line-height: 18px;
-    text-align: center;
 
-    @include laptop {
+    @include tablet {
       padding-bottom: 35px;
       font-size: $font-size-lg;
       line-height: 27px;

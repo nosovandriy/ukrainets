@@ -1,47 +1,41 @@
-import { useState, useEffect } from 'react';
 import style from './accordionItem.module.scss';
-
 import { ArrowDown } from '../../../../icons/arrow-down';
 import { Rule } from 'types/Rule';
 
 type Props = {
   rule: Rule;
   index: number;
+  selectedItem: number | null;
+  handleToggleListContent: (id: number) => void;
 }
 
-export const AccordionItem: React.FC<Props> = ({ rule, index }) => {
-
-  // const [isOpen, setIsOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(-1);
-
-  const handleToggleContent = (id: number) => {
-    if (selectedItem === id) {
-      return setSelectedItem(-1);
-    }
-    
-    setSelectedItem(id);
-  }
-
-  console.log('selectedItem', selectedItem);
-
+export const AccordionItem: React.FC<Props> = ({
+  rule,
+  index,
+  selectedItem,
+  handleToggleListContent
+}) => {
   return (
     <>
       <li className={style.accordionItem}>
         <div
           className={style.accordionItem__title}
-          onClick={() => handleToggleContent(index)}
+          onClick={() => handleToggleListContent(index)}
         >
           <p>
-            {`* ${rule.title}:`}
+            {`● ${rule.title} :`}
           </p>
-          <button className={`${selectedItem !== index ? style.accordionItem__arrowDown : style.accordionItem__arrowUP}`}>
+            <button className={`${selectedItem === index && `${style.accordionItem__arrowUP}`}`}>
             <ArrowDown />
           </button>
+
         </div>
-          <p className={`${selectedItem === index ? style.accordionItem__subTitle : style.accordionItem__subTitleHide}`}>
-            {rule.text}
-          </p>
       </li>
+      {selectedItem === index && (
+        <p className={style.accordionItem__subTitle}>
+          {rule.text}
+        </p>
+      )}
     </>
   );
 }
