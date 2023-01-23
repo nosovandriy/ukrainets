@@ -9,11 +9,19 @@ import {
   UkraineFlagIcon,
   UkrainetsLogoIcon,
 } from '@components/icons';
-import { breakPoints } from 'consts';
+import { breakPoints, defaultContacts } from 'consts';
+import { formatPhoneNumber } from 'utils/utils';
 
 export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
   toggleMobileMenu,
 }) => {
+  const ukrainianNumber = formatPhoneNumber(
+    defaultContacts.phones.ukraineNumber
+  );
+  const englandNumber = formatPhoneNumber(
+    defaultContacts.phones.firstEnglandNumber
+  );
+
   return (
     <div className={style.navigationMenu}>
       <MediaQuery minWidth={breakPoints.fromTablet}>
@@ -24,12 +32,12 @@ export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
 
       <div className={classNames(style.mobileNumber, style.menuItem)}>
         <UkraineFlagIcon />
-        <a href="tel:+380 67 714 4424">+380 67 714 4424</a>
+        <a href={`tel:${ukrainianNumber}`}>{ukrainianNumber}</a>
       </div>
 
       <div className={classNames(style.mobileNumber, style.menuItem)}>
         <EnglandFlagIcon />
-        <a href="tel:+44 77 382 044 57">+44 77 382 044 57</a>
+        <a href={`tel:${englandNumber}`}>{englandNumber}</a>
       </div>
 
       <div className={style.menuItem} onClick={toggleMobileMenu}>
@@ -41,7 +49,7 @@ export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
       </div>
 
       <div className={style.menuItem} onClick={toggleMobileMenu}>
-        <Link href="#contacts-section">Контакти</Link>
+        <Link href="#schedule-section">Графік відправлень</Link>
       </div>
     </div>
   );
