@@ -1,6 +1,8 @@
 import style from './testimonials-section.module.scss';
+
 import { Quotes } from '@components/icons';
 import { TestimonialsSlider } from './carousel';
+import { Title } from '@components/title';
 
 export const TestimonialsSection: React.FC = () => {
   return (
@@ -10,9 +12,9 @@ export const TestimonialsSection: React.FC = () => {
       </div>
 
       <div className={style.testimonialsSection__container}>
-        <h2 className={style.testimonialsSection__title}>
-          Що наші клієнти кажуть про нас
-        </h2>
+        <div className={style.testimonialsSection__title}>
+          <Title title="Що наші клієнти кажуть про нас" color="secondary" />
+        </div>
 
         <TestimonialsSlider />
       </div>

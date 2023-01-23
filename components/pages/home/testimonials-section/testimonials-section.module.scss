@@ -41,24 +41,5 @@
 
   &__title {
     margin: 0 auto;
-    width: 215px;
-    font-weight: $font-weight-regular;
-    font-size: $font-size-xl;
-    line-height: 27px;
-
-
-    @include laptop {
-      width: 270px;
-      padding-bottom: 125px;
-      font-size: $font-size-huge;
-      line-height: 46px;
-    }
-
-    @include desktop-FHD {
-      width: 500px;
-      padding-bottom: 140px;
-      font-size: $font-size-giant;
-      line-height: 51px;
-    }
   }
 }

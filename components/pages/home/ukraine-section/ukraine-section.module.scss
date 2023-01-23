@@ -13,30 +13,6 @@
     margin-top: 200px;
   }
 
-  &__title {
-    margin-bottom: 10px;
-    font-size: $font-size-xl;
-    line-height: 27px;
-
-    @include tablet {
-      margin-bottom: 30px;
-      font-size: $font-size-xxl;
-      line-height: 32px;
-    }
-
-    @include laptop {
-      margin-bottom: 40px;
-      font-size: $font-size-huge;
-      line-height: 46px;
-    }
-
-    @include desktop {
-      margin-bottom: 50px;
-      font-size: $font-size-giant;
-      line-height: 50px;
-    }
-  }
-
   &__image {
     position: relative;
     @include set-size(215px, 175px);

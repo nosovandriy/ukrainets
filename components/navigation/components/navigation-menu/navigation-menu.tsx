@@ -49,7 +49,7 @@ export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
       </div>
 
       <div className={style.menuItem} onClick={toggleMobileMenu}>
-        <Link href="#schedule-section">Графік відправлень</Link>
+        <Link href="#">Контакти</Link>
       </div>
     </div>
   );

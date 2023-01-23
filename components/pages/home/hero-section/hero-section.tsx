@@ -1,5 +1,6 @@
 import style from './hero-section.module.scss';
 
+import Link from 'next/link';
 import MediaQuery from 'react-responsive';
 
 import { breakPoints } from 'consts';
@@ -34,7 +35,9 @@ export const HeroSection: React.FC = () => {
 
         <div className={style.buttons}>
           <Button type="primary" label="Передзвоніть мені" />
-          <Button type="secondary" label="Дивитись розклад" />
+          <Link className={style.scheduleButton} href="#schedule-section">
+            Дивитись розклад
+          </Link>
         </div>
       </div>
 

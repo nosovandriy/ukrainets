@@ -2,6 +2,7 @@ import Image from 'next/legacy/image';
 
 import style from './about-section.module.scss';
 import { MapEurope } from '@components/icons';
+import { Title } from '@components/title';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ export const AboutSection: React.FC = () => {
 
       <div className={style.container}>
         <div className={style.aboutSection__aboutUs}>
-          <h2 className={style.aboutSection__aboutUs__title}>Хто ми?</h2>
+          <Title title="Хто ми?" color="secondary" />
           <p className={style.aboutSection__aboutUs__subTitle}>
             Ми BritishPost — транспортна компанія, що надає послуги з
             перевезення вантажів та посилок з Лондона.
