@@ -11,6 +11,33 @@
     @include set-flex(row, space-between, center);
   }
 
+  .scheduleButton {
+    @include set-flex(row, center, center);
+    @include set-size(250px, 60px);
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    @media #{$desktop-small-and-tablet}, #{$desktop} {
+      @include set-size(230px, 60px);
+      font-size: $font-size-md;
+
+      &:hover {
+        transition: font-size 0.3s ease;
+        font-size: 14.5px;
+      }
+    }
+
+    @media #{$desktop-large} {
+      @include set-size(250px, 60px);
+      font-size: $font-size-base;
+
+      &:hover {
+        transition: font-size 0.3s ease;
+        font-size: 16.5px;
+      }
+    }
+  }
+
   .details {
     @media #{$desktop-small}, #{$desktop} {
       min-width: 350px;
@@ -18,13 +45,13 @@
 
     .title {
       @include set-font($font-size-xl, $color-blue-dark, $font-weight-bold);
-
       max-width: 230px;
       margin: 0 auto;
       text-align: center;
 
       h1 {
         line-height: 1.3;
+        font-size: $font-weight-bold;
       }
 
       @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {

@@ -1,13 +1,15 @@
-import Image from 'next/image';
 import style from './ukraine-section.module.scss';
+
+import Image from 'next/image';
+
+import { Title } from '@components/title';
 
 export const UkraineSection: React.FC = () => {
   return (
     <section className={style.ukraineSection}>
       <>
-        <h3 className={style.ukraineSection__title}>
-          Все буде Україна!
-        </h3>
+        <Title title="Все буде Україна!" />
+
         <div className={style.ukraineSection__image}>
           <Image
             src="/heart-ukraine.png"

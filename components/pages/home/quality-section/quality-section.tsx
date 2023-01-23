@@ -1,6 +1,6 @@
 import style from './quality-section.module.scss';
 
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 import { useIsMounted } from 'hooks';
 import { Title } from '../../../title';
@@ -15,7 +15,11 @@ export const QualitySection: React.FC = () => {
   return (
     <section className={style.qualitySection}>
       <div className={style.qualitySection__worldImage}>
-        <Image layout="fill" src="/world.png" alt="World icon" />
+        <Image
+          layout="fill"
+          src="/world.png"
+          alt="World icon"
+        />
       </div>
 
       <div className={style.qualitySection__textContent}>

@@ -1,6 +1,6 @@
 import style from './schedule-from-england.module.scss';
 
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 import { useIsMounted } from 'hooks';
 import { Title } from '../../../../title';
@@ -14,7 +14,7 @@ export const ScheduleFromEngland: React.FC = () => {
   }
 
   return (
-    <section className={style.scheduleFromEngland}>
+    <section id={'schedule-section'} className={style.scheduleFromEngland}>
       <Title title="Розклад збору вантажів в Лондоні" />
 
       <div className={style.scheduleWrapper}>

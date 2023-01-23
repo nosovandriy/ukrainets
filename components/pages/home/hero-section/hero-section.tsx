@@ -1,11 +1,13 @@
 import style from './hero-section.module.scss';
 
+import Link from 'next/link';
 import MediaQuery from 'react-responsive';
 
 import { breakPoints } from 'consts';
 import { Button } from '../../../button';
 import { HeroBanner } from './hero-banner';
 import { useIsMounted } from 'hooks';
+import { fontService } from '@services/font-service';
 
 export const HeroSection: React.FC = () => {
   const isMounted = useIsMounted();
@@ -18,7 +20,9 @@ export const HeroSection: React.FC = () => {
     <main className={style.heroSection}>
       <div className={style.details}>
         <div className={style.title}>
-          <h1>Міжнародні перевезення посилок з Лондона в Україну</h1>
+          <h1 className={fontService.getMachinaFont().className}>
+            Міжнародні перевезення посилок з Лондона в Україну
+          </h1>
         </div>
 
         <MediaQuery maxWidth={breakPoints.fromTablet}>
@@ -31,7 +35,9 @@ export const HeroSection: React.FC = () => {
 
         <div className={style.buttons}>
           <Button type="primary" label="Передзвоніть мені" />
-          <Button type="secondary" label="Дивитись розклад" />
+          <Link className={style.scheduleButton} href="#schedule-section">
+            Дивитись розклад
+          </Link>
         </div>
       </div>
 
