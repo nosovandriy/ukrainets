@@ -1,6 +1,6 @@
 import style from './calendar.module.scss';
 
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 import { useDateDetails } from 'hooks';
 import classNames from 'classnames';

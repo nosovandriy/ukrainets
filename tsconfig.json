@@ -17,7 +17,10 @@
     "noImplicitReturns": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*":["components/*"]
+      "@components/*":["components/*"],
+      "@services/*": ["services/*"],
+      "@consts/*": ["consts/*"],
+      "@hooks/*": ["hooks/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

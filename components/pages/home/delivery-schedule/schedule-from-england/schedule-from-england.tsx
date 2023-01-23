@@ -1,6 +1,6 @@
 import style from './schedule-from-england.module.scss';
 
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 import { useIsMounted } from 'hooks';
 import { Title } from '../../../../title';

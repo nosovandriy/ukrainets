@@ -1,16 +1,16 @@
 import type { NextPage } from 'next';
 
 import {
-  DeliverySection,
-  DeliverySteps,
-  HeroSection,
-  HomeHeader,
   Layout,
-  QualitySection,
+  HomeHeader,
+  HeroSection,
+  AboutSection,
   ScheduleFromEngland,
   ScheduleFromUkraine,
+  DeliverySteps,
+  QualitySection,
+  DeliverySection,
   TestimonialsSection,
-  AboutSection,
   PartnersSection,
   UkraineSection,
   Footer,
@@ -24,9 +24,7 @@ const Home: NextPage = () => {
 
       <Layout>
         <DesktopNavigation />
-
         <HomeHeader />
-
         <HeroSection />
       </Layout>
 
@@ -34,7 +32,6 @@ const Home: NextPage = () => {
 
       <Layout>
         <ScheduleFromEngland />
-
         <ScheduleFromUkraine />
       </Layout>
 

@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
       <div className={style.footer__container}>
         <div className={style.footer__logo}>
           <a className={style.footer__logo__image} href="#">
-            <Image src="/logo.svg" layout="fill" alt="logo of the site" />
+            <Image src="/logo.svg" fill alt="logo of the site" />
           </a>
 
           <h4 className={style.footer__logo__text}>
@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
             className={style.footer__logo__fb}
             href={defaultContacts.facebook}
           >
-            <Image src="/facebook-logo.svg" layout="fill" alt="facebook logo" />
+            <Image src="/facebook-logo.svg" fill alt="facebook logo" />
           </ExternalLink>
         </div>
         <div className={style.footer__contacts}>

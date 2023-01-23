@@ -18,13 +18,13 @@
 
     .title {
       @include set-font($font-size-xl, $color-blue-dark, $font-weight-bold);
-
       max-width: 230px;
       margin: 0 auto;
       text-align: center;
 
       h1 {
         line-height: 1.3;
+        font-size: $font-weight-bold;
       }
 
       @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
