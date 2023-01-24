@@ -2,8 +2,9 @@ import { useState } from 'react';
 
 import style from './accordion.module.scss';
 import { useRules } from './hook/useRules';
+import { ArrowButtonAccordion } from '../arrowButton';
 import { BorderRulesAccordionItem } from './accordionItem/accordionItem';
-import { ArrowDown } from '@components/icons';
+
 
 export const BorderRulesAccordion = () => {
   const { rules } = useRules();
@@ -25,26 +26,6 @@ export const BorderRulesAccordion = () => {
     }
   };
 
-  const ArrowUpButton = () => {
-    return (
-      <button
-        className={style.arrowUp}
-      >
-        <ArrowDown />
-      </ button>
-    );
-  }
-
-  const ArrowDownButton = () => {
-    return (
-      <button
-        className={style.arrowDown}
-      >
-        <ArrowDown />
-      </ button>
-    );
-  }
-
   return (
     <div className={style.accordion}>
       <div
@@ -55,7 +36,9 @@ export const BorderRulesAccordion = () => {
           Перелік заборонених товарів при переміщенні через митний кордон України
         </p>
 
-        {isOpen ? ArrowUpButton() : ArrowDownButton()}
+        {isOpen
+          ? <ArrowButtonAccordion arrowClassName='arrowUp' />
+          : <ArrowButtonAccordion arrowClassName='arrowDown' />}
       </div>
 
       {
@@ -71,8 +54,6 @@ export const BorderRulesAccordion = () => {
                   index={index}
                   handleToggleListContent={handleToggleListContent}
                   selectedItem={selectedItem}
-                  ArrowUpButton={ArrowUpButton}
-                  ArrowDownButton={ArrowDownButton}
                 />
               ))}
             </ul >
