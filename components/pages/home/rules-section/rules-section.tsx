@@ -1,5 +1,5 @@
 import style from './rules-section.module.scss';
-import { Accordion } from './accordion/accordion'
+import { BorderRulesAccordion } from './accordion/accordion'
 
 export const RulesSection = () => {
   return (
@@ -12,7 +12,7 @@ export const RulesSection = () => {
           Перелік речей які заборонені до перевезнення на території ЄС та держ. кордоні України
         </p>
 
-        <Accordion />
+        <BorderRulesAccordion />
       </div>
     </section>
   );

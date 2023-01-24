@@ -40,16 +40,6 @@
     }
   }
 
-  &__arrowUP {
-    transform: rotate(180deg);
-    transition: 0.5s;
-  }
-
-  &__arrowDown {
-    transform: rotate(360deg);
-    transition: 0.5s;
-  }
-
   &__list {
     @include set-flex(column, space-around);
     width: 330px;
@@ -67,4 +57,14 @@
       padding: 25px 45px;
     }
   }
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.arrowDown {
+  transform: rotate(360deg);
+  transition: 0.5s;
 }

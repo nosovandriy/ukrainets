@@ -1,4 +1,4 @@
-import { Rule } from './../../../../../../types/Rule';
+import { Rule } from '../../../../../../types/rule';
 import { getRandomId } from '../../../../../../utils/utils';
 
 export function useRules(): {

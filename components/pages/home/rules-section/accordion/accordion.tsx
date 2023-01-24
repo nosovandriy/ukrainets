@@ -2,18 +2,20 @@ import { useState } from 'react';
 
 import style from './accordion.module.scss';
 import { useRules } from './hook/useRules';
-import { AccordionItem } from './accordionItem';
-import { ArrowDown } from '../../../../icons/arrow-down';
+import { BorderRulesAccordionItem } from './accordionItem/accordionItem';
+import { ArrowDown } from '@components/icons';
 
-export const Accordion = () => {
+export const BorderRulesAccordion = () => {
   const { rules } = useRules();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<number | null>(null);
 
   const handleToggleContent = () => {
-    isOpen && setSelectedItem(null);
+    if (isOpen) {
+      setSelectedItem(null);
+    }
     setIsOpen(!isOpen);
-  }
+  };
 
   const handleToggleListContent = (id: number) => {
     if (selectedItem === id) {
@@ -21,6 +23,26 @@ export const Accordion = () => {
     } else {
       setSelectedItem(id);
     }
+  };
+
+  const ArrowUpButton = () => {
+    return (
+      <button
+        className={style.arrowUp}
+      >
+        <ArrowDown />
+      </ button>
+    );
+  }
+
+  const ArrowDownButton = () => {
+    return (
+      <button
+        className={style.arrowDown}
+      >
+        <ArrowDown />
+      </ button>
+    );
   }
 
   return (
@@ -33,30 +55,30 @@ export const Accordion = () => {
           Перелік заборонених товарів при переміщенні через митний кордон України
         </p>
 
-        <button className={`${isOpen ? `${style.accordion__arrowUP}` : `${style.accordion__arrowDown}`}`}>
-        <ArrowDown />
-      </button>
-    </div>
+        {isOpen ? ArrowUpButton() : ArrowDownButton()}
+      </div>
 
       {
-    isOpen && (
-      <>
-        <ul
-          className={style.accordion__list}
-        >
-          {rules.map((rule, index) => (
-            <AccordionItem
-              key={rule.id}
-              rule={rule}
-              index={index}
-              handleToggleListContent={handleToggleListContent}
-              selectedItem={selectedItem}
-            />
-          ))}
-        </ul >
-      </>
-    )
-  }
+        isOpen && (
+          <>
+            <ul
+              className={style.accordion__list}
+            >
+              {rules.map((rule, index) => (
+                <BorderRulesAccordionItem
+                  key={rule.id}
+                  rule={rule}
+                  index={index}
+                  handleToggleListContent={handleToggleListContent}
+                  selectedItem={selectedItem}
+                  ArrowUpButton={ArrowUpButton}
+                  ArrowDownButton={ArrowDownButton}
+                />
+              ))}
+            </ul >
+          </>
+        )
+      }
     </div >
   );
 }
