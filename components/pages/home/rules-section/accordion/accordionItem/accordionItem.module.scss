@@ -30,12 +30,14 @@
   }
 
   &__subTitle {
+    position: relative;
     margin: 0 auto;
     width: 250px;
     padding-bottom: 15px;
     font-weight: 400;
     font-size: $font-size-sm;
     line-height: 18px;
+    text-align: start;
 
     @include tablet {
       width: 300px;
@@ -52,6 +54,8 @@
     &::before {
       content: '\1F822';
       color: $color-grey-dark;
+      position: absolute;
+      left: -20px;
     }
   }
 }
