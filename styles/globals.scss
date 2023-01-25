@@ -27,3 +27,23 @@ a {
 * {
   box-sizing: border-box;
 }
+
+p {
+  font-size: $font-size-sm;
+  line-height: 18px;
+
+  @include tablet {
+    font-size: $font-size-md;
+    line-height: 20px;
+  }
+
+  @include laptop {
+    font-size: $font-size-base;
+    line-height: 24px;
+  }
+
+  @include desktop {
+    font-size: $font-size-base;
+    line-height: 24px;
+  }
+}

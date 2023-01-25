@@ -12,15 +12,14 @@ export const Title: React.FC<{ title: string; color?: TitleColor }> = ({
   color = 'primary',
 }) => {
   return (
-    <div className={style.title}>
       <h2
         className={classNames(
+          style.default,
+          style[color],
           fontService.getMachinaFont().className,
-          style[color]
         )}
       >
         {title}
       </h2>
-    </div>
   );
 };
