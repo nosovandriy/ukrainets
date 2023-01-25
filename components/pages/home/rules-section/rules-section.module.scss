@@ -1,0 +1,69 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.rulesSection {
+  @include set-flex(row, center, center);
+  background-color: $color-blue-light;
+  
+  &__container {
+    padding: 150px 0;
+    width: 325px;
+    text-align: center;
+
+    @include tablet {
+      padding: 200px 0;
+      width: 450px;
+    }
+
+    @include laptop {
+      width: 480px;
+    }
+
+    @include desktop {
+      width: 520px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 20px;
+    color: $color-white;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-xl;
+    line-height: 27px;
+
+    @include tablet {
+      padding-bottom: 35px;
+      font-size: $font-size-xxl;
+      line-height: 46px;
+    }
+
+    @include laptop {
+      font-size: $font-size-huge;
+      line-height: 46px;
+    }
+
+    @include desktop {
+      font-size: $font-size-giant;
+      line-height: 52px;
+    }
+  }
+
+  &__subTitle {
+    padding-bottom: 50px;
+    color: $color-white;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-sm;
+    line-height: 18px;
+
+    @include tablet {
+      padding-bottom: 35px;
+      font-size: $font-size-lg;
+      line-height: 27px;
+    }
+
+    @include desktop {
+      font-size: $font-size-xl;
+      line-height: 30px;
+    }
+  }
+}

@@ -6,5 +6,6 @@ export * from './testimonials-section';
 export * from './quality-section';
 export * from './delivery-section';
 export * from './delivery-schedule';
+export * from './rules-section';
 export * from './partners-section';
 export * from './ukraine-section';

@@ -9,9 +9,10 @@ import {
   ScheduleFromUkraine,
   DeliverySteps,
   QualitySection,
-  DeliverySection,
+  RulesSection,
   TestimonialsSection,
   PartnersSection,
+  DeliverySection,
   UkraineSection,
   Footer,
 } from '../components';
@@ -40,11 +41,11 @@ const Home: NextPage = () => {
       <Layout>
         <QualitySection />
       </Layout>
-
       <TestimonialsSection />
       <DeliverySection />
       <PartnersSection />
-      <UkraineSection />
+       <RulesSection />
+       <UkraineSection />
       <Footer />
     </>
   );
