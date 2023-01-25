@@ -3,24 +3,31 @@
 
 .banner {
   max-width: 250px;
+  height: 340px;
   margin: 0 auto;
+  position: relative;
 
-  @media #{tablet} {
+  @include tablet {
     max-width: 300px;
+    width: 300px;
+    height: 411px;
   }
 
-  @media #{$desktop-small} {
+  @include laptop {
     max-width: 100%;
     width: 440px;
+    height: 600px;
   }
 
-  @media #{$desktop} {
+  @include desktop {
     max-width: 100%;
     width: 540px;
+    height: 740px;
   }
 
-  @media #{$desktop-large} {
+  @include desktop-FHD {
     width: 640px;
+    height: 877px;
     max-width: 640px;
   }
 }

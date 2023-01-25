@@ -55,11 +55,6 @@
       @include desktop-FHD {
         @include set-size(160px, 40px);
       }
-
-      &:hover {
-        transform: scale(1.2);
-        transition-duration: 0.3s;
-      }
     }
 
     &__text {

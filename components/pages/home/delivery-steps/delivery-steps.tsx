@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import { useIsMounted } from 'hooks';
 import { ContentBox } from './content-box';
+import { Title } from '@components/title';
 
 export const DeliverySteps: React.FC = () => {
   const isMounted = useIsMounted();
@@ -25,7 +26,7 @@ export const DeliverySteps: React.FC = () => {
       </div>
 
       <div className={style.title}>
-        <h2>Хочу відправити вантаж в Україну</h2>
+        <Title title="Хочу відправити вантаж в Україну" color="secondary" />
       </div>
 
       <div className={style.boxesWrapper}>

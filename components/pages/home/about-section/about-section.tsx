@@ -1,22 +1,22 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 import style from './about-section.module.scss';
 import { MapEurope } from '@components/icons';
+import { Title } from '@components/title';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section className={style.aboutSection}>
+    <section id={'about-section'} className={style.aboutSection}>
       <div className={style.aboutSection__map}>
         <MapEurope />
       </div>
 
       <div className={style.container}>
         <div className={style.aboutSection__aboutUs}>
-          <h2 className={style.aboutSection__aboutUs__title}>
-            Хто ми?
-          </h2>
+          <Title title="Хто ми?" color="secondary" />
           <p className={style.aboutSection__aboutUs__subTitle}>
-            Ми BritishPost — транспортна компанія, що надає послуги з перевезення вантажів та посилок з Лондона.
+            Ми BritishPost — транспортна компанія, що надає послуги з
+            перевезення вантажів та посилок з Лондона.
             <br></br>
             <br></br>
             Відправляй все необхідне в Україну вже цього тижня!
@@ -25,8 +25,7 @@ export const AboutSection: React.FC = () => {
 
         <div className={style.aboutSection__todos}>
           <div className={style.aboutSection__todo}>
-            <div className={style.aboutSection__todo__image1}
-            >
+            <div className={style.aboutSection__todo__image1}>
               <Image
                 src="/pin_who-we-are.png"
                 layout="fill"
@@ -40,13 +39,13 @@ export const AboutSection: React.FC = () => {
                 посилки до дому
               </h3>
               <p className={style.aboutSection__todoInfo__todoSubTitle}>
-                Доставляємо вантаж за адресом, якшо вантаж прибуває в зах. частину України.
+                Доставляємо вантаж за адресом, якшо вантаж прибуває в зах.
+                частину України.
               </p>
             </div>
           </div>
           <div className={style.aboutSection__todo}>
-            <div className={style.aboutSection__todo__image2}
-            >
+            <div className={style.aboutSection__todo__image2}>
               <Image
                 layout="fill"
                 src="/like_who-we-are.png"
@@ -63,14 +62,12 @@ export const AboutSection: React.FC = () => {
 
               <p className={style.aboutSection__todoInfo__todoSubTitle}>
                 Сумлінна робота
-                <br></br>
-                — забезпечення високоякісного транспортування.
+                <br></br>— забезпечення високоякісного транспортування.
               </p>
             </div>
           </div>
           <div className={style.aboutSection__todo}>
-            <div className={style.aboutSection__todo__image3}
-            >
+            <div className={style.aboutSection__todo__image3}>
               <Image
                 src="/time_who-we-are.png"
                 layout="responsive"
@@ -89,14 +86,12 @@ export const AboutSection: React.FC = () => {
 
               <p className={style.aboutSection__todoInfo__todoSubTitle}>
                 Сумлінна робота
-                <br></br>
-                — забезпечення високоякісного транспортування.
+                <br></br>— забезпечення високоякісного транспортування.
               </p>
             </div>
           </div>
           <div className={style.aboutSection__todo}>
-            <div className={style.aboutSection__todo__image4}
-            >
+            <div className={style.aboutSection__todo__image4}>
               <Image
                 src="/safe_who-we-are.png"
                 layout="fill"
