@@ -25,6 +25,7 @@
       font-size: $font-size-sm;
       line-height: 18px;
       color: $color-grey-dark;
+      cursor: pointer;
 
       @include tablet {
         width: 280px;
