@@ -7,7 +7,10 @@ import { Title } from '../../../title';
 export const DeliverySection: React.FC = () => {
   return (
     <section className={style.deliverySection}>
-      <Title title="Замовляйте в Україні з доставкою у Лондон" />
+      <div className={style.deliverySection__title}>
+        <Title title="Замовляйте в Україні з доставкою у Лондон" />
+      </div>
+
       <p className={style.deliverySection__subTitle}>
         Знаходитесь у Лондоні та хочете зробити замовлення у вашому улюбленому
         українському магазині? Ми Вам з цим допоможемо!

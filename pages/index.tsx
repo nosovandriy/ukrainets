@@ -33,7 +33,7 @@ const Home: NextPage = () => {
 
       <Layout>
         <ScheduleFromEngland />
-        <ScheduleFromUkraine />
+        {/* <ScheduleFromUkraine /> */}
       </Layout>
 
       <DeliverySteps />

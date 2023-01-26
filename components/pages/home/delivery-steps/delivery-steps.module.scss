@@ -2,56 +2,124 @@
 @import '~styles/mixins';
 
 .deliverySteps {
-  position: relative;
-  height: 110vh;
   background-color: $color-blue-light;
-  padding: $default-page-padding;
 
-  .tridentImage {
-    @include set-flex(row, center, center);
 
-    position: absolute;
-    top: -100px;
-    margin: auto;
-    left: 0;
-    right: 0;
-  }
-
-  .title {
-    @include set-font($font-size-xl, $color-white, $font-weight-regular);
-
-    max-width: 230px;
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 150px;
-
-    @media #{$desktop-small} {
-      max-width: 330px;
-      font-size: $font-size-huge;
-    }
-
-    @media #{$desktop}, #{$desktop-large} {
-      max-width: 450px;
-      text-align: center;
-      font-size: $font-size-giant;
-    }
-
-    h2 {
-      line-height: 1.3;
-    }
-  }
-
-  .boxesWrapper {
+  &__container {
     @include set-flex(column, center, center);
-    row-gap: 50px;
+    padding-bottom: 125px;
+    position: relative;
 
-    margin: 50px 0 100px 0;
 
-    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
-      @include set-flex(row, center, center);
+    @include tablet {
+      padding-bottom: 200px;
+    }
 
-      margin-top: 180px;
+    @include laptop {
+      padding-bottom: 260px;
+    }
+
+    @include desktop {
+      padding-bottom: 300px;
+    }
+
+    @include desktop-FHD {
+      padding-bottom: 370px;
+    }
+  }
+
+  &__tridentImage {
+    $trident-size: 175px;
+    @include set-flex(column, center, center);
+    @include set-square($trident-size);
+    position: relative;
+    margin-top: $trident-size / -2;
+    margin-bottom: 35px;
+
+    @include tablet {
+      $trident-size: 190px;
+      @include set-square($trident-size);
+      margin-top: $trident-size / -2;
+      margin-bottom: 40px;
+    }
+
+    @include laptop {
+      $trident-size: 205px;
+      @include set-square($trident-size);
+      margin-top: $trident-size / -2;
+      margin-bottom: 45px;
+    }
+
+    @include desktop {
+      $trident-size: 220px;
+      @include set-square($trident-size);
+      margin-top: $trident-size / -2;
+      margin-bottom: 50px;
+    }
+
+    @include desktop-FHD {
+      $trident-size: 260px;
+      @include set-square($trident-size);
+      margin-top: $trident-size / -2;
+    }
+  }
+
+  &__title {
+    max-width: 250px;
+    text-align: center;
+    padding-bottom: 65px;
+
+    @include tablet {
+      max-width: 300px;
+    }
+
+    @include laptop {
+      max-width: 350px;
+      padding-bottom: 75px;
+    }
+
+    @include desktop {
+      padding-bottom: 100px;
+    }
+
+    @include desktop-FHD {
+      max-width: 400px;
+      padding-bottom: 120px;
+    }
+  }
+
+  &__boxesWrapper {
+    @include set-flex(column, center, center);
+    row-gap: 60px;
+    z-index: 1;
+
+    @include laptop {
+      @include set-flex(row, center, flex-start);
       column-gap: 20px;
     }
+  }
+}
+
+.flagImage {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  overflow: hidden;
+
+  @include tablet {
+    height: 260px;
+  }
+
+  @include laptop {
+    height: 300px;
+  }
+
+  @include desktop {
+    height: 380px;
+  }
+
+  @include desktop-FHD {
+    height: 450px;
   }
 }

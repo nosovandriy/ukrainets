@@ -7,15 +7,21 @@
   padding: 65px 0 40px;
   min-height: 100vh;
 
-  @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+  @include tablet {
     @include set-flex(row, space-between, center);
   }
+
+  // @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+  //   @include set-flex(row, space-between, center);
+  // }
 
   .scheduleButton {
     @include set-flex(row, center, center);
     @include set-size(250px, 60px);
     background-color: $color-white;
     color: $color-grey-dark;
+
+    
 
     @media #{$desktop-small-and-tablet}, #{$desktop} {
       @include set-size(230px, 60px);

@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prestart": "rm -rf ./node_modules package-lock.json && npm install",
     "start": "next dev",
     "build": "next build",
     "prod": "next start",
