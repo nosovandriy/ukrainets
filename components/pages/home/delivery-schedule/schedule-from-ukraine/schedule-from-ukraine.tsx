@@ -1,19 +1,21 @@
 import style from './schedule-from-ukraine.module.scss';
 
-import { useIsMounted } from 'hooks';
+// import { useIsMounted } from 'hooks';
 import { Title } from '../../../../title';
 import { Calendar, ScheduleDetailsContainer } from '../components';
 
 export const ScheduleFromUkraine: React.FC = () => {
-  const isMounted = useIsMounted();
+  // const isMounted = useIsMounted();
 
-  if (!isMounted) {
-    return null;
-  }
+  // if (!isMounted) {
+  //   return null;
+  // }
 
   return (
     <section className={style.scheduleFromUkraine}>
-      <Title title="Розклад збору вантажів в Україні" />
+      <div className={style.scheduleFromUkraine__title}>
+        <Title title="Розклад збору вантажів в Україні" />
+      </div>
 
       <div className={style.scheduleWrapper}>
         <Calendar isEngland={false} />

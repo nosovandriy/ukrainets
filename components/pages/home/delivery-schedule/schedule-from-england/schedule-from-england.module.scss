@@ -2,26 +2,57 @@
 @import '~styles/mixins';
 
 .scheduleFromEngland {
-  padding: 100px 0 100px 0;
-
   @include set-flex(column, center, center);
+  padding-bottom: 100px;
 
-  @media #{$desktop}, #{$desktop-large} {
-    @include set-flex(row, space-between, center);
+  @include tablet {
+    padding-bottom: 150px;
+  }
 
-    column-gap: 60px;
+  @include laptop {
+    padding-bottom: 200px;
+  }
+
+  @include desktop {
+    @include set-flex(row, center, center);
+    gap: 30px;
+    padding-bottom: 200px;
+  }
+
+  &__title {
+    max-width: 215px;
+    text-align: center;
+    padding-bottom: 60px;
+
+    @include tablet {
+      max-width: 350px;
+      padding-bottom: 80px;
+    }
+
+    @include laptop {
+      max-width: 370px;
+      padding-bottom: 100px;
+    }
+
+    @include desktop {
+      padding: 0;
+    }
   }
 
   .scheduleWrapper {
     @include set-flex(column, center, center);
-
-    row-gap: 40px;
+    row-gap: 75px;
     position: relative;
 
-    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+    @include tablet {
+      column-gap: 10px;
       @include set-flex(row, center, center);
+      flex-direction: row-reverse;
+    }
 
-      column-gap: 20px;
+    @include laptop {
+      column-gap: 30px;
+      @include set-flex(row, center, center);
       flex-direction: row-reverse;
     }
 

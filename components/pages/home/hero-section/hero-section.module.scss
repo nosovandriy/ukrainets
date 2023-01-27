@@ -13,8 +13,8 @@
     @include set-flex(row, space-between, center);
   }
 
-  @include desktop-FHD {
-    max-height: 100vh;
+  @include laptop {
+    min-height: 100vh;
   }
 
   .scheduleButton {
@@ -36,6 +36,16 @@
     @include desktop {
       @include set-size(230px, 60px);
       font-size: $font-size-base;
+
+      &:hover {
+        transition: font-size 0.3s ease;
+        font-size: 16.5px;
+      }
+    }
+
+    @include desktop-FHD {
+      @include set-size(250px, 60px);
+      font-size: $font-size-lg;
 
       &:hover {
         transition: font-size 0.3s ease;
@@ -84,7 +94,7 @@
         }
 
         @include desktop-FHD {
-          min-width: 550px;
+          min-width: 490px;
           font-size: $font-size-giant;
           margin-bottom: 50px;
           text-align: start;

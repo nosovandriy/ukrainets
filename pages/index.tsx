@@ -32,8 +32,8 @@ const Home: NextPage = () => {
       <AboutSection />
 
       <Layout>
+        <ScheduleFromUkraine />
         <ScheduleFromEngland />
-        {/* <ScheduleFromUkraine /> */}
       </Layout>
 
       <DeliverySteps />
@@ -44,8 +44,8 @@ const Home: NextPage = () => {
       <TestimonialsSection />
       <DeliverySection />
       <PartnersSection />
-       <RulesSection />
-       <UkraineSection />
+      <RulesSection />
+      <UkraineSection />
       <Footer />
     </>
   );
