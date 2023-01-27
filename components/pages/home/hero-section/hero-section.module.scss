@@ -3,17 +3,19 @@
 
 .heroSection {
   @include set-flex(column, center);
-
   padding: 65px 0 40px;
-  min-height: 100vh;
+
+  @include mobile {
+    min-height: 100vh;
+  }
 
   @include tablet {
     @include set-flex(row, space-between, center);
   }
 
-  // @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
-  //   @include set-flex(row, space-between, center);
-  // }
+  @include desktop-FHD {
+    max-height: 100vh;
+  }
 
   .scheduleButton {
     @include set-flex(row, center, center);
@@ -21,9 +23,7 @@
     background-color: $color-white;
     color: $color-grey-dark;
 
-    
-
-    @media #{$desktop-small-and-tablet}, #{$desktop} {
+    @include tablet {
       @include set-size(230px, 60px);
       font-size: $font-size-md;
 
@@ -33,8 +33,8 @@
       }
     }
 
-    @media #{$desktop-large} {
-      @include set-size(250px, 60px);
+    @include desktop {
+      @include set-size(230px, 60px);
       font-size: $font-size-base;
 
       &:hover {
@@ -45,67 +45,91 @@
   }
 
   .details {
-    @media #{$desktop-small}, #{$desktop} {
-      min-width: 350px;
+    @include mobile {
+      @include set-flex(column, center, center);
     }
 
     .title {
       @include set-font($font-size-xl, $color-blue-dark, $font-weight-bold);
-      max-width: 230px;
       margin: 0 auto;
       text-align: center;
+
+      @include tablet {
+        text-align: left;
+        margin: 0;
+      }
 
       h1 {
         line-height: 1.3;
         font-size: $font-weight-bold;
-      }
+        width: 250px;
 
-      @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
-        text-align: left;
-      }
+        @include tablet {
+          width: 280px;
+          font-size: $font-size-xxl;
+          margin-bottom: 25px;
+        }
 
-      @media #{$desktop-small}, #{$desktop} {
-        max-width: 350px;
-        font-size: $font-size-xxxl;
-        margin-bottom: 25px;
-      }
+        @include laptop {
+          max-width: 350px;
+          font-size: $font-size-xxl;
+          margin-bottom: 25px;
+        }
 
-      @media #{$desktop-large} {
-        max-width: 450px;
-        font-size: $font-size-giant;
-        margin-bottom: 50px;
+        @include desktop {
+          min-width: 440px;
+          font-size: $font-size-huge;
+          margin-bottom: 50px;
+          text-align: start;
+        }
+
+        @include desktop-FHD {
+          min-width: 550px;
+          font-size: $font-size-giant;
+          margin-bottom: 50px;
+          text-align: start;
+        }
       }
     }
 
     .text {
       @include set-font($font-size-md, $color-grey-dark, $font-weight-regular);
-
       max-width: 200px;
       margin: 0 auto 25px;
       text-align: center;
 
-      @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
-        max-width: 300px;
+      @include tablet {
+        max-width: 220px;
         text-align: left;
+        font-size: $font-size-lg;
+        margin: 0 0 50px 0;
       }
 
-      @media #{$desktop-small}, #{$desktop} {
+      @include laptop {
+        max-width: 250px;
+        text-align: left;
         font-size: $font-size-xl;
         margin: 0 0 50px 0;
       }
 
-      @media #{$desktop-large} {
+      @include desktop {
+        max-width: 350px;
         font-size: $font-size-xxl;
-        margin: 0 0 100px 0;
+        margin: 0 0 80px 0;
+      }
+
+      @include desktop-FHD {
+        max-width: 350px;
+        font-size: $font-size-xxl;
+        margin: 0 0 80px 0;
       }
     }
 
     .buttons {
       @include set-flex(column, flex-start, center);
-
       row-gap: 5px;
 
-      @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+      @include tablet {
         @include set-flex(column, flex-start, flex-start);
       }
     }

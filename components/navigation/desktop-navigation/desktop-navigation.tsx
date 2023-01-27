@@ -14,7 +14,7 @@ export const DesktopNavigation: React.FC = () => {
   }
 
   return (
-    <MediaQuery minWidth={breakPoints.fromTablet}>
+    <MediaQuery minWidth={breakPoints.fromLaptop.min}>
       <div className={style.desktopNavigation}>
         <NavigationMenu />
       </div>

@@ -24,7 +24,7 @@ export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
 
   return (
     <div className={style.navigationMenu}>
-      <MediaQuery minWidth={breakPoints.fromTablet}>
+      <MediaQuery minWidth={breakPoints.fromTablet.min}>
         <div className={style.navigationLogo}>
           <UkrainetsLogoIcon />
         </div>

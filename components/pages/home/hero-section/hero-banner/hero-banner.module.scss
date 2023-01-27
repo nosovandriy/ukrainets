@@ -2,32 +2,25 @@
 @import '~styles/mixins';
 
 .banner {
-  max-width: 250px;
-  height: 340px;
+  @include set-size(250px, 340px);
   margin: 0 auto;
   position: relative;
+  margin-bottom: 45px;
+  flex-shrink: 0;
 
   @include tablet {
-    max-width: 300px;
-    width: 300px;
-    height: 411px;
+    @include set-size(350px, 480px);
   }
 
   @include laptop {
-    max-width: 100%;
-    width: 440px;
-    height: 600px;
+    @include set-size(450px, 617px);
   }
 
   @include desktop {
-    max-width: 100%;
-    width: 540px;
-    height: 740px;
+    @include set-size(540px, 740px);
   }
 
   @include desktop-FHD {
-    width: 640px;
-    height: 877px;
-    max-width: 640px;
+    @include set-size(640px, 877px);
   }
 }

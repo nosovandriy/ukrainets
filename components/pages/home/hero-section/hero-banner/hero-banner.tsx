@@ -8,9 +8,7 @@ export const HeroBanner: React.FC = () => {
       <Image
         className={style.banner1}
         src="/main-banner.png"
-        width="270"
-        height="380"
-        layout='responsive'
+        layout='fill'
         priority
         placeholder='blur'
         blurDataURL={"/main-banner.png"}

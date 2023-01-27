@@ -34,6 +34,12 @@
   font-weight: $font-weight;
 }
 
+@mixin mobile {
+  @media (max-width: 719px) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: 720px) {
     @content;
