@@ -14,7 +14,7 @@ export const ScheduleFromEngland: React.FC = () => {
   }
 
   return (
-    <section id={'schedule-section'} className={style.scheduleFromEngland}>
+    <section className={style.scheduleFromEngland}>
       <div className={style.scheduleFromEngland__title}>
         <Title title="Розклад збору вантажів в Лондоні" />
       </div>

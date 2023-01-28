@@ -55,6 +55,12 @@
       @include desktop-FHD {
         @include set-size(160px, 40px);
       }
+
+
+      &:hover {
+        transform: scale(1.2);
+        transition-duration: 0.3s;
+      }
     }
 
     &__text {
@@ -123,22 +129,22 @@
       }
 
       &__title {
-        font-size: 14px;
+        font-size: $font-size-md;
         line-height: 23px;
 
         @include tablet {
-          font-size: 18px;
+          font-size: $font-size-lg;
           line-height: 29px;
         }
 
         @include desktop-FHD {
-          font-size: 20px;
+          font-size: $font-size-xl;
           line-height: 33px;
         }
       }
 
       &__info {
-        font-size: 12px;
+        font-size: $font-size-sm;
         line-height: 18px;
         cursor: pointer;
 
@@ -148,7 +154,7 @@
         }
 
         @include desktop-FHD {
-          font-size: 16px;
+          font-size: $font-size-base;
           line-height: 24px;
         }
       }

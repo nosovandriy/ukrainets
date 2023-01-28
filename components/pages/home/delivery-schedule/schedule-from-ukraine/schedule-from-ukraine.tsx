@@ -12,7 +12,7 @@ export const ScheduleFromUkraine: React.FC = () => {
   // }
 
   return (
-    <section className={style.scheduleFromUkraine}>
+    <section id={'schedule-section'} className={style.scheduleFromUkraine}>
       <div className={style.scheduleFromUkraine__title}>
         <Title title="Розклад збору вантажів в Україні" />
       </div>
