@@ -21,7 +21,7 @@ export const MobileNavigation: React.FC = () => {
   }
 
   return (
-    <MediaQuery maxWidth={breakPoints.fromTablet}>
+    <MediaQuery maxWidth={breakPoints.fromTablet.max}>
       <div className={style.mobileNavigation}>
         <NavigationHeader toggleMobileMenu={toggleMobileMenu} />
 

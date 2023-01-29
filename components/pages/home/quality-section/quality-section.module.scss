@@ -3,53 +3,84 @@
 
 .qualitySection {
   @include set-flex(column, flex-start, center);
-  position: relative;
-  height: 80vh;
-  margin-top: 50px;
-  margin-bottom: 100px;
 
-  @include tablet {
-    @include set-flex(row-reverse, flex-start, center);
-  }
-
-  @include desktop-FHD {
-    @include set-flex(row-reverse, center, center);
-  }
-
-  &__worldImage {
-    @include set-size(200px, 200px);
-    position: relative;
-    margin-top: 100px;
+  &__container {
+    margin: 50px 0;
+    max-width: 285px;
 
     @include tablet {
-      margin: 0;
-      @include set-size(250px, 250px);
+      margin: 80px 0;
+      max-width: 360px;
     }
 
     @include laptop {
-      @include set-size(350px, 350px);
+      @include set-flex(row-reverse, flex-start, center);
+      margin: 100px 0;
+      max-width: 900px;
+      gap: 20px;
+    }
+
+    @include desktop {
+      margin: 120px 0;
+      max-width: 965px;
+      gap: 50px;
+    }
+
+    @include desktop-FHD {
+      margin: 150px 0;
+      max-width: 1180px;
+      gap: 120px;
+    }
+  }
+
+  &__worldImage {
+    @include set-square(200px);
+    position: relative;
+    margin-bottom: 50px;
+
+    @include tablet {
+      @include set-square(250px);
+    }
+
+    @include laptop {
+      @include set-square(425px);
+      flex-shrink: 0;
+    }
+
+    @include desktop {
+      @include set-square(450px);
+    }
+
+    @include desktop-FHD {
+      @include set-square(580px);
     }
   }
 
   &__textContent {
-    @include set-flex(column, center, center);
-    row-gap: 10px;
-    flex: 1 0 0;
+    @include set-flex(column);
+    gap: 10px;
+
+    @include laptop {
+      max-width: 425px;
+      gap: 40px;
+    }
+
+    @include desktop {
+      max-width: 475px;
+    }
+
+    @include desktop-FHD {
+      max-width: 490px;
+      gap: 50px;
+    }
 
     &__text {
-      @include set-font(
-        $font-size-base,
-        $color-grey-dark,
-        $font-weight-regular
-      );
-
-      @include tablet {
-        @include set-size(350px, 100%);
+      @include laptop {
+        max-width: 400px;
       }
 
-      @include laptop {
-        @include set-size(450px, 100%);
-        font-size: $font-size-lg;
+      @include desktop-FHD {
+        max-width: 480px;
       }
     }
   }

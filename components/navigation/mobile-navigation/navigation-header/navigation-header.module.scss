@@ -2,6 +2,7 @@
 @import '~styles/mixins';
 
 .navigationHeader {
+  height: 60px;
   @include set-flex(row, space-between, center);
 
   padding: $default-page-padding;

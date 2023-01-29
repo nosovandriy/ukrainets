@@ -3,20 +3,39 @@
 
 .navigationMenu {
   @include set-flex(column, space-between);
-
   row-gap: 20px;
   padding: 70px 0;
   flex-wrap: wrap;
 
-  @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+  @include laptop {
     @include set-flex(row, flex-start, flex-end);
-
-    column-gap: 35px;
+    column-gap: 30px;
     padding: 0;
   }
 
-  @media #{$desktop}, #{$desktop-large} {
+  @include desktop {
     column-gap: 50px;
+  }
+
+  @include desktop-FHD {
+    min-width: 1180px;
+    column-gap: 60px;
+  }
+
+  .navigationLogo {
+    @include set-size(117px, 27px);
+
+    @include tablet {
+      @include set-size(137px, 31px);
+    }
+
+    @include desktop {
+      @include set-size(150px, 35px);
+    }
+
+    @include desktop-FHD {
+      @include set-size(164px, 38px);
+    }
   }
 
   .mobileNumber {
@@ -29,7 +48,18 @@
 
   .menuItem {
     @include set-flex(row, flex-start, center);
-
     cursor: pointer;
+
+    @include laptop {
+      font-size: $font-size-base;
+    }
+
+    @include desktop {
+      font-size: $font-size-lg;
+    }
+
+    @include desktop-FHD {
+      font-size: $font-size-xl;
+    }
   }
 }

@@ -3,8 +3,20 @@
 
 .partnersSection {
   @include set-flex(column, center, center);
-  margin: 120px 80px 100px;
+  margin: 85px 80px;
   text-align: center;
+
+  @include tablet {
+    margin: 150px 80px;
+  }
+
+  @include desktop {
+    margin: 165px 80px;
+  }
+
+  @include desktop-FHD {
+    margin: 220px 80px;
+  }
 
   &__title {
     margin-bottom: 30px;
@@ -33,6 +45,7 @@
     }
 
     @include desktop {
+      margin-bottom: 100px;
       font-size: $font-size-xl;
       line-height: 30px;
     }
@@ -55,7 +68,7 @@
 
     &__image {
       @include set-size(126px, 45px);
-      
+
       &:hover {
         transform: scale(1.1);
         transition-duration: 0.3s;

@@ -5,11 +5,10 @@
   @include set-flex(column, center, center);
   font-weight: $font-weight-regular;
   text-align: center;
-  margin: 100px 0;
 
   &__title {
     padding: 85px 0 30px;
-    max-width: 215px;
+    max-width: 240px;
     font-size: 21px;
     line-height: 27px;
 

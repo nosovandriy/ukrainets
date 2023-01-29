@@ -4,32 +4,87 @@
 .contentBox {
   @include set-flex(column, center, center);
   @include set-font($font-size-sm, $color-white, $font-weight-regular);
+  padding: 50px;
 
   position: relative;
   row-gap: 20px;
   width: 215px;
-  min-width: 215px;
-  min-height: 170px;
+  height: 170px;
   box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(
-    155.63deg,
-    rgba(255, 255, 255, 0.3) 1.56%,
-    rgba(255, 255, 255, 0) 98.16%,
-    rgba(255, 255, 255, 0.1) 98.16%
-  );
+  background: linear-gradient(155.63deg,
+      rgba(255, 255, 255, 0.3) 1.56%,
+      rgba(255, 255, 255, 0) 98.16%,
+      rgba(255, 255, 255, 0.1) 98.16%);
   border-radius: 40px;
-  z-index: 1;
+  backdrop-filter: blur(5px);
 
-  @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
-    width: 280px;
-    min-height: 230px;
+  &:nth-child(2) {
+    height: 210px;
+  }
+
+  &:nth-child(3) {
+    height: 230px;
+  }
+
+  @include tablet {
+    width: 275px;
+    height: 215px;
+    padding: 70px 25px;
 
     &:nth-child(2) {
-      top: 70px;
+      height: 245px;
     }
 
     &:nth-child(3) {
-      top: 140px;
+      height: 265px;
+    }
+  }
+
+  @include laptop {
+    width: 275px;
+    height: 215px;
+    padding: 70px 25px;
+
+    &:nth-child(2) {
+      top: 55px;
+      height: 245px;
+    }
+
+    &:nth-child(3) {
+      top: 110px;
+      height: 265px;
+    }
+  }
+
+  @include desktop {
+    width: 310px;
+    height: 215px;
+    padding: 70px 25px;
+
+    &:nth-child(2) {
+      top: 55px;
+      height: 245px;
+    }
+
+    &:nth-child(3) {
+      top: 110px;
+      height: 265px;
+    }
+  }
+
+  @include desktop-FHD {
+    width: 380px;
+    height: 215px;
+    padding: 70px 25px;
+
+    &:nth-child(2) {
+      top: 55px;
+      height: 245px;
+    }
+
+    &:nth-child(3) {
+      top: 110px;
+      height: 265px;
     }
   }
 
@@ -37,8 +92,12 @@
     @include set-font($font-size-md, $color-white, $font-weight-regular);
     text-align: center;
 
-    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+    @include tablet {
       font-size: $font-size-lg;
+    }
+
+    @include desktop-FHD {
+      font-size: $font-size-xl;
     }
   }
 
@@ -46,27 +105,39 @@
     max-width: 120px;
     text-align: center;
 
-    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+    @include tablet {
       font-size: $font-size-base;
+      max-width: 200px;
+    }
+
+    @include desktop-FHD {
+      font-size: $font-size-lg;
       max-width: 200px;
     }
   }
 
   .boxCount {
-    @include set-size(45px, 45px);
+    @include set-size(46px, 46px);
     @include set-flex(row, center, center);
     @include set-font($font-size-xxl, $color-blue-light, $font-weight-base);
 
     position: absolute;
-    top: -20px;
+    top: -23px;
     border-radius: 50%;
     background-color: $color-white;
     box-shadow: $box-shadow-1;
 
-    @media #{$desktop-small}, #{$desktop}, #{$desktop-large} {
+    @include tablet {
       @include set-size(60px, 60px);
+      font-size: $font-size-huge;
+      top: -30px;
+    }
 
-      top: -25px;
+    @include desktop-FHD {
+      margin: 0 auto;
+      @include set-size(70px, 70px);
+      font-size: $font-size-giant;
+      top: -35px;
     }
   }
 }

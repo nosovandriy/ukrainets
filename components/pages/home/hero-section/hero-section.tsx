@@ -25,12 +25,12 @@ export const HeroSection: React.FC = () => {
           </h1>
         </div>
 
-        <MediaQuery maxWidth={breakPoints.fromTablet}>
+        <MediaQuery maxWidth={breakPoints.fromMobile.max}>
           <HeroBanner />
         </MediaQuery>
 
-        <div className={style.text}>
-          <p>Отримай посилку вже наступного тижня!</p>
+        <div>
+          <p  className={style.text}>Отримай посилку вже наступного тижня!</p>
         </div>
 
         <div className={style.buttons}>
@@ -41,7 +41,7 @@ export const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      <MediaQuery minWidth={breakPoints.fromTablet}>
+      <MediaQuery minWidth={breakPoints.fromTablet.min}>
         <HeroBanner />
       </MediaQuery>
     </main>

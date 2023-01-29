@@ -1,6 +1,6 @@
 import style from './ukraine-section.module.scss';
 
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 import { Title } from '@components/title';
 
