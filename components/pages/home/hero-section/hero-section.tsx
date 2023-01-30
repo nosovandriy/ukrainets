@@ -2,14 +2,18 @@ import style from './hero-section.module.scss';
 
 import Link from 'next/link';
 import MediaQuery from 'react-responsive';
+import { useState } from 'react';
 
 import { breakPoints } from 'consts';
 import { Button } from '../../../button';
 import { HeroBanner } from './hero-banner';
 import { useIsMounted } from 'hooks';
 import { fontService } from '@services/font-service';
+import { CallMeModal } from './modal-call-me';
+import classNames from 'classnames';
 
 export const HeroSection: React.FC = () => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
   const isMounted = useIsMounted();
 
   if (!isMounted) {
@@ -17,6 +21,7 @@ export const HeroSection: React.FC = () => {
   }
 
   return (
+
     <main className={style.heroSection}>
       <div className={style.details}>
         <div className={style.title}>
@@ -30,20 +35,30 @@ export const HeroSection: React.FC = () => {
         </MediaQuery>
 
         <div>
-          <p  className={style.text}>Отримай посилку вже наступного тижня!</p>
+          <p className={style.text}>Отримай посилку вже наступного тижня!</p>
         </div>
 
         <div className={style.buttons}>
-          <Button type="primary" label="Передзвоніть мені" />
+          <Button
+            type="primary"
+            label="Передзвоніть мені"
+            isOpenModal={isOpenModal}
+            setIsOpenModal={setIsOpenModal}
+          />
+          {!isOpenModal && (
+            <CallMeModal
+              isOpenModal={isOpenModal}
+              setIsOpenModal={setIsOpenModal} />
+          )}
           <Link className={style.scheduleButton} href="#schedule-section">
             Дивитись розклад
           </Link>
         </div>
-      </div>
+      </div >
 
       <MediaQuery minWidth={breakPoints.fromTablet.min}>
         <HeroBanner />
       </MediaQuery>
-    </main>
+    </main >
   );
 };

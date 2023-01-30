@@ -4,6 +4,7 @@
 .heroSection {
   @include set-flex(column, center);
   padding: 65px 0 40px;
+  position: relative;
 
   @include mobile {
     min-height: 100vh;

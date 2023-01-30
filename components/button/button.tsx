@@ -4,10 +4,19 @@ import classNames from 'classnames';
 
 type ButtonType = 'primary' | 'secondary';
 
-export const Button: React.FC<{
+type Props = {
   type: ButtonType;
   label: string;
-}> = ({ type, label }) => {
+  isOpenModal: boolean;
+  setIsOpenModal: (isOpen: boolean) => void;
+}
+
+export const Button: React.FC<Props> = ({
+  type,
+  label,
+  isOpenModal,
+  setIsOpenModal,
+}) => {
   const isPrimaryButton = type === 'primary';
   const isSecondaryButton = type === 'secondary';
 
@@ -17,6 +26,7 @@ export const Button: React.FC<{
         [style.secondaryButton]: isSecondaryButton,
         [style.primaryButton]: isPrimaryButton,
       })}
+      onClick={() => setIsOpenModal(!isOpenModal)}
     >
       {label}
     </button>
