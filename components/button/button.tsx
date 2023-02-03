@@ -3,12 +3,14 @@ import style from './button.module.scss';
 import classNames from 'classnames';
 
 type ButtonType = 'primary' | 'secondary';
+import { EmailStepType } from '../../types/EmailStepType';
 
 type Props = {
   type: ButtonType;
   label: string;
   isOpenModal: boolean;
   setIsOpenModal: (isOpen: boolean) => void;
+  setSendClientData: (sendStep: EmailStepType) => void;
 }
 
 export const Button: React.FC<Props> = ({
@@ -16,9 +18,15 @@ export const Button: React.FC<Props> = ({
   label,
   isOpenModal,
   setIsOpenModal,
+  setSendClientData,
 }) => {
   const isPrimaryButton = type === 'primary';
   const isSecondaryButton = type === 'secondary';
+
+  const handleOpenModal = () => {
+    setIsOpenModal(!isOpenModal);
+    setSendClientData(EmailStepType.initial);
+  }
 
   return (
     <button
@@ -26,7 +34,7 @@ export const Button: React.FC<Props> = ({
         [style.secondaryButton]: isSecondaryButton,
         [style.primaryButton]: isPrimaryButton,
       })}
-      onClick={() => setIsOpenModal(!isOpenModal)}
+      onClick={handleOpenModal}
     >
       {label}
     </button>
