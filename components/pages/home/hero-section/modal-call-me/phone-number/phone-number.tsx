@@ -1,4 +1,3 @@
-import 'react-phone-input-2/lib/plain.css'
 import ReactPhoneInput from 'react-phone-input-2'
 import { fontService } from '@services/font-service';
 import classNames from 'classnames';

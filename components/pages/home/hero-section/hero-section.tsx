@@ -9,16 +9,21 @@ import { HeroBanner } from './hero-banner';
 import { useIsMounted } from 'hooks';
 import { fontService } from '@services/font-service';
 import { CallMeModal } from './modal-call-me';
-import { EmailStepType } from '../../../../types/EmailStepType';
+import { EmailNotificationStep } from '../../../../types/EmailNotificationStep';
 
 export const HeroSection: React.FC = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
-  const [sendClientData, setSendClientData] = useState<EmailStepType>(EmailStepType.initial);
+  const [sendClientData, setSendClientData] = useState<EmailNotificationStep>(EmailNotificationStep.initial);
 
   const isMounted = useIsMounted();
 
   if (!isMounted) {
     return null;
+  }
+
+  const handleOpenModal = () => {
+    setIsOpenModal(!isOpenModal);
+    setSendClientData(EmailNotificationStep.initial);
   }
 
   return (
@@ -40,11 +45,8 @@ export const HeroSection: React.FC = () => {
 
         <div className={style.buttons}>
           <Button
-            type="primary"
             label="Передзвоніть мені"
-            isOpenModal={isOpenModal}
-            setIsOpenModal={setIsOpenModal}
-            setSendClientData={setSendClientData}
+            onClick={handleOpenModal}
           />
           <CallMeModal
             isOpenModal={isOpenModal}

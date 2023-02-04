@@ -3,24 +3,23 @@
 
 .phoneWrapper {
   margin-bottom: 30px;
+  border: 0.56px solid $color-grey-light;
+  border-radius: 45px;
 }
 
 .phoneWrapper .phoneNumber {
-  width: 100% !important;
-  border: 0.560918px solid #C7D2DC;
+  width: 100%;
   border-radius: 45px;
-  color: #5E7294;
-  font-size: 12px;
+  color: $color-grey-dark;
+  font-size: $font-size-sm;
   padding-right: 20px;
   border: none;
-  transition: 0.3s;
-  font-size: 12px !important;
   color: $color-grey-dark;
 
   @include desktop {
-    height: 50px !important;
-    font-size: 16px !important;
-    padding-left: 60px !important;
+    height: 50px;
+    font-size: $font-size-base;
+    padding-left: 60px;
   }
 }
 

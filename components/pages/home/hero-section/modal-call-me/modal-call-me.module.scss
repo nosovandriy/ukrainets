@@ -124,8 +124,9 @@
 
     &__styles:not(:last-child):focus {
       outline: none;
-      border: 1px solid #1C5BFF;
-      box-shadow: 0 0 5px #1C5BFF;
+      border: 1px solid $color-blue-light;
+      box-shadow: 0 0 5px $color-blue-light;
+      transition: 0.3s;
     }
 
     &__name {

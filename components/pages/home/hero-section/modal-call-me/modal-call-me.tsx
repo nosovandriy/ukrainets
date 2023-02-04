@@ -10,13 +10,13 @@ import { fontService } from '@services/font-service';
 import { CrossIcon } from '@components/icons';
 import { breakPoints } from 'consts';
 import { useEmailSent } from '../../../../../hooks/useEmailSent';
-import { EmailStepType } from '../../../../../types/EmailStepType';
+import { EmailNotificationStep } from '../../../../../types/EmailNotificationStep';
 
 type Props = {
   isOpenModal: boolean;
   setIsOpenModal: (isOpen: boolean) => void;
-  sendClientData: EmailStepType;
-  setSendClientData: (sendStep: EmailStepType) => void;
+  sendClientData: EmailNotificationStep;
+  setSendClientData: (sendStep: EmailNotificationStep) => void;
 }
 
 export const CallMeModal: FC<Props> = ({
@@ -27,13 +27,14 @@ export const CallMeModal: FC<Props> = ({
 }) => {
   const [clientName, setClientName] = useState('');
   const [clientPhoneNumber, setClientPhoneNumber] = useState('');
-  
+
   const formRef = useRef<HTMLFormElement | string>('');
   const { sendMail } = useEmailSent();
-  
+
   const modalRef = useRef<HTMLInputElement>(null);
   const activeField = useRef<HTMLInputElement>(null);
   const isActiveCallMeButton = clientName && clientPhoneNumber.length === 12;
+  const escapeKey = 'Escape';
 
   useEffect(() => {
     if (activeField.current) {
@@ -49,7 +50,7 @@ export const CallMeModal: FC<Props> = ({
 
   const keyPress = useCallback(
     (event: any) => {
-      if (event.key === 'Escape' && isOpenModal) {
+      if (event.key === escapeKey && isOpenModal) {
         setIsOpenModal(false);
       }
     }, [setIsOpenModal, isOpenModal]
@@ -62,13 +63,13 @@ export const CallMeModal: FC<Props> = ({
     [keyPress]
   );
 
-  const sendForm = (event: React.FormEvent<HTMLFormElement>) => {
+  const sendFormInformationToEmail = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!isActiveCallMeButton) {
       return;
     };
 
-    setSendClientData(EmailStepType.send);
+    setSendClientData(EmailNotificationStep.send);
     sendMail(formRef);
   };
 
@@ -127,7 +128,7 @@ export const CallMeModal: FC<Props> = ({
                   <form
                     ref={formRef as RefObject<HTMLFormElement>}
                     className={style.form}
-                    onSubmit={sendForm}
+                    onSubmit={sendFormInformationToEmail}
                   >
                     <input
                       type="text"
