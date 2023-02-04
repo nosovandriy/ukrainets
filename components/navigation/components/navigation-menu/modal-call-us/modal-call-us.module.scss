@@ -1,0 +1,191 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.overlay {
+  @include set-flex(column, center, center);
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+
+.modalWrapper {
+  @include set-size(330px, 500px);
+  @include set-flex(column, center, center);
+  padding: 50px 0;
+  background-color: $color-white;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
+
+  @include laptop {
+    @include set-size(800px, 500px);
+    @include set-flex(row-reverse, center, center);
+    gap: 100px;
+  }
+
+  @include desktop {
+    @include set-size(945px, 650px);
+    @include set-flex(row-reverse, center, center);
+    gap: 100px;
+  }
+
+  .closeMenuIcon {
+    @include set-flex(row, center, center);
+    @include set-size(20px, 20px);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: 0.5s;
+
+    @include laptop {
+      top: 30px;
+      right: 30px;
+    }
+
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
+
+  .textContent {
+    @include set-flex(column, center, center);
+    text-align: center;
+
+    @include laptop {
+      align-items: flex-start;
+      text-align: start;
+    }
+
+    &__image {
+      position: relative;
+      @include set-size(100px, 85px);
+      margin-bottom: 20px;
+
+      @include desktop {
+        @include set-size(150px, 125px);
+      }
+    }
+
+
+    &__title {
+      width: 230px;
+      font-size: 15px;
+      line-height: 19px;
+      padding-bottom: 10px;
+
+      @include laptop {
+        width: 280px;
+        font-size: $font-size-xxl;
+        line-height: 30px;
+      }
+    }
+
+    &__subTitle {
+      width: 280px;
+      padding-bottom: 30px;
+    }
+  }
+
+  .form {
+    @include set-flex(column, center, center);
+    width: 270px;
+    height: 230px;
+    box-shadow: 10px 10px 10px 1px rgba(19, 10, 46, 0.06);
+    border-radius: 22px;
+    border-width: 1px;
+    padding: 0 30px;
+
+    @include desktop {
+      @include set-size(380px, 350px);
+      padding: 0 60px;
+    }
+
+    &__styles {
+      @include set-flex(column, center, center);
+      height: 35px;
+      width: 100%;
+      border: 0.560918px solid #C7D2DC;
+      border-radius: 45.9953px;
+      color: #5E7294;
+      font-size: $font-size-sm;
+      text-align: center;
+      transition: 0.3s;
+
+      @include desktop {
+        height: 50px;
+      }
+    }
+
+    &__styles:not(:last-child):focus {
+      outline: none;
+      border: 1px solid $color-blue-light;
+      box-shadow: 0 0 5px $color-blue-light;
+      transition: 0.3s;
+    }
+
+    &__name {
+      margin-bottom: 20px;
+      font-size: $font-size-sm;
+
+      @include desktop {
+        margin-bottom: 30px;
+        font-size: $font-size-base;
+      }
+    }
+
+    &__phone {
+      margin-bottom: 30px;
+      font-size: 12px;
+      text-align: center;
+
+      @include desktop {
+        font-size: $font-size-md;
+      }
+    }
+
+    &__callMe {
+      font-size: 12px;
+      background: #C7D2DC;
+      color: $color-white;
+
+      @include desktop {
+        font-size: $font-size-md;
+      }
+
+      &__active {
+        background-color: #1C5BFF;
+        transition-duration: 0.5s;
+
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    &__hide {
+      display: none !important;
+    }
+  }
+
+  .checked {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+
+
+    &__image {
+      @include set-square(150px);
+      position: relative;
+      cursor: pointer;
+    }
+  }
+}
