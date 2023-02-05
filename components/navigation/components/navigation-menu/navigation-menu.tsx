@@ -1,11 +1,7 @@
-import { useState } from 'react';
 import style from './navigation-menu.module.scss';
-
 import Link from 'next/link';
 import classNames from 'classnames';
 import MediaQuery from 'react-responsive';
-
-import { CallUsModal } from './modal-call-us';
 
 import {
   EnglandFlagIcon,
@@ -18,7 +14,6 @@ import { formatPhoneNumber } from 'utils/utils';
 export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
   toggleMobileMenu,
 }) => {
-  const [isOpenModal, setIsOpenModal] = useState(false);
 
   const ukrainianNumber = formatPhoneNumber(
     defaultContacts.phones.ukraineNumber
@@ -26,11 +21,6 @@ export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
   const englandNumber = formatPhoneNumber(
     defaultContacts.phones.firstEnglandNumber
   );
-
-  const handleOpen = () => {
-    setIsOpenModal(!isOpenModal);
-    toggleMobileMenu();
-  }
 
   return (
     <div className={style.navigationMenu}>
@@ -60,14 +50,12 @@ export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
 
       <div
         className={style.menuItem}
-      // onClick={toggleMobileMenu}
       >
         <Link
-          onClick={() => handleOpen()}
+          onClick={toggleMobileMenu}
           href="#">
           Контакти
         </Link>
-        <CallUsModal isOpenModal={isOpenModal} />
       </div>
     </div>
   );

@@ -15,6 +15,7 @@ import {
   DeliverySection,
   UkraineSection,
   Footer,
+  CallUsModal,
 } from '../components';
 import { DesktopNavigation, MobileNavigation } from '@components/navigation';
 
@@ -22,7 +23,7 @@ const Home: NextPage = () => {
   return (
     <>
       <MobileNavigation />
-
+      <CallUsModal />
       <Layout>
         <DesktopNavigation />
         <HomeHeader />

@@ -1,0 +1,295 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.overlay {
+  @include set-flex(column, center, center);
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+
+.modalWrapper {
+  @include set-size(330px, 350px);
+  @include set-flex(column, center, center);
+  position: relative;
+  background-color: $color-white;
+  border-radius: 30px;
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
+
+  @include tablet {
+    @include set-size(450px, 550px);
+  }
+
+  @include laptop {
+    @include set-size(800px, 500px);
+  }
+
+  @include desktop {
+    @include set-size(945px, 650px);
+  }
+
+  @include desktop-FHD {
+    @include set-size(1200px, 750px);
+  }
+
+  .closeMenuIcon {
+    @include set-flex(row, center, center);
+    @include set-size(13px, 13px);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: 0.5s;
+
+    @include tablet {
+      top: 30px;
+      right: 30px;
+    }
+
+    @include laptop {
+      @include set-square(18px);
+    }
+
+    @include desktop {
+      top: 50px;
+      right: 50px;
+    }
+
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
+
+  .image {
+    @include set-square(70px);
+    position: relative;
+    margin-bottom: 15px;
+
+    @include tablet {
+      @include set-square(120px);
+      margin-bottom: 30px;
+    }
+
+    @include desktop {
+      @include set-square(150px);
+    }
+
+    @include desktop-FHD {
+      @include set-square(180px);
+    }
+  }
+
+  .textContent {
+    &__title {
+      font-size: $font-size-base;
+      line-height: 19px;
+      color: $color-blue-dark;
+      margin-bottom: 25px;
+      text-align: center;
+
+      @include tablet {
+        font-size: $font-size-xl;
+        line-height: 25px;
+      }
+
+      @include laptop {
+        margin-bottom: 50px;
+        font-size: $font-size-xxl;
+        line-height: 30px;
+      }
+
+      @include desktop {
+        font-size: $font-size-xxxl;
+        line-height: 40px;
+      }
+
+      @include desktop-FHD {
+        font-size: $font-size-giant;
+        line-height: 42px;
+      }
+    }
+  }
+
+  .contacts {
+    @include laptop {
+      @include set-flex(row, center, flex-start);
+      gap: 80px;
+    }
+
+    @include desktop {
+      gap: 100px;
+    }
+
+    @include desktop-FHD {
+      gap: 150px;
+    }
+
+    &__contact {
+      @include set-flex(column, center, center);
+      margin-bottom: 15px;
+
+      @include tablet {
+        margin-bottom: 25px;
+      }
+
+      @include laptop {
+        align-items: flex-start;
+      }
+
+      &__title {
+        font-size: $font-size-md;
+        line-height: 23px;
+        color: $color-grey-dark;
+        margin-bottom: 10px;
+
+        @include tablet {
+          font-size: $font-size-lg;
+          line-height: 23px;
+          margin-bottom: 15px;
+        }
+
+        @include laptop {
+          font-size: $font-size-xl;
+          line-height: 25px;
+          margin-bottom: 15px;
+        }
+
+        @include desktop {
+          font-size: $font-size-xxl;
+          line-height: 30px;
+          margin-bottom: 15px;
+        }
+
+        @include desktop-FHD {
+          font-size: $font-size-xxl;
+          line-height: 30px;
+          margin-bottom: 15px;
+        }
+      }
+
+      &__info {
+        position: relative;
+        font-size: $font-size-sm;
+        line-height: 25px;
+        color: $color-grey-dark;
+
+        @include tablet {
+          font-size: $font-size-base;
+          line-height: 35px;
+        }
+
+        @include laptop {
+          font-size: $font-size-lg;
+          line-height: 30px;
+        }
+
+        @include desktop {
+          font-size: $font-size-xl;
+          line-height: 30px;
+        }
+
+        @include desktop-FHD {
+          font-size: $font-size-xl;
+          line-height: 30px;
+        }
+      }
+
+      &__link {
+        &:hover {
+          color: $color-grey-light;
+          transition-duration: 0.3s;
+        }
+      }
+
+      &__copy {
+        &__icon {
+          @include set-square(15px);
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -25px;
+          cursor: pointer;
+          transition: 0.5s ease-in-out;
+
+          @include laptop {
+            @include set-square(18px);
+          }
+
+          @include desktop {
+            @include set-square(20px);
+            right: -30px;
+          }
+
+          @include desktop-FHD {
+            @include set-square(25px);
+            right: -35px;
+          }
+        }
+      }
+
+      &__hide {
+        display: none;
+      }
+
+      &__copyNotification {
+        color: $color-white;
+        position: absolute;
+        background: $color-blue-dark;
+        width: 90px;
+        height: 25px;
+        text-align: center;
+        font-size: 10px;
+        line-height: 25px;
+        border-radius: 5px;
+        z-index: 1;
+        top: -250%;
+        right: 50%;
+        transform: translateX(50%);
+        transition: 0.5s ease-in-out;
+
+        @include laptop {
+          top: -200%;
+        }
+
+        @include desktop-FHD {
+          top: -150%;
+        }
+
+        &::after {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          border-top: 5px solid $color-blue-dark;
+          border-right: 5px solid transparent;
+          border-left: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
+
+.textDecoration {
+  &:hover {
+    color: $color-grey-light;
+  }
+
+  @include laptop {
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      color: $color-grey-light;
+      border-bottom: 1px solid $color-grey-light;
+      transition-duration: 0.3s;
+    }
+  }
+}
