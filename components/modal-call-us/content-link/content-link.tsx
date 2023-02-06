@@ -1,4 +1,6 @@
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import classNames from 'classnames';
+
 import style from '../modal-call-us.module.scss';
 import { formatPhoneNumber } from '../../../utils/utils';
 import { CopyIcon } from '@components/icons';
@@ -32,12 +34,16 @@ export const ContentLink: React.FC<Props> = ({
       </a>
       <div
         className={style.contacts__contact__copy}
-        onClick={() => handleCopyPhoneNumber(contactInfo)}
       >
         <div className={style.contacts__contact__copy__icon}>
-          <div className={style.contacts__contact__copy__icon__svg}>
-            <CopyIcon />
-          </div>
+          <CopyToClipboard text={`${contactInfo}`}>
+            <div
+              className={style.contacts__contact__copy__icon__svg}
+              onClick={() => handleCopyPhoneNumber(contactInfo)}
+            >
+              <CopyIcon />
+            </div>
+          </CopyToClipboard>
           {isCopyPhoneNumber && phoneNumber === contactInfo ? (
             <div
               className={classNames(style.contacts__contact__copyNotification)}

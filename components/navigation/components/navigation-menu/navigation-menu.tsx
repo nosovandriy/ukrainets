@@ -1,7 +1,10 @@
+import { useContext } from 'react';
+
 import style from './navigation-menu.module.scss';
 import Link from 'next/link';
 import classNames from 'classnames';
 import MediaQuery from 'react-responsive';
+import { ModalContext } from '../../../modal-context/modal-context';
 
 import {
   EnglandFlagIcon,
@@ -11,9 +14,13 @@ import {
 import { breakPoints, defaultContacts } from 'consts';
 import { formatPhoneNumber } from 'utils/utils';
 
-export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
-  toggleMobileMenu,
-}) => {
+type Props = {
+  toggleMobileMenu?: () => void;
+};
+
+
+export const NavigationMenu: React.FC<Props> = ({ toggleMobileMenu }) => {
+  const { setIsOpenModalCallUs } = useContext(ModalContext);
 
   const ukrainianNumber = formatPhoneNumber(
     defaultContacts.phones.ukraineNumber
@@ -21,6 +28,11 @@ export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
   const englandNumber = formatPhoneNumber(
     defaultContacts.phones.firstEnglandNumber
   );
+
+  const handleOpenModalCallUs = () => {
+    toggleMobileMenu?.();
+    setIsOpenModalCallUs(true);
+  }
 
   return (
     <div className={style.navigationMenu}>
@@ -50,12 +62,9 @@ export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
 
       <div
         className={style.menuItem}
+        onClick={handleOpenModalCallUs}
       >
-        <Link
-          onClick={toggleMobileMenu}
-          href="#">
-          Контакти
-        </Link>
+        <Link href="#">Контакти</Link>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import Image from 'next/legacy/image';
 import classNames from 'classnames';
 
@@ -7,37 +7,36 @@ import { CrossIcon } from '@components/icons';
 import { fontService } from '@services/font-service';
 import { useContacts } from './hooks/useContacts';
 import { ContentLink } from './content-link';
+import { ModalContext } from '../modal-context/modal-context';
 
 export const CallUsModal = () => {
-  const [isOpenModal, setIsOpenModal] = useState(true);
   const [isCopyPhoneNumber, setIsCopyPhoneNumber] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
   const { contacts } = useContacts();
 
-  if (isCopyPhoneNumber) {
+  const { isOpenModalCallUs, setIsOpenModalCallUs } = useContext(ModalContext);
+
+  useEffect(() => {
     setTimeout(() => {
-      setPhoneNumber('');
-      setIsCopyPhoneNumber(false);
-    }, 3500);
-  };
+      if (isCopyPhoneNumber) {
+        setPhoneNumber('');
+        setIsCopyPhoneNumber(false);
+      };
+    }, 1500);
+  }, [isCopyPhoneNumber])
 
   return (
     <>
-      {isOpenModal && (
-        <div
-          className={style.overlay}
-        >
+      {isOpenModalCallUs && (
+        <div className={style.overlay}>
           <div className={style.modalWrapper}>
             <div
               className={style.closeMenuIcon}
-              onClick={() => setIsOpenModal(false)}
+              onClick={() => setIsOpenModalCallUs(false)}
             >
               <CrossIcon />
             </div>
-            <div
-              className={style.image}
-              onClick={() => setIsOpenModal(false)}
-            >
+            <div className={style.image}>
               <Image
                 src="/call-me-hand.png"
                 layout="fill"
@@ -56,7 +55,10 @@ export const CallUsModal = () => {
               <div className={style.contacts}>
                 <>
                   {contacts.map((contact) => (
-                    <div className={style.contacts__contact} key={contact.id}>
+                    <div
+                      className={style.contacts__contact}
+                      key={contact.id}
+                    >
 
                       <h4 className={style.contacts__contact__title}>
                         {`${contact.title}:`}

@@ -8,7 +8,7 @@ import { breakPoints } from 'consts';
 import { NavigationBody } from './navigation-body';
 import { NavigationHeader } from './navigation-header';
 
-export const MobileNavigation: React.FC = () => {
+export const MobileNavigation = () => {
   const [isVisible, setIsVisible] = useState(false);
   const isMounted = useIsMounted();
 
