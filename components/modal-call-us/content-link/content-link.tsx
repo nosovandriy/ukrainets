@@ -1,10 +1,10 @@
 import copy from 'copy-to-clipboard';
 
 import style from '../modal-call-us.module.scss';
-import { formatPhoneNumber } from '../../../utils/utils';
+import { formatPhoneNumber } from 'utils/utils';
 import { CopyIcon } from '@components/icons';
 import { PhoneLink } from '@components/phone-link';
-import { Tooltip } from '../../tool-tip';
+import { Tooltip } from '@components/tool-tip';
 
 type Props = {
   contactInfo: string;
