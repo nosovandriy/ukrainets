@@ -199,78 +199,31 @@
         }
       }
 
-      &__link {
-        &:hover {
-          color: $color-grey-light;
-          transition-duration: 0.3s;
-        }
-      }
-
-      &__copy {
-        &__icon {
-          @include set-square(15px);
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          right: -25px;
-          cursor: pointer;
-          transition: 0.5s ease-in-out;
-
-          @include laptop {
-            @include set-square(18px);
-          }
-
-          @include desktop {
-            @include set-square(20px);
-            right: -30px;
-          }
-
-          @include desktop-FHD {
-            @include set-square(25px);
-            right: -35px;
-          }
-        }
-      }
-
-      &__hide {
-        display: none;
-      }
-
-      &__copyNotification {
-        color: $color-white;
+      &__copyIcon {
+        @include set-square(15px);
         position: absolute;
-        background: $color-blue-dark;
-        width: 90px;
-        height: 25px;
-        text-align: center;
-        font-size: 10px;
-        line-height: 25px;
-        border-radius: 5px;
-        z-index: 1;
-        top: -250%;
-        right: 50%;
-        transform: translateX(50%);
-        transition: 0.5s ease-in-out;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -25px;
+        cursor: pointer;
+        fill: $color-grey-dark;
+
+        &:hover {
+          fill: $color-blue-light;
+        }
 
         @include laptop {
-          top: -200%;
+          @include set-square(18px);
+        }
+
+        @include desktop {
+          @include set-square(20px);
+          right: -30px;
         }
 
         @include desktop-FHD {
-          top: -150%;
-        }
-
-        &::after {
-          content: '';
-          display: inline-block;
-          position: absolute;
-          border-top: 5px solid $color-blue-dark;
-          border-right: 5px solid transparent;
-          border-left: 5px solid transparent;
-          border-bottom: 5px solid transparent;
-          bottom: -10px;
-          left: 50%;
-          transform: translateX(-50%);
+          @include set-square(25px);
+          right: -35px;
         }
       }
     }
@@ -279,17 +232,13 @@
 
 .textDecoration {
   &:hover {
-    color: $color-grey-light;
+    color: $color-blue-light;
+    border-bottom: 1px solid $color-blue-light;
+    transition-duration: 0.5s;
   }
 
   @include laptop {
     padding-bottom: 3px;
     border-bottom: 1px solid transparent;
-
-    &:hover {
-      color: $color-grey-light;
-      border-bottom: 1px solid $color-grey-light;
-      transition-duration: 0.3s;
-    }
   }
 }

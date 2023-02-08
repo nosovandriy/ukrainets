@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 
-import { ModalProvider } from '../components/modal-context/modal-context';
+import { ModalProvider } from '../components/modal-context/modal-provider';
 
 import {
   Layout,

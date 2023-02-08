@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import Image from 'next/legacy/image';
 import classNames from 'classnames';
 
@@ -7,23 +7,11 @@ import { CrossIcon } from '@components/icons';
 import { fontService } from '@services/font-service';
 import { useContacts } from './hooks/useContacts';
 import { ContentLink } from './content-link';
-import { ModalContext } from '../modal-context/modal-context';
+import { ModalContext } from '../modal-context/modal-provider';
 
 export const CallUsModal = () => {
-  const [isCopyPhoneNumber, setIsCopyPhoneNumber] = useState(false);
-  const [phoneNumber, setPhoneNumber] = useState('');
   const { contacts } = useContacts();
-
   const { isOpenModalCallUs, setIsOpenModalCallUs } = useContext(ModalContext);
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (isCopyPhoneNumber) {
-        setPhoneNumber('');
-        setIsCopyPhoneNumber(false);
-      };
-    }, 1500);
-  }, [isCopyPhoneNumber])
 
   return (
     <>
@@ -66,19 +54,11 @@ export const CallUsModal = () => {
 
                       <ContentLink
                         contactInfo={contact.firstInfo}
-                        isCopyPhoneNumber={isCopyPhoneNumber}
-                        phoneNumber={phoneNumber}
-                        setPhoneNumber={setPhoneNumber}
-                        setIsCopyPhoneNumber={setIsCopyPhoneNumber}
                       />
 
                       {contact.secondInfo && (
                         <ContentLink
                           contactInfo={contact.secondInfo}
-                          isCopyPhoneNumber={isCopyPhoneNumber}
-                          phoneNumber={phoneNumber}
-                          setPhoneNumber={setPhoneNumber}
-                          setIsCopyPhoneNumber={setIsCopyPhoneNumber}
                         />
                       )}
                     </div>

@@ -4,7 +4,8 @@ import style from './navigation-menu.module.scss';
 import Link from 'next/link';
 import classNames from 'classnames';
 import MediaQuery from 'react-responsive';
-import { ModalContext } from '../../../modal-context/modal-context';
+import { ModalContext } from '../../../modal-context/modal-provider';
+import { PhoneLink } from '@components/phone-link';
 
 import {
   EnglandFlagIcon,
@@ -44,12 +45,16 @@ export const NavigationMenu: React.FC<Props> = ({ toggleMobileMenu }) => {
 
       <div className={classNames(style.mobileNumber, style.menuItem)}>
         <UkraineFlagIcon />
-        <a href={`tel:${ukrainianNumber}`}>{ukrainianNumber}</a>
+        <PhoneLink phoneNumber={ukrainianNumber}>
+          {ukrainianNumber}
+        </PhoneLink>
       </div>
 
       <div className={classNames(style.mobileNumber, style.menuItem)}>
         <EnglandFlagIcon />
-        <a href={`tel:${englandNumber}`}>{englandNumber}</a>
+        <PhoneLink phoneNumber={englandNumber}>
+          {englandNumber}
+        </PhoneLink>
       </div>
 
       <div className={style.menuItem} onClick={toggleMobileMenu}>
