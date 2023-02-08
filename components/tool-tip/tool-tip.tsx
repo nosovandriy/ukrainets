@@ -3,14 +3,16 @@ import style from './tool-tip.module.scss';
 
 interface TooltipProps {
   className?: string;
-  copyPhoneNumber: () => void;
+  content?: string;
+  onClick: () => void;
   delay?: number;
   children: React.ReactNode;
 }
 
 export const Tooltip: React.FC<TooltipProps> = ({
   className,
-  copyPhoneNumber,
+  content,
+  onClick,
   delay = 500,
   children,
 }) => {
@@ -18,7 +20,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
 
   const handleShowToolTip = () => {
     setIsVisibleTooltip(true);
-    copyPhoneNumber();
+    onClick();
   }
 
   useEffect(() => {
@@ -37,7 +39,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
       {children}
       {isVisibleTooltip && (
         <div className={style.copyNotification}>
-          Скопійовано!
+          {content}
         </div>
       )}
     </div>

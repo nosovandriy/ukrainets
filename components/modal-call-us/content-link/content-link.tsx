@@ -1,5 +1,4 @@
 import copy from 'copy-to-clipboard';
-import classNames from 'classnames';
 
 import style from '../modal-call-us.module.scss';
 import { formatPhoneNumber } from '../../../utils/utils';
@@ -29,8 +28,9 @@ export const ContentLink: React.FC<Props> = ({
       </PhoneLink>
       <Tooltip
         className={style.contacts__contact__copyIcon}
-        copyPhoneNumber={copyPhoneNumber}
+        onClick={copyPhoneNumber}
         delay={800}
+        content={'Скопійовано!'}
       >
         <CopyIcon />
       </Tooltip>
