@@ -1,8 +1,11 @@
-import style from './navigation-menu.module.scss';
+import { useContext } from 'react';
 
+import style from './navigation-menu.module.scss';
 import Link from 'next/link';
 import classNames from 'classnames';
 import MediaQuery from 'react-responsive';
+import { ModalContext } from '../../../modal-context/modal-provider';
+import { PhoneLink } from '@components/phone-link';
 
 import {
   EnglandFlagIcon,
@@ -12,15 +15,25 @@ import {
 import { breakPoints, defaultContacts } from 'consts';
 import { formatPhoneNumber } from 'utils/utils';
 
-export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
-  toggleMobileMenu,
-}) => {
+type Props = {
+  toggleMobileMenu?: () => void;
+};
+
+
+export const NavigationMenu: React.FC<Props> = ({ toggleMobileMenu }) => {
+  const { setIsOpenModalCallUs } = useContext(ModalContext);
+
   const ukrainianNumber = formatPhoneNumber(
     defaultContacts.phones.ukraineNumber
   );
   const englandNumber = formatPhoneNumber(
     defaultContacts.phones.firstEnglandNumber
   );
+
+  const handleOpenModalCallUs = () => {
+    toggleMobileMenu?.();
+    setIsOpenModalCallUs(true);
+  }
 
   return (
     <div className={style.navigationMenu}>
@@ -32,12 +45,16 @@ export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
 
       <div className={classNames(style.mobileNumber, style.menuItem)}>
         <UkraineFlagIcon />
-        <a href={`tel:${ukrainianNumber}`}>{ukrainianNumber}</a>
+        <PhoneLink phoneNumber={ukrainianNumber}>
+          {ukrainianNumber}
+        </PhoneLink>
       </div>
 
       <div className={classNames(style.mobileNumber, style.menuItem)}>
         <EnglandFlagIcon />
-        <a href={`tel:${englandNumber}`}>{englandNumber}</a>
+        <PhoneLink phoneNumber={englandNumber}>
+          {englandNumber}
+        </PhoneLink>
       </div>
 
       <div className={style.menuItem} onClick={toggleMobileMenu}>
@@ -48,7 +65,10 @@ export const NavigationMenu: React.FC<{ toggleMobileMenu?: () => void }> = ({
         <Link href="#testimonials-section">Відгуки</Link>
       </div>
 
-      <div className={style.menuItem} onClick={toggleMobileMenu}>
+      <div
+        className={style.menuItem}
+        onClick={handleOpenModalCallUs}
+      >
         <Link href="#">Контакти</Link>
       </div>
     </div>

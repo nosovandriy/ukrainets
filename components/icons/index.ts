@@ -12,3 +12,4 @@ export * from './ukrPoshta-logo';
 export * from './quotes';
 export * from './quotes-small';
 export * from './ukraine-line-flag';
+export * from './copy-icon';
