@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 
+import { ModalProvider } from '../components/modal-context/modal-provider';
+
 import {
   Layout,
   HomeHeader,
@@ -15,38 +17,41 @@ import {
   DeliverySection,
   UkraineSection,
   Footer,
+  CallUsModal,
 } from '../components';
 import { DesktopNavigation, MobileNavigation } from '@components/navigation';
 
 const Home: NextPage = () => {
   return (
     <>
-      <MobileNavigation />
+      <ModalProvider>
+        <MobileNavigation />
+        <Layout>
+          <DesktopNavigation />
+          <HomeHeader />
+          <HeroSection />
+        </Layout>
 
-      <Layout>
-        <DesktopNavigation />
-        <HomeHeader />
-        <HeroSection />
-      </Layout>
+        <AboutSection />
 
-      <AboutSection />
+        <Layout>
+          <ScheduleFromUkraine />
+          <ScheduleFromEngland />
+        </Layout>
 
-      <Layout>
-        <ScheduleFromUkraine />
-        <ScheduleFromEngland />
-      </Layout>
+        <DeliverySteps />
 
-      <DeliverySteps />
-
-      <Layout>
-        <QualitySection />
-      </Layout>
-      <TestimonialsSection />
-      <DeliverySection />
-      <PartnersSection />
-      <RulesSection />
-      <UkraineSection />
-      <Footer />
+        <Layout>
+          <QualitySection />
+        </Layout>
+        <TestimonialsSection />
+        <DeliverySection />
+        <PartnersSection />
+        <RulesSection />
+        <UkraineSection />
+        <Footer />
+        <CallUsModal />
+      </ModalProvider>
     </>
   );
 };
