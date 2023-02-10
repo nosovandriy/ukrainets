@@ -14,8 +14,8 @@ export const TestimonialsSlider = () => {
         slidesPerView={"auto"}
         loop={true}
         autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
+          delay: 4000,
+          disableOnInteraction: true,
         }}
         navigation={{
           nextEl: '.swiper-button-next',
@@ -26,8 +26,9 @@ export const TestimonialsSlider = () => {
 
         breakpoints={{
           0: { slidesPerView: 1 },
-          720: { slidesPerView: 2 },
-          1366: { slidesPerView: 3 },
+          1024: { slidesPerView: 2 },
+          1366: { slidesPerView: 2 },
+          // 1920: { slidesPerView: 3 },
         }}
       >
         {testimonials.map((testimonial) => (
