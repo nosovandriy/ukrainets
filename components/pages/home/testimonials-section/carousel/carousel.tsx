@@ -28,7 +28,7 @@ export const TestimonialsSlider = () => {
           0: { slidesPerView: 1 },
           1024: { slidesPerView: 2 },
           1366: { slidesPerView: 2 },
-          1920: { slidesPerView: 3 },
+          // 1920: { slidesPerView: 3 },
         }}
       >
         {testimonials.map((testimonial) => (
