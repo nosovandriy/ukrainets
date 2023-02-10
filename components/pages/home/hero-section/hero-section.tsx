@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 import Link from 'next/link';
 import MediaQuery from 'react-responsive';
 
@@ -8,12 +8,14 @@ import { Button } from '../../../button';
 import { HeroBanner } from './hero-banner';
 import { useIsMounted } from 'hooks';
 import { fontService } from '@services/font-service';
-import { CallMeModal } from './modal-call-me';
-import { EmailNotificationStep } from '../../../../types/EmailNotificationStep';
+import { ModalContext } from '@components/modal-context/modal-provider';
+import { EmailNotificationStep } from 'types/EmailNotificationStep';
 
 export const HeroSection: React.FC = () => {
-  const [isOpenModal, setIsOpenModal] = useState(false);
-  const [sendClientData, setSendClientData] = useState<EmailNotificationStep>(EmailNotificationStep.initial);
+  const {
+    setIsOpenModalCallMe,
+    setSendClientData,
+  } = useContext(ModalContext);
 
   const isMounted = useIsMounted();
 
@@ -21,8 +23,8 @@ export const HeroSection: React.FC = () => {
     return null;
   }
 
-  const handleOpenModal = () => {
-    setIsOpenModal(!isOpenModal);
+  const handleOpenModalCallMe = () => {
+    setIsOpenModalCallMe(true);
     setSendClientData(EmailNotificationStep.initial);
   }
 
@@ -46,13 +48,7 @@ export const HeroSection: React.FC = () => {
         <div className={style.buttons}>
           <Button
             label="Передзвоніть мені"
-            onClick={handleOpenModal}
-          />
-          <CallMeModal
-            isOpenModal={isOpenModal}
-            setIsOpenModal={setIsOpenModal}
-            sendClientData={sendClientData}
-            setSendClientData={setSendClientData}
+            onClick={handleOpenModalCallMe}
           />
           <Link className={style.scheduleButton} href="#schedule-section">
             Дивитись розклад

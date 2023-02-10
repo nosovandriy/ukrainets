@@ -1,17 +1,6 @@
 @import '~styles/vars';
 @import '~styles/mixins';
 
-.overlay {
-  @include set-flex(column, center, center);
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
-}
-
 .modalWrapper {
   @include set-size(330px, 500px);
   @include set-flex(column, center, center);
@@ -35,7 +24,7 @@
 
   .closeMenuIcon {
     @include set-flex(row, center, center);
-    @include set-size(20px, 20px);
+    @include set-square(13px);
     position: absolute;
     top: 20px;
     right: 20px;
@@ -44,6 +33,7 @@
     transition: 0.5s;
 
     @include laptop {
+      @include set-square(20px);
       top: 30px;
       right: 30px;
     }
@@ -162,15 +152,10 @@
         background-color: #1C5BFF;
         transition-duration: 0.5s;
 
-
         &:hover {
           transform: scale(1.05);
         }
       }
-    }
-
-    &__hide {
-      display: none !important;
     }
   }
 
