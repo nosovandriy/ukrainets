@@ -1,19 +1,31 @@
-import style from './hero-section.module.scss';
-
+import { useContext } from 'react';
 import Link from 'next/link';
 import MediaQuery from 'react-responsive';
 
+import style from './hero-section.module.scss';
 import { breakPoints } from 'consts';
 import { Button } from '../../../button';
 import { HeroBanner } from './hero-banner';
 import { useIsMounted } from 'hooks';
 import { fontService } from '@services/font-service';
+import { ModalContext } from '@components/modal-context/modal-provider';
+import { EmailNotificationStep } from 'types/EmailNotificationStep';
 
 export const HeroSection: React.FC = () => {
+  const {
+    setIsOpenModalCallMe,
+    setSendClientData,
+  } = useContext(ModalContext);
+
   const isMounted = useIsMounted();
 
   if (!isMounted) {
     return null;
+  }
+
+  const handleOpenModalCallMe = () => {
+    setIsOpenModalCallMe(true);
+    setSendClientData(EmailNotificationStep.initial);
   }
 
   return (
@@ -30,20 +42,23 @@ export const HeroSection: React.FC = () => {
         </MediaQuery>
 
         <div>
-          <p  className={style.text}>Отримай посилку вже наступного тижня!</p>
+          <p className={style.text}>Отримай посилку вже наступного тижня!</p>
         </div>
 
         <div className={style.buttons}>
-          <Button type="primary" label="Передзвоніть мені" />
+          <Button
+            label="Передзвоніть мені"
+            onClick={handleOpenModalCallMe}
+          />
           <Link className={style.scheduleButton} href="#schedule-section">
             Дивитись розклад
           </Link>
         </div>
-      </div>
+      </div >
 
       <MediaQuery minWidth={breakPoints.fromTablet.min}>
         <HeroBanner />
       </MediaQuery>
-    </main>
+    </main >
   );
 };

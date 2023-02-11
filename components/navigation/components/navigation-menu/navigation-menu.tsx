@@ -1,9 +1,9 @@
 import { useContext } from 'react';
-
-import style from './navigation-menu.module.scss';
 import Link from 'next/link';
 import classNames from 'classnames';
 import MediaQuery from 'react-responsive';
+
+import style from './navigation-menu.module.scss';
 import { ModalContext } from '../../../modal-context/modal-provider';
 import { PhoneLink } from '@components/phone-link';
 
@@ -19,7 +19,6 @@ type Props = {
   toggleMobileMenu?: () => void;
 };
 
-
 export const NavigationMenu: React.FC<Props> = ({ toggleMobileMenu }) => {
   const { setIsOpenModalCallUs } = useContext(ModalContext);
 
@@ -31,8 +30,8 @@ export const NavigationMenu: React.FC<Props> = ({ toggleMobileMenu }) => {
   );
 
   const handleOpenModalCallUs = () => {
-    toggleMobileMenu?.();
     setIsOpenModalCallUs(true);
+    toggleMobileMenu?.();
   }
 
   return (

@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.1.4",
+    "@emailjs/browser": "^3.10.0",
+    "@next/font": "13.1.4",
+    "@react-spring/web": "9.6.1",
     "@types/react-slick": "0.23.10",
     "copy-to-clipboard": "^3.3.3",
     "next": "13.1.4",
     "react": "18.2.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "18.2.0",
+    "react-phone-input-2": "^2.15.1",
     "react-responsive": "9.0.2",
     "semantic-ui-css": "2.4.1",
     "semantic-ui-react": "2.1.3",

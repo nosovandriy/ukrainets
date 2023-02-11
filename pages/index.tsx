@@ -18,6 +18,7 @@ import {
   UkraineSection,
   Footer,
   CallUsModal,
+  CallMeModal,
 } from '../components';
 import { DesktopNavigation, MobileNavigation } from '@components/navigation';
 
@@ -51,6 +52,7 @@ const Home: NextPage = () => {
         <UkraineSection />
         <Footer />
         <CallUsModal />
+        <CallMeModal />
       </ModalProvider>
     </>
   );

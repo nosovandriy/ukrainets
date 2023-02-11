@@ -1,0 +1,13 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.overlay {
+  @include set-flex(column, center, center);
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}

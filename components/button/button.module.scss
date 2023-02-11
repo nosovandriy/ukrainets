@@ -8,8 +8,16 @@
   min-height: 43px;
   letter-spacing: 0.5px;
   border-radius: 55px;
+  background-color: $color-blue-light;
+  color: $color-white;
 
-  @media #{$desktop-small-and-tablet}, #{$desktop} {
+  &:hover {
+    background-color: $color-blue-medium;
+    transition: background-color 0.5s ease;
+  }
+
+  @media #{$desktop-small-and-tablet},
+  #{$desktop} {
     @include set-size(230px, 60px);
 
     font-size: $font-size-md;
@@ -19,38 +27,5 @@
     @include set-size(250px, 60px);
 
     font-size: $font-size-base;
-  }
-}
-
-.primaryButton {
-  background-color: $color-blue-light;
-  color: $color-white;
-
-  &:hover {
-    background-color: $color-blue-medium;
-    transition: background-color 0.5s ease;
-  }
-}
-
-.secondaryButton {
-  background-color: $color-white;
-  color: $color-grey-dark;
-
-  @media #{$desktop-small-and-tablet}, #{$desktop} {
-    font-size: $font-size-md;
-
-    &:hover {
-      transition: font-size 0.3s ease;
-      font-size: 14.5px;
-    }
-  }
-
-  @media #{$desktop-large} {
-    font-size: $font-size-base;
-
-    &:hover {
-      transition: font-size 0.3s ease;
-      font-size: 16.5px;
-    }
   }
 }
