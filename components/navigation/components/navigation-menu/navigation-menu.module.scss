@@ -1,0 +1,65 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.navigationMenu {
+  @include set-flex(column, space-between);
+  row-gap: 20px;
+  padding: 70px 0;
+  flex-wrap: wrap;
+
+  @include laptop {
+    @include set-flex(row, flex-start, flex-end);
+    column-gap: 30px;
+    padding: 0;
+  }
+
+  @include desktop {
+    column-gap: 50px;
+  }
+
+  @include desktop-FHD {
+    min-width: 1180px;
+    column-gap: 60px;
+  }
+
+  .navigationLogo {
+    @include set-size(117px, 27px);
+
+    @include tablet {
+      @include set-size(137px, 31px);
+    }
+
+    @include desktop {
+      @include set-size(150px, 35px);
+    }
+
+    @include desktop-FHD {
+      @include set-size(164px, 38px);
+    }
+  }
+
+  .mobileNumber {
+    @include set-flex(row, flex-start);
+
+    column-gap: 10px;
+    min-width: 150px;
+    cursor: pointer;
+  }
+
+  .menuItem {
+    @include set-flex(row, flex-start, center);
+    cursor: pointer;
+
+    @include laptop {
+      font-size: $font-size-base;
+    }
+
+    @include desktop {
+      font-size: $font-size-lg;
+    }
+
+    @include desktop-FHD {
+      font-size: $font-size-xl;
+    }
+  }
+}

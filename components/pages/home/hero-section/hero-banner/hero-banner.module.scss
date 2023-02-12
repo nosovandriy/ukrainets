@@ -1,0 +1,26 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.banner {
+  @include set-size(250px, 340px);
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 45px;
+  flex-shrink: 0;
+
+  @include tablet {
+    @include set-size(350px, 480px);
+  }
+
+  @include laptop {
+    @include set-size(450px, 617px);
+  }
+
+  @include desktop {
+    @include set-size(540px, 740px);
+  }
+
+  @include desktop-FHD {
+    @include set-size(640px, 877px);
+  }
+}

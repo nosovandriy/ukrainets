@@ -1,0 +1,16 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.arrowDown {
+  transition: 0.5s;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.arrow90 {
+  transform: rotate(90deg);
+  transition: 0.5s;
+}

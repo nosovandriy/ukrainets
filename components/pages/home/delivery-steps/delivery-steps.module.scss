@@ -1,0 +1,125 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.deliverySteps {
+  background-color: $color-blue-light;
+
+
+  &__container {
+    @include set-flex(column, center, center);
+    padding-bottom: 125px;
+    position: relative;
+
+
+    @include tablet {
+      padding-bottom: 200px;
+    }
+
+    @include laptop {
+      padding-bottom: 260px;
+    }
+
+    @include desktop {
+      padding-bottom: 300px;
+    }
+
+    @include desktop-FHD {
+      padding-bottom: 370px;
+    }
+  }
+
+  &__tridentImage {
+    $trident-size: 175px;
+    @include set-flex(column, center, center);
+    @include set-square($trident-size);
+    position: relative;
+    margin-top: $trident-size / -2;
+    margin-bottom: 35px;
+
+    @include tablet {
+      $trident-size: 190px;
+      @include set-square($trident-size);
+      margin-top: $trident-size / -2;
+      margin-bottom: 40px;
+    }
+
+    @include laptop {
+      $trident-size: 205px;
+      @include set-square($trident-size);
+      margin-top: $trident-size / -2;
+      margin-bottom: 45px;
+    }
+
+    @include desktop {
+      $trident-size: 220px;
+      @include set-square($trident-size);
+      margin-top: $trident-size / -2;
+      margin-bottom: 50px;
+    }
+
+    @include desktop-FHD {
+      $trident-size: 260px;
+      @include set-square($trident-size);
+      margin-top: $trident-size / -2;
+    }
+  }
+
+  &__title {
+    max-width: 250px;
+    text-align: center;
+    padding-bottom: 65px;
+
+    @include tablet {
+      max-width: 300px;
+    }
+
+    @include laptop {
+      max-width: 350px;
+      padding-bottom: 75px;
+    }
+
+    @include desktop {
+      padding-bottom: 100px;
+    }
+
+    @include desktop-FHD {
+      max-width: 400px;
+      padding-bottom: 120px;
+    }
+  }
+
+  &__boxesWrapper {
+    @include set-flex(column, center, center);
+    row-gap: 60px;
+    z-index: 1;
+
+    @include laptop {
+      @include set-flex(row, center, flex-start);
+      column-gap: 20px;
+    }
+  }
+}
+
+.flagImage {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  overflow: hidden;
+
+  @include tablet {
+    height: 260px;
+  }
+
+  @include laptop {
+    height: 300px;
+  }
+
+  @include desktop {
+    height: 380px;
+  }
+
+  @include desktop-FHD {
+    height: 450px;
+  }
+}

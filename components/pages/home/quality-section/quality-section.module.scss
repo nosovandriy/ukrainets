@@ -1,0 +1,87 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.qualitySection {
+  @include set-flex(column, flex-start, center);
+
+  &__container {
+    margin: 50px 0;
+    max-width: 285px;
+
+    @include tablet {
+      margin: 80px 0;
+      max-width: 360px;
+    }
+
+    @include laptop {
+      @include set-flex(row-reverse, flex-start, center);
+      margin: 100px 0;
+      max-width: 900px;
+      gap: 20px;
+    }
+
+    @include desktop {
+      margin: 120px 0;
+      max-width: 965px;
+      gap: 50px;
+    }
+
+    @include desktop-FHD {
+      margin: 150px 0;
+      max-width: 1180px;
+      gap: 120px;
+    }
+  }
+
+  &__worldImage {
+    @include set-square(200px);
+    position: relative;
+    margin-bottom: 50px;
+
+    @include tablet {
+      @include set-square(250px);
+    }
+
+    @include laptop {
+      @include set-square(425px);
+      flex-shrink: 0;
+    }
+
+    @include desktop {
+      @include set-square(450px);
+    }
+
+    @include desktop-FHD {
+      @include set-square(580px);
+    }
+  }
+
+  &__textContent {
+    @include set-flex(column);
+    gap: 10px;
+
+    @include laptop {
+      max-width: 425px;
+      gap: 40px;
+    }
+
+    @include desktop {
+      max-width: 475px;
+    }
+
+    @include desktop-FHD {
+      max-width: 490px;
+      gap: 50px;
+    }
+
+    &__text {
+      @include laptop {
+        max-width: 400px;
+      }
+
+      @include desktop-FHD {
+        max-width: 480px;
+      }
+    }
+  }
+}

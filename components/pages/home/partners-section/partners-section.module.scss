@@ -1,0 +1,120 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.partnersSection {
+  @include set-flex(column, center, center);
+  margin: 85px 80px;
+  text-align: center;
+
+  @include tablet {
+    margin: 150px 80px;
+  }
+
+  @include desktop {
+    margin: 165px 80px;
+  }
+
+  @include desktop-FHD {
+    margin: 220px 80px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: $font-size-xl;
+    line-height: 27px;
+
+    @include tablet {
+      font-size: $font-size-huge;
+      line-height: 46px;
+    }
+
+    @include desktop {
+      font-size: $font-size-giant;
+      line-height: 50px;
+    }
+  }
+
+  &__subTitle {
+    margin-bottom: 60px;
+    font-size: $font-size-sm;
+    line-height: 18px;
+
+    @include tablet {
+      font-size: $font-size-lg;
+      line-height: 27px;
+    }
+
+    @include desktop {
+      margin-bottom: 100px;
+      font-size: $font-size-xl;
+      line-height: 30px;
+    }
+  }
+
+  &__partnersLogo {
+    @include set-flex(column);
+    gap: 40px;
+    cursor: pointer;
+
+    @include laptop {
+      @include set-flex(row);
+      gap: 50px;
+    }
+
+    @include desktop {
+      @include set-flex(row);
+      gap: 70px;
+    }
+
+    &__image {
+      @include set-size(126px, 45px);
+
+      &:hover {
+        transform: scale(1.1);
+        transition-duration: 0.3s;
+      }
+    }
+
+    &__image1 {
+      @include tablet {
+        @include set-size(210px, 75px);
+      }
+
+      @include laptop {
+        @include set-size(210px, 75px);
+      }
+
+      @include desktop {
+        @include set-size(250px, 90px);
+      }
+    }
+
+    &__image2 {
+      @include tablet {
+        @include set-size(210px, 75px);
+      }
+
+      @include laptop {
+        @include set-size(290px, 75px);
+      }
+
+      @include desktop {
+        @include set-size(350px, 90px);
+      }
+    }
+
+    &__image3 {
+      @include tablet {
+        @include set-size(210px, 75px);
+      }
+
+      @include laptop {
+        @include set-size(240px, 75px);
+      }
+
+      @include desktop {
+        @include set-size(280px, 90px);
+      }
+    }
+  }
+}

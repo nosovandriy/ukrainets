@@ -1,60 +1,63 @@
-import styles from '../styles/Home.module.css';
-
-import classNames from 'classnames';
 import type { NextPage } from 'next';
-import Link from 'next/link';
 
-import { Company, HomeHeader } from '../components';
+import { ModalProvider } from '../components/modal-context/modal-provider';
+
+import {
+  Layout,
+  HomeHeader,
+  HeroSection,
+  AboutSection,
+  ScheduleFromEngland,
+  ScheduleFromUkraine,
+  DeliverySteps,
+  QualitySection,
+  RulesSection,
+  TestimonialsSection,
+  PartnersSection,
+  DeliverySection,
+  UkraineSection,
+  MessengerFbChat,
+  Footer,
+  CallUsModal,
+  CallMeModal,
+} from '../components';
+import { DesktopNavigation, MobileNavigation } from '@components/navigation';
 
 const Home: NextPage = () => {
-  const facebookLink = 'https://www.facebook.com/britishpost/';
-
   return (
-    <div>
-      <HomeHeader />
+    <>
+      <MessengerFbChat />
+      <ModalProvider>
+        <MobileNavigation />
+        <Layout>
+          <DesktopNavigation />
+          <HomeHeader />
+          <HeroSection />
+        </Layout>
 
-      <main className={styles.container}>
-        <div className={styles.maintenancePage}>
-          <Company />
+        <AboutSection />
 
-          <div
-            className={classNames(styles.maintenanceTitle, 'text-stone-700')}
-          >
-            [ Сторінка розробляється ]
-          </div>
+        <Layout>
+          <ScheduleFromUkraine />
+          <ScheduleFromEngland />
+        </Layout>
 
-          <div>
-            <span
-              className={classNames(
-                styles.facebookLink,
-                'text-stone-700',
-                'font-bold'
-              )}
-            >
-              Сконтактуватися з нами можна у{' '}
-            </span>
-            <span
-              className={classNames(
-                styles.facebookLink,
-                'text-stone-700',
-                'font-bold',
-                'underline decoration-4'
-              )}
-            >
-              <Link href={facebookLink}>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline decoration-sky-500"
-                >
-                  facebook.
-                </a>
-              </Link>
-            </span>
-          </div>
-        </div>
-      </main>
-    </div>
+        <DeliverySteps />
+
+        <Layout>
+          <QualitySection />
+        </Layout>
+        <TestimonialsSection />
+        <DeliverySection />
+        <PartnersSection />
+        <RulesSection />
+        <UkraineSection />
+        <Footer />
+        <CallUsModal />
+        <CallMeModal />
+      </ModalProvider>
+
+    </>
   );
 };
 

@@ -1,0 +1,18 @@
+@import '~styles/vars.scss';
+
+.layoutSection {
+  padding: $default-page-padding;
+  margin: 0 auto;
+
+  @media #{$tablet} {
+    max-width: 870px;
+  }
+
+  @media #{$desktop-small} {
+    max-width: 970px;
+  }
+
+  @media #{$desktop}, #{$desktop-large} {
+    max-width: 1250px;
+  }
+}

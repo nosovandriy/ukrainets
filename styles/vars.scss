@@ -1,0 +1,50 @@
+/* media rules */
+
+$desktop-large: unquote('only screen and (min-width: 1440px)');
+$desktop: unquote(
+  'only screen and (min-width: 1200px) and (max-width: 1440px)'
+);
+$desktop-small-and-tablet: unquote(
+  'only screen and (min-width: 480px) and (max-width: 1200px)'
+);
+$desktop-small: unquote(
+  'only screen and (min-width: 720px) and (max-width: 1200px)'
+);
+$tablet-and-mobile: unquote('only screen and (max-width: 720px)');
+$tablet: unquote('only screen and (min-width: 480px) and (max-width: 720px)');
+$mobile: unquote('only screen and (max-width: 480px)');
+
+/* size */
+
+$font-size-giant: 40px;
+$font-size-huge: 36px;
+$font-size-xxxl: 32px;
+$font-size-xxl: 24px;
+$font-size-xl: 21px;
+$font-size-lg: 18px;
+$font-size-base: 16px;
+$font-size-md: 14px;
+$font-size-sm: 12px;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-base: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 800;
+
+/* colors */
+
+$color-white: #ffffff;
+$color-red: #dd0546;
+$color-yellow: #ffd007;
+$color-blue-light: #1c5bff;
+$color-blue-medium: #002fa8;
+$color-blue-dark: #273a5a;
+$color-grey-light: #c7d2dc;
+$color-grey-dark: #5e7294;
+
+$box-shadow-1: 0px 0px 10px 0.8px rgba(19, 10, 46, 0.08);
+
+/* other */
+$z-index-menu: 10;
+$default-page-padding: 0 50px;

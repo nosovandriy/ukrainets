@@ -1,0 +1,55 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.scheduleFromUkraine {
+  @include set-flex(column, center, center);
+  padding-bottom: 80px;
+
+  @include laptop {
+    padding-bottom: 150px;
+  }
+
+  @include desktop {
+    @include set-flex(row, center, center);
+    gap: 30px;
+    padding-top: 200px;
+    padding-bottom: 180px;
+  }
+
+  &__title {
+    max-width: 215px;
+    text-align: center;
+    padding: 80px 0 65px;
+
+    @include tablet {
+      max-width: 350px;
+      padding: 80px 0 65px;
+    }
+
+    @include laptop {
+      max-width: 350px;
+      padding: 100px 0 100px;
+    }
+
+    @include desktop {
+      padding: 0;
+    }
+  }
+
+  .scheduleWrapper {
+    @include set-flex(column, center, center);
+    row-gap: 40px;
+
+    @include tablet {
+      @include set-flex(row, center, center);
+      column-gap: 10px;
+      flex-direction: row-reverse;
+    }
+
+    @include laptop {
+      @include set-flex(row, center, center);
+      column-gap: 30px;
+      flex-direction: row-reverse;
+    }
+  }
+}

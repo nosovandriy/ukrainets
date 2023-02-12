@@ -1,0 +1,167 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.swiper {
+  @include set-flex(column, flex-start, center);
+  width: 100%;
+
+  @include tablet {
+    width: 80%;
+  }
+
+  @include laptop {
+    width: 90%;
+  }
+
+  @include desktop {
+    width: 80%;
+  }
+
+  &__wrapper {
+    @include set-flex(column, center, center);
+
+    @include laptop {
+      width: 850px;
+    }
+
+    @include desktop {
+      width: 1050px;
+    }
+
+    @include desktop-FHD {
+      width: 1280px;
+    }
+  }
+
+  &__testimonials {
+    @include set-flex(column, center, center);
+    height: 450px;
+  }
+
+  &__testimonial {
+    position: relative;
+    @include set-flex(column, center, center);
+    @include set-size(300px, max-content);
+    padding: 40px 25px;
+    background: linear-gradient(155.63deg,
+        rgba(255, 255, 255, 0.3) 1.5%,
+        rgba(255, 255, 255, 0) 98%,
+        rgba(255, 255, 255, 0.1) 98%);
+    box-shadow: 0px 0px 10px 0.78px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.9px);
+    border-radius: 30px;
+
+    @include tablet {
+      @include set-size(400px, max-content);
+      padding: 40px 35px;
+    }
+
+    @include laptop {
+      @include set-size(400px, 320px);
+      padding: 40px 25px 10px;
+    }
+
+    @include desktop {
+      @include set-size(450px, 320px);
+      padding: 20px 25px 10px;
+    }
+
+    @include desktop-FHD {
+      @include set-size(600px, 350px);
+      padding: 20px 30px 10px;
+    }
+
+    &__quotes {
+      overflow: visible;
+      position: absolute;
+      $quotes-size: 50px;
+      @include set-flex(column, center, center);
+      @include set-square($quotes-size);
+      top: $quotes-size / -2;
+      margin-bottom: 10px;
+      background: #E9ECFF;
+      box-shadow: 0px 0px 10px 0.78px rgba(0, 0, 0, 0.1);
+      border-radius: 50px;
+
+      @include laptop {
+        $quotes-size: 60px;
+        @include set-square($quotes-size);
+        top: $quotes-size / -2;
+        margin-bottom: 20px;
+      }
+
+      @include desktop-FHD {
+        $quotes-size: 70px;
+        @include set-square($quotes-size);
+        top: $quotes-size / -2;
+      }
+    }
+
+    &__name {
+      padding-bottom: 5px;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-base;
+      line-height: 25px;
+
+      @include laptop {
+        font-size: $font-size-xl;
+        line-height: 32px;
+      }
+
+      @include desktop-FHD {
+        font-size: $font-size-xxl;
+        line-height: 40px;
+      }
+    }
+
+    &__city {
+      padding-bottom: 10px;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-sm;
+      line-height: 20px;
+      color: $color-grey-light;
+
+      @include laptop {
+        padding-bottom: 20px;
+        font-size: $font-size-base;
+        line-height: 26px;
+      }
+
+      @include desktop-FHD {
+        padding-bottom: 20px;
+        font-size: $font-size-xl;
+        line-height: 26px;
+      }
+    }
+
+    &__text {
+      font-weight: $font-weight-regular;
+      font-size: $font-size-sm;
+      line-height: 18px;
+
+      @include laptop {
+        font-size: $font-size-md;
+        line-height: 24px;
+      }
+
+      @include desktop-FHD {
+        font-size: $font-size-lg;
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  color: white;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.swiper .swiper-pagination-bullet {
+  background-color: white;
+}

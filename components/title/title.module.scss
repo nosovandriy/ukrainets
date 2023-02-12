@@ -1,0 +1,30 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.default {
+  @include set-font($font-size-xl, $color-blue-dark, $font-weight-base);
+  line-height: 27px;
+
+  @include tablet {
+    font-size: $font-size-xxxl;
+    line-height: 42px;
+  }
+
+  @include laptop {
+    font-size: $font-size-huge;
+    line-height: 46px;
+  }
+
+  @include desktop-FHD {
+    font-size: $font-size-giant;
+    line-height: 52px;
+  }
+}
+
+.primary {
+  color: $color-blue-dark;
+}
+
+.secondary {
+  color: $color-white;
+}

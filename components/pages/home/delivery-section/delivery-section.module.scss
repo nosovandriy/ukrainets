@@ -1,0 +1,113 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.deliverySection {
+  @include set-flex(column, center, center);
+  font-weight: $font-weight-regular;
+  text-align: center;
+
+  &__title {
+    padding: 85px 0 30px;
+    max-width: 240px;
+    font-size: 21px;
+    line-height: 27px;
+
+    @include tablet {
+      padding: 165px 0 55px;
+      max-width: 550px;
+      font-size: 36px;
+      line-height: 46px;
+    }
+
+    @include desktop-FHD {
+      padding: 220px 0 70px;
+      font-size: 40px;
+      line-height: 51px;
+    }
+  }
+
+  &__subTitle {
+    max-width: 260px;
+    padding-bottom: 50px;
+    font-size: 12px;
+    line-height: 18px;
+
+    @include tablet {
+      max-width: 530px;
+      padding-bottom: 100px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    @include desktop-FHD {
+      max-width: 530px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &__shoppingImage {
+    position: relative;
+    width: 250px;
+    height: 110px;
+
+    @include tablet {
+      position: relative;
+      width: 475px;
+      height: 210px;
+    }
+
+    @include desktop-FHD {
+      position: relative;
+      width: 600px;
+      height: 265px;
+    }
+  }
+
+  &__aboutDelivery {
+    padding: 65px 30px 40px;
+    color: $color-white;
+    margin-top: -40px;
+    width: 330px;
+    height: 230px;
+    background: $color-blue-light;
+    border-radius: 22px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: $font-weight-base;
+
+    @include tablet {
+      padding: 120px 80px 60px;
+      margin-top: -70px;
+      width: 575px;
+      height: 355px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include desktop {
+      width: 640px;
+    }
+
+    @include desktop-FHD {
+      padding: 150px 170px 60px;
+      margin-top: -90px;
+      width: 980px;
+      height: 430px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__info {
+      padding-bottom: 15px;
+
+      @include tablet {
+        padding-bottom: 50px;
+      }
+
+      @include desktop-FHD {
+        padding-bottom: 60px;
+      }
+    }
+  }
+}
