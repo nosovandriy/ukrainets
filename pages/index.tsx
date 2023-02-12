@@ -16,6 +16,7 @@ import {
   PartnersSection,
   DeliverySection,
   UkraineSection,
+  MessengerFbChat,
   Footer,
   CallUsModal,
   CallMeModal,
@@ -25,6 +26,7 @@ import { DesktopNavigation, MobileNavigation } from '@components/navigation';
 const Home: NextPage = () => {
   return (
     <>
+      <MessengerFbChat />
       <ModalProvider>
         <MobileNavigation />
         <Layout>
@@ -54,6 +56,7 @@ const Home: NextPage = () => {
         <CallUsModal />
         <CallMeModal />
       </ModalProvider>
+
     </>
   );
 };
