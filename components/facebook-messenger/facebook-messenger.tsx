@@ -9,6 +9,13 @@ export const MessengerFbChat = () => {
       messengerRef.current.setAttribute('attribution', 'install_email');
       messengerRef.current.setAttribute('page_id', '116713648921145');
 
+      window.fbAsyncInit = function () {
+        window.FB.init({
+          xfbml: true,
+          version: 'v16.0',
+        });
+      };
+
       (function (d, s, id) {
         var js,
           fjs = d.getElementsByTagName(s)[0];
@@ -19,15 +26,6 @@ export const MessengerFbChat = () => {
           'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
         (fjs as any).parentNode.insertBefore(js, fjs);
       })(document, 'script', 'facebook-jssdk');
-
-      (window as any).fbAsyncInit = function () {
-        const FB = {};
-
-        (FB as any).init({
-          xfbml: true,
-          version: 'v16.0',
-        });
-      };
     }
   }, []);
 
