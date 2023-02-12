@@ -7,3 +7,4 @@ export * from './external-link';
 export * from './modal-call-us';
 export * from './modal-call-me';
 export * from './modal-overlay';
+export * from './facebook-messenger';
