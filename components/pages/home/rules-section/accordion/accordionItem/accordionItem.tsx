@@ -1,19 +1,20 @@
 import style from './accordionItem.module.scss';
-import { Rule } from 'types/rule';
+
 import { ArrowButtonAccordion } from '../../arrowButton';
+import { Rule } from 'types';
 
 type Props = {
   rule: Rule;
   index: number;
   selectedItem: number | null;
   handleToggleListContent: (id: number) => void;
-}
+};
 
 export const BorderRulesAccordionItem: React.FC<Props> = ({
   rule,
   index,
   selectedItem,
-  handleToggleListContent
+  handleToggleListContent,
 }) => {
   return (
     <>
@@ -25,16 +26,16 @@ export const BorderRulesAccordionItem: React.FC<Props> = ({
           <p className={style.accordionItem__title__content}>
             {` ${rule.title} :`}
           </p>
-          {selectedItem !== index
-            ? <ArrowButtonAccordion arrowClassName='arrowDown' />
-            : <ArrowButtonAccordion arrowClassName='arrow90' />}
+          {selectedItem !== index ? (
+            <ArrowButtonAccordion arrowClassName="arrowDown" />
+          ) : (
+            <ArrowButtonAccordion arrowClassName="arrow90" />
+          )}
         </div>
       </li>
       {selectedItem === index && (
-        <p className={style.accordionItem__subTitle}>
-          {` ${rule.text} :`}
-        </p>
+        <p className={style.accordionItem__subTitle}>{` ${rule.text} :`}</p>
       )}
     </>
   );
-}
+};

@@ -1,5 +1,5 @@
-import { Rule } from '../../../../../../types/rule';
-import { getRandomId } from '../../../../../../utils/utils';
+import { Rule } from 'types';
+import { getRandomId } from 'utils/utils';
 
 export function useRules(): {
   rules: Rule[];
