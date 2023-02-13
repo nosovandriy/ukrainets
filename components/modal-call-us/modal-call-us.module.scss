@@ -27,7 +27,7 @@
 
   .closeMenuIcon {
     @include set-flex(row, center, center);
-    @include set-size(13px, 13px);
+    @include set-square(13px);
     position: absolute;
     top: 20px;
     right: 20px;
@@ -51,6 +51,14 @@
 
     &:hover {
       transform: rotate(180deg);
+    }
+
+    svg {
+      @include set-square(13px);
+
+      @include laptop {
+        @include set-square(18px);
+      }
     }
   }
 

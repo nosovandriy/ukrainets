@@ -27,7 +27,7 @@ export const AboutSection: React.FC = () => {
           <div className={style.aboutSection__todo}>
             <div className={style.aboutSection__todo__image1}>
               <Image
-                src="/pin_who-we-are.png"
+                src="/pin_who-we-are.webp"
                 layout="fill"
                 alt="Picture point of the GPS"
               />
@@ -48,7 +48,7 @@ export const AboutSection: React.FC = () => {
             <div className={style.aboutSection__todo__image2}>
               <Image
                 layout="fill"
-                src="/like_who-we-are.png"
+                src="/like_who-we-are.webp"
                 alt="Picture hand OK"
               />
             </div>
@@ -69,7 +69,7 @@ export const AboutSection: React.FC = () => {
           <div className={style.aboutSection__todo}>
             <div className={style.aboutSection__todo__image3}>
               <Image
-                src="/time_who-we-are.png"
+                src="/time_who-we-are.webp"
                 layout="responsive"
                 width={100}
                 height={100}
@@ -93,7 +93,7 @@ export const AboutSection: React.FC = () => {
           <div className={style.aboutSection__todo}>
             <div className={style.aboutSection__todo__image4}>
               <Image
-                src="/safe_who-we-are.png"
+                src="/safe_who-we-are.webp"
                 layout="fill"
                 alt="Picture of door lock"
               />

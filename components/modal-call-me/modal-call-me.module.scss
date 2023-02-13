@@ -33,13 +33,21 @@
     transition: 0.5s;
 
     @include laptop {
-      @include set-square(20px);
+      @include set-square(18px);
       top: 30px;
       right: 30px;
     }
 
     &:hover {
       transform: rotate(180deg);
+    }
+
+    svg {
+      @include set-square(13px);
+
+      @include laptop {
+        @include set-square(18px);
+      }
     }
   }
 
@@ -158,8 +166,8 @@
       }
     }
 
-    &__hide {	
-      display: none;	
+    &__hide {
+      display: none;
     }
   }
 

@@ -18,7 +18,7 @@ export const QualitySection: React.FC = () => {
         <div className={style.qualitySection__worldImage}>
           <Image
             layout="fill"
-            src="/world.png"
+            src="/world.webp"
             alt="World icon"
           />
         </div>
