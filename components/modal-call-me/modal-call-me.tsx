@@ -60,7 +60,7 @@ export const CallMeModal = () => {
                     className={style.textContent__image}
                   >
                     <Image
-                      src="/online-shopping.png"
+                      src="/online-shopping.webp"
                       layout="fill"
                       alt="Online shopping"
                     />
@@ -135,7 +135,7 @@ export const CallMeModal = () => {
                 onClick={() => setIsOpenModalCallMe(false)}
               >
                 <Image
-                  src="/check.png"
+                  src="/check.webp"
                   layout="fill"
                   alt="Check Picture"
                 />

@@ -29,7 +29,7 @@ export const CallUsModal = () => {
           </div>
           <div className={style.image}>
             <Image
-              src="/call-me-hand.png"
+              src="/call-me-hand.webp"
               layout="fill"
               alt="Call me hand"
             />

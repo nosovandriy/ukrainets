@@ -31,7 +31,7 @@ export const Calendar: React.FC<{
             priority
             width="100"
             height="110"
-            src="/calendar.png"
+            src="/calendar.webp"
             alt="Calendar icon"
           />
         </div>

@@ -18,7 +18,7 @@ export const DeliverySection: React.FC = () => {
 
       <div className={style.deliverySection__shoppingImage}>
         <Image
-          src="/shop-in-ukraine.png"
+          src="/shop-in-ukraine.webp"
           layout="fill"
           alt="Picture point of the GPS"
         />

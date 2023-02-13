@@ -12,7 +12,7 @@ export const UkraineSection: React.FC = () => {
 
         <div className={style.ukraineSection__image}>
           <Image
-            src="/heart-ukraine.png"
+            src="/heart-ukraine.webp"
             layout="fill"
             alt="Picture of Ukraine heart"
           />

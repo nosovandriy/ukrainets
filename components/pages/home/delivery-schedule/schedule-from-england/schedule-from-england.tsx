@@ -28,7 +28,7 @@ export const ScheduleFromEngland: React.FC = () => {
               priority
               width="100"
               height="110"
-              src="/mark.png"
+              src="/mark.webp"
               alt="Mark icon"
             />
           </span>

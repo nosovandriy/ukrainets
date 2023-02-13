@@ -14,7 +14,7 @@ export const DeliverySteps: React.FC = () => {
           <Image
             priority
             layout="fill"
-            src="/trident.png"
+            src="/trident.webp"
             alt="Trident Ukraine"
           />
         </div>
