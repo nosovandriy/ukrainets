@@ -1,11 +1,16 @@
-import type { NextComponentType } from 'next';
 import Head from 'next/head';
+import type { NextComponentType } from 'next';
+
+import { OpenGraph } from '@components/open-graph';
 
 export const HomeHeader: NextComponentType = () => {
   return (
     <Head>
+      <html lang="uk" />
       <title>Ukrainets - Перевезення посилок з Лондона</title>
+      <meta charSet="utf-8" />
       <meta name="description" content="Ukrainets" />
+      <OpenGraph />
       <link
         rel="apple-touch-icon-precomposed"
         sizes="57x57"
