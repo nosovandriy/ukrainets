@@ -110,7 +110,6 @@ export const HomeHeader: NextComponentType = () => {
         name="msapplication-square310x310logo"
         content="mstile-310x310.png"
       />
-      <html lang="uk" />
     </Head>
   );
 };
