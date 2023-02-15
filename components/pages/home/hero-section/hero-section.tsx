@@ -1,12 +1,9 @@
 import { useContext } from 'react';
 import Link from 'next/link';
-import MediaQuery from 'react-responsive';
 
 import style from './hero-section.module.scss';
-import { breakPoints } from 'consts';
 import { Button } from '../../../button';
 import { HeroBanner } from './hero-banner';
-import { useIsMounted } from 'hooks';
 import { fontService } from '@services/font-service';
 import { ModalContext } from '@components/modal-context/modal-provider';
 import { EmailNotificationStep } from 'types/EmailNotificationStep';
@@ -16,12 +13,6 @@ export const HeroSection: React.FC = () => {
     setIsOpenModalCallMe,
     setSendClientData,
   } = useContext(ModalContext);
-
-  const isMounted = useIsMounted();
-
-  if (!isMounted) {
-    return null;
-  }
 
   const handleOpenModalCallMe = () => {
     setIsOpenModalCallMe(true);
@@ -37,9 +28,9 @@ export const HeroSection: React.FC = () => {
           </h1>
         </div>
 
-        <MediaQuery maxWidth={breakPoints.fromMobile.max}>
+        <div className={style.banner__mobile}>
           <HeroBanner />
-        </MediaQuery>
+        </div>
 
         <div>
           <p className={style.text}>Отримай посилку вже наступного тижня!</p>
@@ -56,9 +47,9 @@ export const HeroSection: React.FC = () => {
         </div>
       </div >
 
-      <MediaQuery minWidth={breakPoints.fromTablet.min}>
+      <div className={style.banner__desktop}>
         <HeroBanner />
-      </MediaQuery>
+      </div>
     </main >
   );
 };

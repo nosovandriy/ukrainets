@@ -146,3 +146,19 @@
     }
   }
 }
+
+.banner__mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.banner__desktop {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
