@@ -5,11 +5,11 @@ export const HomeHeader: NextComponentType = () => {
   return (
 
     <Head>
-      {/* <meta charSet="utf-8" />
+      <meta charSet="utf-8" />
       <meta property="og:title" content="Ukrainets - Перевезення посилок Україна-Лондон" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.ukrainets.in.ua/" />
-      <meta property="og:image" content="https://www.ukrainets.in.ua/_next/image?url=%2Fmain-banner.webp&w=1920&q=75" /> */}
+      <meta property="og:image" content="https://www.ukrainets.in.ua/_next/image?url=%2Fmain-banner.webp&w=1920&q=75" />
 
       <title>Ukrainets - Перевезення посилок з Лондона</title>
       <meta name="description" content="Ukrainets" />
@@ -110,7 +110,6 @@ export const HomeHeader: NextComponentType = () => {
         name="msapplication-square310x310logo"
         content="mstile-310x310.png"
       />
-      <html lang="uk" />
     </Head>
   );
 };
