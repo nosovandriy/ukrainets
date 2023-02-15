@@ -17,7 +17,7 @@ import {
   PartnersSection,
   DeliverySection,
   UkraineSection,
-  MessengerFbChat,
+  // MessengerFbChat,
   Footer,
   CallUsModal,
   CallMeModal,
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         onReset={() => console.log('click')}
       >
         <HomeHeader />
-        <MessengerFbChat />
+        {/* <MessengerFbChat /> */}
         <ModalProvider>
           <MobileNavigation />
           <Layout>
