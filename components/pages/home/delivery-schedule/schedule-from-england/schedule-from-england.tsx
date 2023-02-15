@@ -2,17 +2,10 @@ import style from './schedule-from-england.module.scss';
 
 import Image from 'next/legacy/image';
 
-import { useIsMounted } from 'hooks';
 import { Title } from '../../../../title';
 import { Calendar, ScheduleDetailsContainer } from '../components';
 
 export const ScheduleFromEngland: React.FC = () => {
-  const isMounted = useIsMounted();
-
-  if (!isMounted) {
-    return null;
-  }
-
   return (
     <section className={style.scheduleFromEngland}>
       <div className={style.scheduleFromEngland__title}>

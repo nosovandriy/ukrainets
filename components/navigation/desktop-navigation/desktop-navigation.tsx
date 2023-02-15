@@ -2,22 +2,26 @@ import style from './desktop-navigation.module.scss';
 
 import MediaQuery from 'react-responsive';
 
-import { useIsMounted } from 'hooks';
 import { breakPoints } from 'consts';
 import { NavigationMenu } from '../components';
+import { useEffect, useState } from 'react';
 
 export const DesktopNavigation: React.FC = () => {
-  const isMounted = useIsMounted();
+  const [domLoaded, setDomLoaded] = useState(false);
 
-  if (!isMounted) {
-    return null;
-  }
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
 
   return (
-    <MediaQuery minWidth={breakPoints.fromLaptop.min}>
-      <div className={style.desktopNavigation}>
-        <NavigationMenu />
-      </div>
-    </MediaQuery>
+    <>
+      {domLoaded && (
+        <MediaQuery minWidth={breakPoints.fromLaptop.min}>
+          <div className={style.desktopNavigation}>
+            <NavigationMenu />
+          </div>
+        </MediaQuery>
+      )}
+    </>
   );
 };

@@ -1,16 +1,9 @@
-import style from './quality-section.module.scss';
-
 import Image from 'next/legacy/image';
 
-import { useIsMounted } from 'hooks';
+import style from './quality-section.module.scss';
 import { Title } from '../../../title';
 
 export const QualitySection: React.FC = () => {
-  const isMounted = useIsMounted();
-
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <section className={style.qualitySection}>
