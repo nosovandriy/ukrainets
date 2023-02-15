@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 
 import { ModalProvider } from '../components/modal-context/modal-provider';
+import { ErrorBoundary } from 'react-error-boundary'
 
 import {
   Layout,
@@ -22,41 +23,46 @@ import {
   CallMeModal,
 } from '../components';
 import { DesktopNavigation, MobileNavigation } from '@components/navigation';
+import { ErrorFallback } from '@components/error-boundary/error-boundary';
 
 const Home: NextPage = () => {
   return (
     <>
-      <MessengerFbChat />
-      <ModalProvider>
-        <MobileNavigation />
-        <Layout>
-          <DesktopNavigation />
-          <HomeHeader />
-          <HeroSection />
-        </Layout>
+      <ErrorBoundary
+        FallbackComponent={ErrorFallback}
+        onReset={() => console.log('click')}
+      >
+        <HomeHeader />
+        <MessengerFbChat />
+        <ModalProvider>
+          <MobileNavigation />
+          <Layout>
+            <DesktopNavigation />
+            <HeroSection />
+          </Layout>
 
-        <AboutSection />
+          <AboutSection />
 
-        <Layout>
-          <ScheduleFromUkraine />
-          <ScheduleFromEngland />
-        </Layout>
+          <Layout>
+            <ScheduleFromUkraine />
+            <ScheduleFromEngland />
+          </Layout>
 
-        <DeliverySteps />
+          <DeliverySteps />
 
-        <Layout>
-          <QualitySection />
-        </Layout>
-        <TestimonialsSection />
-        <DeliverySection />
-        <PartnersSection />
-        <RulesSection />
-        <UkraineSection />
-        <Footer />
-        <CallUsModal />
-        <CallMeModal />
-      </ModalProvider>
-
+          <Layout>
+            <QualitySection />
+          </Layout>
+          <TestimonialsSection />
+          <DeliverySection />
+          <PartnersSection />
+          <RulesSection />
+          <UkraineSection />
+          <Footer />
+          <CallUsModal />
+          <CallMeModal />
+        </ModalProvider>
+      </ErrorBoundary>
     </>
   );
 };
