@@ -10,9 +10,8 @@ export const HeroBanner: React.FC = () => {
         src="/main-banner.webp"
         fill
         sizes="100%"
-        // priority
-        // placeholder="blur"
-        // blurDataURL={'/main-banner.webp'}
+        placeholder="blur"
+        blurDataURL={'/main-banner.webp'}
         alt="Picture of delivery man with parcels. Ukraine and England flag on background"
       />
     </div>

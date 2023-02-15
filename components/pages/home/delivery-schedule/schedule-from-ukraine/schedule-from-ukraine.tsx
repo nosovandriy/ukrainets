@@ -1,15 +1,9 @@
 import style from './schedule-from-ukraine.module.scss';
 
-// import { useIsMounted } from 'hooks';
 import { Title } from '../../../../title';
 import { Calendar, ScheduleDetailsContainer } from '../components';
 
 export const ScheduleFromUkraine: React.FC = () => {
-  // const isMounted = useIsMounted();
-
-  // if (!isMounted) {
-  //   return null;
-  // }
 
   return (
     <section id={'schedule-section'} className={style.scheduleFromUkraine}>
