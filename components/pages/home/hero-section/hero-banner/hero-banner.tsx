@@ -1,6 +1,6 @@
-import style from './hero-banner.module.scss';
-
 import Image from 'next/image';
+
+import style from './hero-banner.module.scss';
 
 export const HeroBanner: React.FC = () => {
   return (
