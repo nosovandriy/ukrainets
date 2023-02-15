@@ -8,9 +8,8 @@ export const HomeHeader: NextComponentType = () => {
       <meta charSet="utf-8" />
       <meta property="og:title" content="Ukrainets - Перевезення посилок Україна-Лондон" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.ukrainets.in.ua/" />
-      {/* <meta property="og:image" content="https://www.ukrainets.in.ua/_next/image?url=%2Fmain-banner.webp&w=1920&q=75" /> */}
-      <meta property="og:image" content="https://serving.photos.photobox.com/33443798fa6de3e5e20fc2a8ed0f6592337572aa772bc953d92c355953825da99728e5c1.jpg" />
+      <meta property="og:url" content="https://www.ukrainets.in.ua" />
+      <meta property="og:image" content="https://serving.photos.photobox.com/38304904564cd23c41fd55013da2801238268d985fcef857ca32e38afbb5d1a45a8c1cb5.jpg" />
 
       <title>Ukrainets - Перевезення посилок з Лондона</title>
       <meta name="description" content="Ukrainets" />

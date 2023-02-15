@@ -8,7 +8,7 @@
 }
 
 .phoneWrapper .phoneNumber {
-  width: 100% !important;
+  width: 208px;
   border-radius: 45px;
   color: $color-grey-dark;
   font-size: $font-size-sm;
@@ -17,6 +17,7 @@
   color: $color-grey-dark;
 
   @include desktop {
+    width: 258px;
     height: 50px;
     font-size: $font-size-base;
     padding-left: 60px;
