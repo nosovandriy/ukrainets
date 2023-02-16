@@ -5,6 +5,7 @@ interface Contacts {
   title: string;
   firstInfo: string;
   secondInfo: string;
+  thirdInfo: string;
 }
 
 export function useContacts(): {
@@ -17,18 +18,21 @@ export function useContacts(): {
       "title": defaultContacts.countries.england,
       "firstInfo": defaultContacts.phones.firstEnglandNumber,
       "secondInfo": defaultContacts.phones.secondEnglandNumber,
+      "thirdInfo": defaultContacts.phones.thirdEnglandNumber,
     },
     {
       "id": 2,
       "title": defaultContacts.countries.ukraine,
       "firstInfo": defaultContacts.phones.ukraineNumber,
       "secondInfo": "",
+      "thirdInfo": "",
     },
     {
       "id": 3,
       "title": "E-mail",
       "firstInfo": defaultContacts.email,
       "secondInfo": "",
+      "thirdInfo": "",
     },
   ];
 

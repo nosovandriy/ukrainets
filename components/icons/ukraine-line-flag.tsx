@@ -2,8 +2,6 @@ export const UAlineFlag = () => {
   return (
     <>
       <svg
-        // width="1920"
-        // height="1060"
         viewBox="350 700 1320 2000"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

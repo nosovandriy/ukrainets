@@ -64,6 +64,12 @@ export const CallUsModal = () => {
                         contactInfo={contact.secondInfo}
                       />
                     )}
+
+                    {contact.thirdInfo && (
+                      <ContentLink
+                        contactInfo={contact.thirdInfo}
+                      />
+                    )}
                   </div>
                 ))}
               </>
