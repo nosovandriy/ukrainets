@@ -11,6 +11,7 @@ export const HeroBanner: React.FC = () => {
         fill
         sizes="100%"
         placeholder="blur"
+        priority
         blurDataURL={'/main-banner.webp'}
         alt="Picture of delivery man with parcels. Ukraine and England flag on background"
       />
