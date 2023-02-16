@@ -8,7 +8,8 @@ export const defaultContacts = {
   phones: {
     ukraineNumber: '+380677144424',
     firstEnglandNumber: '+447738204457',
-    secondEnglandNumber: '+447982651844'
+    secondEnglandNumber: '+447982651844',
+    thirdEnglandNumber: '+447577796269',
   },
   partners: {
     novaPoshta: {

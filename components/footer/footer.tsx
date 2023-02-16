@@ -68,6 +68,15 @@ export const Footer: React.FC = () => {
                     {formattingPhoneNumber(contact.secondInfo)}
                   </a>
                 )}
+
+                {contact.thirdInfo && (
+                  <a
+                    className={`${style.footer__contacts__contact__info} ${style.textDecoration}`}
+                    href={isEmailAddress(contact.thirdInfo)}
+                  >
+                    {formattingPhoneNumber(contact.thirdInfo)}
+                  </a>
+                )}
               </div>
             ))}
           </>

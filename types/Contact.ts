@@ -3,4 +3,5 @@ export interface Contact {
   title: string;
   firstInfo: string;
   secondInfo: string;
+  thirdInfo: string;
 }
