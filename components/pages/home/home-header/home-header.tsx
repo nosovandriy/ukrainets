@@ -10,7 +10,8 @@ export const HomeHeader: NextComponentType = () => {
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.ukrainets.in.ua" />
       <meta property="og:image" content="https://serving.photos.photobox.com/38304904564cd23c41fd55013da2801238268d985fcef857ca32e38afbb5d1a45a8c1cb5.jpg" />
-
+      <meta name="google-site-verification" content="DKM_yni9BQ4C8gptWLoroXgX7gmzMdJ_6GYfGoc9Ox8" />
+      
       <title>Ukrainets - Перевезення посилок Україна-Лондон</title>
       <meta name="description" content="Ukrainets" />
       <link
