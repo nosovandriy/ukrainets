@@ -1,113 +1,47 @@
-# Start development
 
-```sh
-npm run dev
-```
+# Ukrainets
 
-
-# Documentation
-
-Specs for react framework and css
-
-- [Next.js](https://nextjs.org/docs/getting-started)
-
-- [Tailwindcss](https://tailwindcss.com/docs/configuration)
-  Add **Tailwindcss** [extension](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) to VSCode
-
-# Git branching
-
-The simple convention for branch naming in *kebab-case* with component/feature/bugfix prefix.
-
-```
-  > component/some-huge-features
-  > feature/some-feature-name
-  > bugfix/bug-name
-  > hotfix/description
-              
-```
-
-# Style Guidelines
-## Project structure
-
-```
-  > components
-    > footer
-    > pages
-      > home
-        
-  > pages
-    index.tsx [all pages of the project]
-```
+Ukrainets is a website that provides all information about a shipping company, along with the ability for customers to request a callback. Built-in Next.js and CSS(SASS), this website offers a modern and user-friendly experience. In addition, we have implemented a feature that allows the owner to receive information about customers' orders in the e-mail.
 
 
+## Link
 
-| Folder           | Purpose                                                                                           |
-| -----------------| --------------------------------------------------------------------------------------------------|
-| /components       | Shared components that can be used across the whole application                                  |
-| /components/pages | Shared components that can be used in scope of one page                                          |
-| /consts     | Reusable constants                                                                                     |
-| /pages      | Main pages in the project (for now we have only one page as it is landing)                             |
-
----
-
-## Components
-
-### 1. Barrel file
-
-We are using barrel rule for all the components. Each folder contain index.ts file which exports one or more components.
-```
-index.ts
-
-export * from './component-name.tsx';
-```
-You can read more about barrel files [here](https://medium.com/suyeonme/barrel-adding-barrel-into-typescript-7141a6ac9003).
-
-### 2. Structure
-
-Component consist with *tsx* and *scss* (if needed) files. If your component is large, you can decompose some of the parts with nested folders.
-
-```
-Structure of the component:
-
-  > hero-section.tsx
-  > hero-section.module.scss
-  > index.ts
-
-  > hero-header
-    > hero-header.tsx
-    > index.ts
-```
-
-### 3. Scss files
-
-Style files should always be created and used within component that needs those styles.
-**Next.js** has specific rules for the *css* and *scss* files.
+[https://www.ukrainets.in.ua/](https://www.ukrainets.in.ua/)
 
 
-```
-1. File name should be the same as component name
-  > hero-section.tsx
-  > hero-section.module.scss
+![Logo](https://serving.photos.photobox.com/23530499d5c11f400e3e1443bcf29f48178f279c2e00ffd9b4d19fefbcd1ea517a517507.jpg)
 
-2. Scss file should always have .module in the file name
-  > hero-section.module.scss
 
-3. Class names should be in camelCase so it will be easy to use it in the component
-  > .someGreatClass {
+## 🛠 Tech Stack
 
-    }
+Next.js, TypeScript, HTML, SCSS, Swiper, Facebook chat widget.
 
-    <div className={style.someGreatClass} />
+## Features
 
-4. Import style file always on the top of the component page
-  > import style from './some-great.module.scss';
+- Built the project based on the React;
+- The landing page boasts a responsive design with a mobile-first approach, ensuring a Pixel Perfect Layout that is adaptive, responsive, and cross-browser compatible;
+- Implemented the capability to request a callback;
+- Integrated the option for communication through Facebook chat;
+- Integrated the ability to receive information about customer orders via email;
+- Integrated a testimonials slider using the Swiper library.
 
-    import React from 'react';
-```
-### 4. File naming
+## Optimizations
 
-Typescript files should be always named in *kebab-case*
 
-```
-  > hero-section.tsx
-```
+![Logo](https://serving.photos.photobox.com/75518737cbab58f382b06e30b23a48cbd40317acfd1197937435be7f91a6a1c12f363aca.jpg)
+
+
+## Screenshots
+
+![Main page](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGpsMWx6dGY0ZnZ4ZHppcHh6Mm43amkzbmxmaTlzZHFmcG81YjZxdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/92uLJ0zTf78ISUeEyc/giphy.gif)
+
+![Feature](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGVlMGxoOTFoNzRuZWhydzB5c3VyYmprNWl5YzFrNzJtbXdzOXFkeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4v0T7GMJwI9hKK6aHY/giphy.gif)
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://andriynosov.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/andriy-nosov/)
+
+
+## Authors
+
+- [Andriy Nosov [Frontend developer]](https://www.linkedin.com/in/andriy-nosov/)
